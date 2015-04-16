@@ -24,13 +24,38 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use Bootstrap for CSS frameowrk
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'sass-rails', '>= 3.2'
+
+# Use Hirb to visualize Active Record tables in console
+gem 'hirb'
+
+# User annotate to show schema able model
+gem 'annotate', '~> 2.6.6'
+
+# possible gems...
+# geocoder for location based associations
+# dashing for creating dashboards
+# algolia for search
+# omniauth for user logins via third parties
+# nokogiri for scraping existing info and pics
+# sendgrid for emails
+# haml for cleaner html
+# rspec and capybara for testing
+# simpleform for excellent integration with bootstrap forms
+# sunspot for indexing
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,5 +66,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # User bettererros to display more speciic errors in browser
+  gem 'better_errors'
+
 end
 
