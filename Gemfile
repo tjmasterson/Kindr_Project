@@ -27,7 +27,7 @@ gem 'faker', '~> 1.4.3'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'unicorn-rails'
-gem "codeclimate-test-reporter", group: :test, require: nil
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
