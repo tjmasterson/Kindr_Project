@@ -1,0 +1,2 @@
+class DispensaryRatingsController < ApplicationController
+end
