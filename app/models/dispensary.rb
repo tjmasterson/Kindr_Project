@@ -22,3 +22,7 @@ class Dispensary < ActiveRecord::Base
   belongs_to :owner, class_name: "User", foreign_key: :user_id
   belongs_to :city
 end
+
+def self.six_popular_dispensaires_json
+  order("rating DESC").limit(6).to_json
+end
