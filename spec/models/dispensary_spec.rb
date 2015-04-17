@@ -7,4 +7,12 @@ RSpec.describe Dispensary, type: :model do
     expect(dispensary).to belong_to :owner
   end
 
+  it 'should have many ratings' do
+    expect(dispensary).to have_many :dispensary_ratings
+  end
+
+  it 'should have ratings from many people' do
+    expect(dispensary).to have_many :voters
+  end
+
 end
