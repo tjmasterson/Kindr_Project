@@ -13,4 +13,5 @@
 class UserChoice < ActiveRecord::Base
   belongs_to :strain_rating
   belongs_to :choice
+  belongs_to :dispensary_strain
 end
