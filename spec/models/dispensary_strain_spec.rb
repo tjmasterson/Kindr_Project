@@ -20,10 +20,9 @@ RSpec.describe DispensaryStrain, type: :model do
   end
 
   describe '#average_ratings' do
-    # let(:palace_haze) { DispensaryStrain.new }
 
     it 'should average all of the strain_ratings for a dispensary strain' do
-      expect(silver_haze.average_ratings).to be_a(Array)
+      expect(silver_haze.average_ratings.map { |choice, average| "#{choice.name}: #{average}" }).to be_a(Array)
     end
 
   end

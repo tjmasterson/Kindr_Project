@@ -14,4 +14,8 @@ class UserChoice < ActiveRecord::Base
   belongs_to :strain_rating
   belongs_to :choice
   belongs_to :dispensary_strain
+
+  def self.average_ratings
+    group(:choice).average(:rating)
+  end
 end

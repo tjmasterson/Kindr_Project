@@ -19,13 +19,11 @@ class DispensaryStrain < ActiveRecord::Base
   belongs_to :dispensary
   belongs_to :strain
 
-  def average_ratings
-    self.user_choices.average(:rating)
-  end
+  delegate :average_ratings, to: :user_choices
 
-  def top_five
 
-  end
+# DispensaryStrain.first.average_ratings.map { |c, a| "#{c.name}: #{a}" }
+
 
 
 
