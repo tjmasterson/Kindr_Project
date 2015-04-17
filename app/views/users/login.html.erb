@@ -1,6 +1,6 @@
 <h1>Login</h1>
-<div>
-  <%= form_for(:session, url: login_path, method: "put") do |f| %>
+<div class="dope-forms">
+  <%= form_for(:session, url: login_path, method: "put", class: "dope-forms") do |f| %>
     <%=f.label :email %>
     <%=f.email_field :email%>
     <%=f.label :password %>
@@ -9,5 +9,5 @@
   <% end %>
 </div>
 <div>
-  Don't have an account?  <%= link_to "Sign up here!", '/signup' %>
+  Don't have an account yet?  <%= link_to "Sign up here!", '/signup' %>
 </div>
