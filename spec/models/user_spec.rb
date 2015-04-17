@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     expect(chase).to have_many :dispensary_ratings
   end
 
-  it 'can rate a strain' do
+  it 'knows about strains that they have rated' do
     expect(chase).to have_many :strain_ratings
   end
 
