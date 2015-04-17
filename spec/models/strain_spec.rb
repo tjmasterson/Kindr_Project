@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Strain, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  let(:purple_haze) { Strain.new(name: "purple_haze")}
+
+  it 'should be carried by multiple dispensaries' do
+    expect(purple_haze).to have_many :dispensaries
+  end
+
 end
