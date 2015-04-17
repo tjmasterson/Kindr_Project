@@ -2,21 +2,22 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let!(:chase) { User.create(username: "chase", email: "chase@chase.com")}
-  let!(:weed_palace) { Dispensary.create(name: "weed_palace", phone_number: 12345678, website: "weed_palace.com", city_id: 1, owner: chase)}
-  let!(:purple_haze) { Strain.create(name: "weed_palace", phone_number: 12345678, website: "weed_palace.com", city_id: 1, owner: chase)}
+  let!(:weed_palace) { Dispensary.create(name: "weed_palace", owner: chase)}
+  let!(:purple_haze) { Strain.create(name: "weed_palace")}
   let!(:palace_haze) { DispensaryStrain.create(dispensary_id: weed_palace.id, strain_id: purple_haze.id)}
+  let!(:palace_haze_vote) {StrainRating.create(dispensary_strain_id: palace_haze.id, user_id: chase.id)}
 
 
-  it 'can own a dispensary' do
-    expect(weed_palace.owner).to be_a(User)
+  it 'can own dispensaries' do
+    expect(chase).to have_many :dispensaries
   end
 
-  it 'can vote on a dispensary' do
-    expect(chase.dispensary_ratings.create(dispensary_id: weed_palace.id, rating: 9))
+  it 'can vote on dispensary_ratings' do
+    expect(chase).to have_many :dispensary_ratings
   end
 
-  it 'can vote on strains specific to a dispensary' do
-    expect(chase.strain_ratings.create(dispensary_strain_id: palace_haze.id, ))
+  it 'can vote on strains specific to dispensaries' do
+    expect(palace_haze_vote).to belong_to :dispensary_strain
   end
 
 end
