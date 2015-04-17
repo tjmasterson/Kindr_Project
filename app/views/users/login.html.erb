@@ -1,13 +1,12 @@
 <h1>Login</h1>
-<div class="dope-forms">
+<div class="form-box">
   <%= form_for(:session, url: login_path, method: "put", class: "dope-forms") do |f| %>
     <%=f.label :email %>
-    <%=f.email_field :email%>
+    <%=f.email_field :email, class: "dope-forms"%>
     <%=f.label :password %>
-    <%=f.password_field :password %>
-    <%=f.submit "Login"%>
+    <%=f.password_field :password, class: "dope-forms" %>
+    <%=f.submit "Login", class: "dope-forms"%>
   <% end %>
-</div>
-<div>
-  Don't have an account yet?  <%= link_to "Sign up here!", '/signup' %>
+  <span>Don't have an account yet?  <%= link_to "Sign up here!", '/signup', class: "center" %></span>
+
 </div>
