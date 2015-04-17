@@ -66,6 +66,8 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  gem 'rspec-rails'
+
   # User bettererros to display more speciic errors in browser
   gem 'better_errors'
 
