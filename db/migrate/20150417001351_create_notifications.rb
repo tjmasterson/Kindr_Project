@@ -5,8 +5,6 @@ class CreateNotifications < ActiveRecord::Migration
       t.references :dispensary_strain
       t.references :dispensary
 
-
-
       t.timestamps null: false
     end
   end
