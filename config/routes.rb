@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   resources :strains
   resources :dispensaries
   resources :users
+
+
+  get '/login' => 'users#login'
+  put '/login' => 'users#update'
+  get '/signup' => 'users#signup'
+  post '/signup' => 'users#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
