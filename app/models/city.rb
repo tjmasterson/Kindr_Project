@@ -12,4 +12,5 @@
 class City < ActiveRecord::Base
   has_many :dispensaries
   has_many :dispensary_strains, through: :dispensaries
+  has_many :strains, through: :dispensary_strains
 end
