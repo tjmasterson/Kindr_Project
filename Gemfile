@@ -68,6 +68,8 @@ group :development, :test do
 
   gem 'rspec-rails'
 
+  gem 'shoulda-matchers'
+
   # User bettererros to display more speciic errors in browser
   gem 'better_errors'
 
