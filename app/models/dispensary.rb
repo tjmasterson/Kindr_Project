@@ -21,8 +21,12 @@ class Dispensary < ActiveRecord::Base
   has_many :voters, through: :dispensary_ratings, class_name: "User"
   belongs_to :owner, class_name: "User", foreign_key: :user_id
   belongs_to :city
+
+
+  def self.six_rand_dispensaries_json
+    limit(6).order("RANDOM()").to_json
+  end
+
 end
 
-def self.six_popular_dispensaires_json
-  order("rating DESC").limit(6).to_json
-end
+
