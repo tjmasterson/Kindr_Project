@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   def update
     user = User.find_by(email: params[:session][:email].downcase)
     if User.authenticate(params[:session][:email].downcase, params[:session][:password])
-      session[:user_id] = user.user_id
+      session[:user_id] = user.id
+      redirect_to '/'
     else
       flash.now[:danger] = "Invalid login parameters"
       render :login
@@ -39,7 +40,7 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
-
+  end
   def index
     origin/controllers
   end

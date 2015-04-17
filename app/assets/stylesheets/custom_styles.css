@@ -1,18 +1,6 @@
 .form-box {
-  border: .15em solid black;
   width: 20em;
   height: 20em;
   margin-left: auto;
   margin-right: auto;
 }
-
-.dope-forms {
-  display: block;
-  color: red;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
