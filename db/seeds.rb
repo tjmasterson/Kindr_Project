@@ -1,9 +1,10 @@
 ##users(name, email, password)
-10.times do User.create(name: Faker::Name.name) end
+50.times do User.create(username: Faker::Name.name) end
 
-kelly = User.create(name: "Kelly Malone", email: "kelly@gmail.com")
-
-
+kelly = User.create(username: "Kelly Malone", email: "kelly@gmail.com")
+ziggy = User.create(username: "Ziggy Marley", email: "jahrastafari@themosthigh.com")
+selasie = User.create(username: "Haile Selasie", email: "hisimperialmajesty@gmail.com")
+lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com")
 
 ##cities(name, state)
 golden = City.new(name: "Golden", state: "Colorado")
@@ -19,69 +20,70 @@ lakewood = City.new(name: "Lakewood", state: "Colorado")
 ##dispensaries(name, address, city, zip, website, photo) ---addresses need doublechecking
 ##--missing data for user_id and photo_id
     ##golden
-terrapin = Dispensary.create(name:"Terrapin Care Clinic", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: golden.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-native_roots = Dispensary.create(name: "Native Roots", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: golden.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-fox_street_clinic = Dispensary.create(name: "Fox Street Clinic", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: golden.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+terrapin = Dispensary.create(name:"Terrapin Care Clinic", city_id: golden.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+native_roots = Dispensary.create(name: "Native Roots", city_id: golden.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+fox_street_clinic = Dispensary.create(name: "Fox Street Clinic", city_id: golden.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 ##steamboat
-natural_remedies = Dispensary.create(name: "Natural Remedies", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: steamboat.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-mindful_recreation = Dispensary.create(name: "Mindful Recreation", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: steamboat.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-new_age_medical = Dispensary.create(name: "New Age Medical", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: steamboat.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+natural_remedies = Dispensary.create(name: "Natural Remedies", city_id: steamboat.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+mindful_recreation = Dispensary.create(name: "Mindful Recreation", city_id: steamboat.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+new_age_medical = Dispensary.create(name: "New Age Medical", city_id: steamboat.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 ##buena_vista
-northern_lights_cannabis = Dispensary.create(name: "Northern Lights Cannabis", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: buena_vista.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-green_man_cannabis = Dispensary.create(name: "Green Man Cannabis", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: buena_vista.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+northern_lights_cannabis = Dispensary.create(name: "Northern Lights Cannabis", city_id: buena_vista.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+green_man_cannabis = Dispensary.create(name: "Green Man Cannabis", city_id: buena_vista.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 ## denver
-lightshade = Dispensary.create(name: "Lightshade", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-timberline = Dispensary.create(name: "Timberline Herbal Clinic", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-firehouse = Dispensary.create(name: "Firehouse Organics", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-standing_akimbo = Dispensary.create(name: "Standing Akimbo", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-livegreen_cannabis = Dispensary.create(name: "Livegreen Cannabis", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-medicine_man = Dispensary.create(name: "Medicine Man", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-tru_cannabis_mile_high = Dispensary.create(name: "Tru Cannabis Mile High", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-metro_cannabis_inc = Dispensary.create(name: "Metro Cannabis Inc.", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-natural_remedies_denver = Dispensary.create(name: "Natural Remedies", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-botanico = Dispensary.create(name: "Botanico", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-caregivers_for_life = Dispensary.create(name: "Caregivers for Life Recreational Center", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-herbs4you = Dispensary.create(name: "Herbs4you", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-sweet_leaf = Dispensary.create(name: "Sweet Leaf", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-the_herbal_cure = Dispensary.create(name: "The Herbal Cure", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-trenchtown_medical_marijuana_center = Dispensary.create(name: "Trenchtown Medical Marijuana Center", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-green_man_cannabis_sf_street = Dispensary.create(name: "Green Man Cannabis", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-infinite_wellness_center = Dispensary.create(name: "Infinite Wellness Center", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-denver_relief = Dispensary.create(name: "Denver Releif", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-verde_wellness_center = Dispensary.create(name: "Verde Wellness Center", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-dank_colorado = Dispensary.create(name: "DANK Colorado", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-the_giving_tree_of_denver = Dispensary.create(name: "The Giving Tree of Denver", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-colorado_harvest_center = Dispensary.create(name: "Colorado Harvest Center", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-herbs4you_9th_ave = Dispensary.create(name: "Herbs4you", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-holistic_life = Dispensary.create(name: "Holistic Life", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+lightshade = Dispensary.create(name: "Lightshade", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+timberline = Dispensary.create(name: "Timberline Herbal Clinic", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+firehouse = Dispensary.create(name: "Firehouse Organics", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+standing_akimbo = Dispensary.create(name: "Standing Akimbo", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+livegreen_cannabis = Dispensary.create(name: "Livegreen Cannabis", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+medicine_man = Dispensary.create(name: "Medicine Man", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+tru_cannabis_mile_high = Dispensary.create(name: "Tru Cannabis Mile High", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+metro_cannabis_inc = Dispensary.create(name: "Metro Cannabis Inc.", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+natural_remedies_denver = Dispensary.create(name: "Natural Remedies", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+botanico = Dispensary.create(name: "Botanico", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+caregivers_for_life = Dispensary.create(name: "Caregivers for Life Recreational Center", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+herbs4you = Dispensary.create(name: "Herbs4you", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+sweet_leaf = Dispensary.create(name: "Sweet Leaf", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+the_herbal_cure = Dispensary.create(name: "The Herbal Cure", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+trenchtown_medical_marijuana_center = Dispensary.create(name: "Trenchtown Medical Marijuana Center", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+green_man_cannabis_sf_street = Dispensary.create(name: "Green Man Cannabis", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+infinite_wellness_center = Dispensary.create(name: "Infinite Wellness Center", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+denver_relief = Dispensary.create(name: "Denver Releif", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+verde_wellness_center = Dispensary.create(name: "Verde Wellness Center", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+dank_colorado = Dispensary.create(name: "DANK Colorado", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+the_giving_tree_of_denver = Dispensary.create(name: "The Giving Tree of Denver", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+colorado_harvest_center = Dispensary.create(name: "Colorado Harvest Center", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+herbs4you_9th_ave = Dispensary.create(name: "Herbs4you", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+holistic_life = Dispensary.create(name: "Holistic Life", city_id: denver.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 
 ##boulder
-3d_cannabis_center = Dispensary.create(name: "3D Cannabis Center", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-native_roots_boulder = Dispensary.create(name: "Native Roots", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-sweet_leaf_38th_ave = Dispensary.create(name: "Sweet Leaf", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-ballpark_holistic_dispensary = Dispensary.create(name: "Ballpark Holistic Dispensary", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-chronic_therapy_recreational = Dispensary.create(name: "Chronic Therapy Recreational", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+3d_cannabis_center = Dispensary.create(name: "3D Cannabis Center", city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+native_roots_boulder = Dispensary.create(name: "Native Roots", city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+sweet_leaf_38th_ave = Dispensary.create(name: "Sweet Leaf", city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+ballpark_holistic_dispensary = Dispensary.create(name: "Ballpark Holistic Dispensary", city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+chronic_therapy_recreational = Dispensary.create(name: "Chronic Therapy Recreational", city_id: boulder.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 
 ## aurora
-good_chemistry = Dispensary.create(name: "Good Chemistry", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-herbs4you_aurora = Dispensary.create(name: "Herbs4you", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-tru_cannabis_aurora = Dispensary.create(name: "Tru Cannabis", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-allgreens = Dispensary.create(name: "Allgreens", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-river_rock_store = Dispensary.create(name: "River Rock Store", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+good_chemistry = Dispensary.create(name: "Good Chemistry", city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+herbs4you_aurora = Dispensary.create(name: "Herbs4you", city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+tru_cannabis_aurora = Dispensary.create(name: "Tru Cannabis", city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+allgreens = Dispensary.create(name: "Allgreens", city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+river_rock_store = Dispensary.create(name: "River Rock Store", city_id: aurora.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+
 ## manitou springs
-maggies_farm = Dispensary.create(name: "Maggie's Farm", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: manitou_springs.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-the_clone_store = Dispensary.create(name: "The Clone Store", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: manitou_springs.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-lyons_finest = Dispensary.create(name: "Lyon's Finest", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: manitou_springs.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+maggies_farm = Dispensary.create(name: "Maggie's Farm", city_id: manitou_springs.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+the_clone_store = Dispensary.create(name: "The Clone Store", city_id: manitou_springs.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+lyons_finest = Dispensary.create(name: "Lyon's Finest", city_id: manitou_springs.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+
 ## erie
-at_home_remedies = Dispensary.create(name: "At Home Remedies", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-lucy_sky = Dispensary.create(name: "Lucy Sky", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-ivita_wellness = Dispensary.create(name: "iVita Wellness", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-tru_cannabis = Dispensary.create(name: "Tru Cannabis", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+at_home_remedies = Dispensary.create(name: "At Home Remedies", city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+lucy_sky = Dispensary.create(name: "Lucy Sky", city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+ivita_wellness = Dispensary.create(name: "iVita Wellness", city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+tru_cannabis = Dispensary.create(name: "Tru Cannabis", city_id: erie.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 
 ##lakewood
-natures_best_alternative_medicine = Dispensary.create(name: "Nature's Best Alternative Medicine", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: lakewood.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-herban_medicinals = Dispensary.create(name: "Herban Medicinals", street_name: Faker::Address.street_name, street_address: Faker::Address.street_address, city_id: lakewood.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
-
+natures_best_alternative_medicine = Dispensary.create(name: "Nature's Best Alternative Medicine", city_id: lakewood.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
+herban_medicinals = Dispensary.create(name: "Herban Medicinals", city_id: lakewood.id, phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name, user_id: , photo_id:)
 
 ##strains(name, photo_id)
 white_widow = Strain.create(name: "White Widow", photo_id: )
@@ -119,9 +121,7 @@ super_silver_haze = Strain.create(name: "Super Silver Haze", photo_id: )
 strawberry_cough = Strain.create(name: "Strawberry Cough", photo_id: )
 durban_poison = Strain.create(name: "Durban Poison", photo_id: )
 
-
 ##dispensary_strains(dispensary_id, strain_id, stocked?)
-
 ##only dispensaries in boulder ---- all w/ white_widow, trainwreck, cheese, skywalker
 one = DispensaryStrain.create(dispensary_id: 3d_cannabis_center.id, strain_id: white_widow.id, stocked?: true)
 two = DispensaryStrain.create(dispensary_id: 3d_cannabis_center.id, strain_id: trainwreck.id, stocked?: true)
@@ -157,26 +157,113 @@ thirty_one = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational
 thirty_two = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: super_silver_haze.id, stocked?: true)
 thirty_three = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: tahoe_og_kush.id, stocked?: true)
 
-##user_choices
+##strain ratings(dispensary_strain_id, user_id)
+a = StrainRating.create(dispensary_strain_id: one.id, user_id: kelly.id)
+b = StrainRating.create(dispensary_strain_id: two.id, user_id: ziggy.id)
+c = StrainRating.create(dispensary_strain_id: one.id, user_id: selasie.id)
+d = StrainRating.create(dispensary_strain_id: three.id, user_id: lil_jon.id)
+e = StrainRating.create(dispensary_strain_id: four.id, user_id: lil_jon.id)
+f = StrainRating.create(dispensary_strain_id: five.id, user_id: ziggy.id)
+g = StrainRating.create(dispensary_strain_id: six.id, user_id: selasie.id)
+h = StrainRating.create(dispensary_strain_id: six.id, user_id: kelly.id)
+i = StrainRating.create(dispensary_strain_id: seven.id, user_id: ziggy.id)
+j = StrainRating.create(dispensary_strain_id: eight.id, user_id: selasie.id)
 
+## user_choices (strain_rating_id, choice_id, rating)
+#kelly is rating ____ from ____ for euphoria, happy, pain, focused, dizzy)
+UserChoices.create(strain_rating_id: a.id, choice_id: euphoria.id, rating: 5)
+UserChoices.create(strain_rating_id: a.id, choice_id: happy.id, rating: 9)
+UserChoices.create(strain_rating_id: a.id, choice_id: pain.id, rating: 10)
+UserChoices.create(strain_rating_id: a.id, choice_id: focused.id, rating: 5)
+UserChoices.create(strain_rating_id: a.id, choice_id: dizzy.id, rating: 6)
 
+UserChoices.create(strain_rating_id: b.id, choice_id: stress.id, rating: 10)
+UserChoices.create(strain_rating_id: b.id, choice_id: depression.id, rating: 5)
+UserChoices.create(strain_rating_id: b.id, choice_id: relaxed.id, rating: 8)
+UserChoices.create(strain_rating_id: b.id, choice_id: uplifted.id, rating: 4)
+UserChoices.create(strain_rating_id: b.id, choice_id: euphoric.id, rating: 7)
 
+UserChoices.create(strain_rating_id: c.id, choice_id: shakes.id, rating: 9)
+UserChoices.create(strain_rating_id: c.id, choice_id: insomnia.id, rating: 7)
+UserChoices.create(strain_rating_id: c.id, choice_id: dry_mouth.id, rating: 6)
+UserChoices.create(strain_rating_id: c.id, choice_id: fatigue.id, rating: 5)
+UserChoices.create(strain_rating_id: c.id, choice_id: lazy.id, rating: 9)
 
+UserChoices.create(strain_rating_id: d.id, choice_id: pain.id, rating: 10)
+UserChoices.create(strain_rating_id: d.id, choice_id: glaucoma.id, rating: 10)
+UserChoices.create(strain_rating_id: d.id, choice_id: fatigue.id, rating: 7)
+UserChoices.create(strain_rating_id: d.id, choice_id: focused.id, rating: 5)
+UserChoices.create(strain_rating_id: d.id, choice_id: sleepy.id, rating: 3)
 
+UserChoices.create(strain_rating_id: e.id, choice_id: paranoia.id, rating: 5)
+UserChoices.create(strain_rating_id: e.id, choice_id: giggly.id, rating: 8)
+UserChoices.create(strain_rating_id: e.id, choice_id: happy.id, rating: 6)
+UserChoices.create(strain_rating_id: e.id, choice_id: creative.id, rating: 7)
+UserChoices.create(strain_rating_id: e.id, choice_id: dry_mouth.id, rating: 9)
 
+UserChoices.create(strain_rating_id: f.id, choice_id: insomnia.id, rating: 10)
+UserChoices.create(strain_rating_id: f.id, choice_id: happy.id, rating: 4)
+UserChoices.create(strain_rating_id: f.id, choice_id: fatigue.id, rating: 7)
+UserChoices.create(strain_rating_id: f.id, choice_id: sleepy.id, rating: 8)
+UserChoices.create(strain_rating_id: f.id, choice_id: muscle_spasms.id, rating: 6)
 
+UserChoices.create(strain_rating_id: g.id, choice_id: talkative.id, rating: 6)
+UserChoices.create(strain_rating_id: g.id, choice_id: energetic.id, rating: 7)
+UserChoices.create(strain_rating_id: g.id, choice_id: dry_eyes.id, rating: 5)
+UserChoices.create(strain_rating_id: g.id, choice_id: fatigue.id, rating: 2)
+UserChoices.create(strain_rating_id: g.id, choice_id: euphoric.id, rating: 1)
 
+UserChoices.create(strain_rating_id: h.id, choice_id: lazy.id, rating: 3)
+UserChoices.create(strain_rating_id: h.id, choice_id: focused.id, rating: 5)
+UserChoices.create(strain_rating_id: h.id, choice_id: anxiety.id, rating: 6)
+UserChoices.create(strain_rating_id: h.id, choice_id: pain.id, rating: 9)
+UserChoices.create(strain_rating_id: h.id, choice_id: depression.id, rating: 10)
 
+UserChoices.create(strain_rating_id: i.id, choice_id: happy.id, rating: 8)
+UserChoices.create(strain_rating_id: i.id, choice_id: uplifted.id, rating: 5)
+UserChoices.create(strain_rating_id: i.id, choice_id: depression.id, rating: 7)
+UserChoices.create(strain_rating_id: i.id, choice_id: headache.id, rating: 9)
+UserChoices.create(strain_rating_id: i.id, choice_id: sleepy.id, rating: 3)
 
+UserChoices.create(strain_rating_id: j.id, choice_id: creative.id, rating: 3)
+UserChoices.create(strain_rating_id: j.id, choice_id: lazy.id, rating: 5)
+UserChoices.create(strain_rating_id: j.id, choice_id: dry_mouth.id, rating: 8)
+UserChoices.create(strain_rating_id: j.id, choice_id: fatigue.id, rating: 5)
+UserChoices.create(strain_rating_id: j.id, choice_id: energetic.id, rating: 8)
 
+## choices (name, category)
+  #effects
+euphoric = Choice.create(name: "Euphoric", category: "Effects")
+lazy = Choice.create(name: "Lazy", category: "Effects")
+happy = Choice.create(name: "Happy", category: "Effects")
+uplifted = Choice.create(name: "Uplifted", category: "Effects")
+sleepy = Choice.create(name: "Sleepy", category: "Effects")
+relaxed = Choice.create(name: "Relaxed", category: "Effects")
+giggly = Choice.create(name: "Giggly", category: "Effects")
+energetic = Choice.create(name: "Energetic", category: "Effects")
+focused = Choice.create(name: "Focused", category: "Effects")
+creative = Choice.create(name: "Creative", category: "Effects")
+talkative = Choice.create(name: "Talkative", category: "Effects")
+  #medical
+stress = Choice.create(name: "Stress", categroy: "Medical")
+pain = Choice.create(name: "Pain", category: "Medical")
+anxiety = Choice.create(name: "Anxiety", category: "Medical")
+insomnia = Choice.create(name: "Insomnia", category: "Medical")
+nausea = Choice.create(name: "Nausea", category: "Medical")
+depression = Choice.create(name: "Depression", category: "Medical")
+glaucoma = Choice.create(name: "Glaucoma", category: "Medical")
+muscle_spasms = Choice.create(name: "Muscle Spasms", category: "Medical")
+fatigue = Choice.create(name: "Fatigue", category: "Medical")
+  #negative
+headache = Choice.create(name: "Headache", category: "Negatives")
+dry_mouth = Choice.create(name: "Dry Mouth", category: "Negatives")
+dry_eyes = Choice.create(name: "Dry Eyes", category: "Negatives")
+shakes = Choice.create(name: "Shakes", category: "Negatives")
+paranoia = Choice.create(name: "Paranoia", category: "Negatives")
+dizzy = Choice.create(name: "Dizzy", category: "Negatives")
 
-
-
-
-
-
-
-
+##dispensary ratings (rating, user_id, dispensary_id)
+## notifications
 
 
 
