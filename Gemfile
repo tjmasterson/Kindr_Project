@@ -74,6 +74,4 @@ group :development, :test do
 
   # User bettererros to display more speciic errors in browser
   gem 'better_errors'
-
 end
-
