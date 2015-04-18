@@ -11,4 +11,8 @@ RSpec.describe UserChoice, type: :model do
     expect(choice_1).to belong_to :choice
   end
 
+  it 'should be associated with dispensary_strains' do
+    expect(choice_1).to belong_to :dispensary_strain
+  end
+
 end
