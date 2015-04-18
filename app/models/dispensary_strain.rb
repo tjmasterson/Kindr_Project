@@ -22,7 +22,11 @@ class DispensaryStrain < ActiveRecord::Base
   delegate :average_ratings, to: :user_choices
 
   def pretty_average
-    self.average_ratings.map { |choice, average| choice.sort_by(average)} #{average}" }
+    sorted = {}
+    self.average_ratings.each do  |choice, average|
+      sorted[choice.name] = average.to_f
+    end
+    return sorted.sort_by{|key, value| value}
   end
 
 end
