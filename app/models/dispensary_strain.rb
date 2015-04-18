@@ -12,8 +12,21 @@
 
 class DispensaryStrain < ActiveRecord::Base
   has_many :strain_ratings
-  has_many :voters, through: :strain_ratings, source: :user
+  has_many :user_choices, through: :strain_ratings
+  has_many :choices, through: :user_choices
+  has_many :voters, through: :strain_ratings, class_name: "User"
   has_many :notifications
   belongs_to :dispensary
   belongs_to :strain
+
+  delegate :average_ratings, to: :user_choices
+
+  def pretty_average
+    sorted = {}
+    self.average_ratings.each do  |choice, average|
+      sorted[choice.name] = average.to_f
+    end
+    return sorted.sort_by{|key, value| value}
+  end
+
 end

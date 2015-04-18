@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150417001357) do
   create_table "notifications", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "dispensary_strain_id"
+    t.integer  "dispensary_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -87,9 +88,10 @@ ActiveRecord::Schema.define(version: 20150417001357) do
   create_table "user_choices", force: :cascade do |t|
     t.integer  "strain_rating_id"
     t.integer  "choice_id"
+    t.integer  "dispensary_strain_id"
     t.integer  "rating"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "users", force: :cascade do |t|
