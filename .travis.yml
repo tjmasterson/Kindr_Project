@@ -9,4 +9,6 @@ before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
 
-script: bundle exec rake spec
+script:
+
+-bundle exec rake spec
