@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+<%= @disp_strain.inspect %>
+
+<form_for @strain_rating>
+    <ul>
+      <%@choices.each do |f| %>
+        <li>
+            <%= f.name %>
+
+        </li>
+      <%end%>
+    </ul>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<%= render partial: 'user_choices/form', locals: {
+  dispensary_strain: @disp_strain} %>

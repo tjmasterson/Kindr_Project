@@ -1,6 +1,6 @@
 
-<%= form_for(@strain_rating, format: :json) do |f| %>
-  <%= f.label :dispensary_strains %>
-<%= f.submit %>
-
+<%= form_for(@strain_rating) do |f| %>
+  <%= f.label :strain_rating %>
+  <%= f.submit %>
+  <%= button_to @strain_rating %>
 <%end%>

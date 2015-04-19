@@ -1,9 +1,5 @@
 class StrainRatingsController < ApplicationController
 
-
-
-
-
   def new
     @strain_rating = StrainRating.new
   end
