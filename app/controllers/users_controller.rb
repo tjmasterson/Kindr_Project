@@ -32,16 +32,16 @@ class UsersController < ApplicationController
       session.delete(:user_id)
       puts "Session deleted"
     end
+
     if request.xhr?
       render :partial => 'layouts/logout', layout: false
     end
   end
 
   private
+
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
-  def index
-    origin/controllers
-  end
+
 end

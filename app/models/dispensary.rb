@@ -22,4 +22,8 @@ class Dispensary < ActiveRecord::Base
   has_many :notifications, through: :dispensary_strains
   belongs_to :owner, class_name: "User", foreign_key: :user_id
   belongs_to :city
+
+  def self.six_rand_dispensaries_json
+    limit(6).order("RANDOM()").to_json
+  end
 end
