@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   resources :user_choices
   resources :photos
   resources :strain_ratings
-  resources :dispensary_ratings
   resources :strains
   resources :users
 
+
   resources :dispensaries do
-    resources :dispensary_strains
+    resources :dispensary_ratings
+    resources :dispensary_srtains
   end
 
   get '/login' => 'users#login'
@@ -18,7 +19,13 @@ Rails.application.routes.draw do
   get '/signup' => 'users#signup'
   post '/signup' => 'users#create'
 
+
+  get 'dispensaries/random_dispensaries' => 'dispensaries#random_dispensaries'
+
+
+
   # You can have the root of your site routed with "root"
   root 'users#index'
 
- end
+
+end
