@@ -1,5 +1,7 @@
 class DispensariesController < ApplicationController
   def index
+    dispensaries = Dispensary.all.to_json
+    render json: dispensaries
   end
 
   def random_dispensaries
