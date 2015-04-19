@@ -6,9 +6,9 @@ class DispensariesController < ApplicationController
   end
 
   def show
-    dispensary = Dispensary.find(params[:id])
-    dispensary_strains = dispensary.dispensary_strains.to_json
-    render json: dispensary_strains
+    # dispensary = Dispensary.find(params[:id])
+    # dispensary_strains = dispensary.dispensary_strains.to_json
+    # render json: dispensary_strains
   end
 
   def random_dispensaries
