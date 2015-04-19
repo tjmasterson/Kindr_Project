@@ -16,7 +16,10 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
       get 'dispensaries/random_dispensaries' => 'dispensaries#random_dispensaries'
-
+        get '/login' => 'users#login'
+        put '/login' => 'users#update'
+        get '/signup' => 'users#signup'
+        post '/signup' => 'users#create'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -26,7 +29,7 @@ Rails.application.routes.draw do
   # Example resource route with options:
     resources :dispensaries do
         resources :dispensary_ratings
-        resources :dispensary_srtains
+        resources :dispensary_strains
     end
 
   # Example resource route with sub-resources:
