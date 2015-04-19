@@ -1,5 +1,5 @@
 ##users(name, email, password)
-# 50.times do User.create(username: Faker::Name.name, password_hash: Faker::Internet.password) end
+# 50.times do User.create(username: Faker::Name.name, password: Faker::Internet.password) end
 
 kelly = User.create(username: "Kelly Malone", email: "kelly@gmail.com", password: Faker::Internet.password)
 ziggy = User.create(username: "Ziggy Marley", email: "jahrastafari@themosthigh.com", password: Faker::Internet.password)
