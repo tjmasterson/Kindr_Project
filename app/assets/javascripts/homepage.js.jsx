@@ -3,10 +3,13 @@ var DispensaryBox = React.createClass({
     $.ajax({
       url: this.props.url,
       dataType: 'json',
-      success: function(data) {
-        this.setState({data: data});
+      success: function(response) {
+        console.log(response)
+        console.log("yes")
+        this.setState({data: response});
       }.bind(this),
       error: function(xhr, status, err) {
+        console.log("no")
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
@@ -15,13 +18,12 @@ var DispensaryBox = React.createClass({
     return {data: []};
   },
   componentDidMount: function() {
-    this.loadCommentsFromServer();
-    setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+    this.loadDispensariesFromServer();
+    setInterval(this.loadDispensariesFromServer, this.props.pollInterval);
   },
   render: function() {
     return (
       <div className="dispensaryBox">
-        <h1>It worked!</h1>
         <DispensaryList data={this.state.data} />
       </div>
     );
@@ -30,11 +32,10 @@ var DispensaryBox = React.createClass({
 
 var DispensaryList = React.createClass({
   render: function() {
-    console.log("hi")
+     console.log("hi");
     var dispensaryNodes = this.props.data.map(function(dispensary){
-      return (
-        <Dispensary name={dispensary.name} />
-        );
+       console.log("hii");
+      return (<Dispensary name={dispensary.name} /> );
     });
     return (
       <div className="dispensaryList">
@@ -47,8 +48,10 @@ var DispensaryList = React.createClass({
 var Dispensary = React.createClass({
   render: function() {
     return (
+     <div class="col-sm-4 col-xs-6">
       <div className="dispensary_item">
-      <div className="dispensary_name">{this.props.name}</div>
+        <p>{this.props.name}</p><p></p>
+        <div className="panel-thumbnail"><a href="#" title="Renovations"><img src="//placehold.it/600x400/444/F8F8F8" className="img-responsive"/></a></div>
       </div>
       );
   }
@@ -56,7 +59,7 @@ var Dispensary = React.createClass({
 
 $(document).ready(function(){
 React.render(
-  <DispensaryBox url="dispensaries/random_dispensaries" pollInterval={10000} />, document.getElementById('panel-body')
+  <DispensaryBox url="/dispensaries/random_dispensaries" pollInterval={10000} />, document.getElementById('random_dispensaries')
   );
 });
 
