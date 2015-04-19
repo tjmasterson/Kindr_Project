@@ -30,6 +30,7 @@ var DispensaryBox = React.createClass({
 
 var DispensaryList = React.createClass({
   render: function() {
+    console.log("hi")
     var dispensaryNodes = this.props.data.map(function(dispensary){
       return (
         <Dispensary name={dispensary.name} />
@@ -47,7 +48,7 @@ var Dispensary = React.createClass({
   render: function() {
     return (
       <div className="dispensary_item">
-      <div className="dispensary_name">Name:{this.props.name}</div>
+      <div className="dispensary_name">{this.props.name}</div>
       </div>
       );
   }
