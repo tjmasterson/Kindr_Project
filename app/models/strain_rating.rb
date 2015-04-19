@@ -14,4 +14,6 @@ class StrainRating < ActiveRecord::Base
   has_many :choices, through: :user_choices
   belongs_to :dispensary_strain
   belongs_to :voter, class_name: "User", foreign_key: :user_id
+
+  accepts_nested_attributes_for :user_choices
 end
