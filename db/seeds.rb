@@ -1,10 +1,10 @@
 ##users(name, email, password)
-50.times do User.create(username: Faker::Name.name) end
+# 50.times do User.create(username: Faker::Name.name, password: Faker::Internet.password) end
 
-kelly = User.create(username: "Kelly Malone", email: "kelly@gmail.com")
-ziggy = User.create(username: "Ziggy Marley", email: "jahrastafari@themosthigh.com")
-selasie = User.create(username: "Haile Selasie", email: "hisimperialmajesty@gmail.com")
-lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com")
+kelly = User.create(username: "Kelly Malone", email: "kelly@gmail.com", password: Faker::Internet.password)
+ziggy = User.create(username: "Ziggy Marley", email: "jahrastafari@themosthigh.com", password: Faker::Internet.password)
+selasie = User.create(username: "Haile Selasie", email: "hisimperialmajesty@gmail.com", password: Faker::Internet.password)
+lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com", password: Faker::Internet.password)
 
 ##cities(name, state)
 golden = City.new(name: "Golden", state: "Colorado")
