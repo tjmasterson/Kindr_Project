@@ -11,16 +11,16 @@ Rails.application.routes.draw do
 
   resources :dispensaries do
     resources :dispensary_ratings
-    resources :dispensary_srtains
+    resources :dispensary_strains
   end
-
+  get '/dispensaries/random_dispensaries' => 'dispensaries#random_dispensaries'
   get '/login' => 'users#login'
   put '/login' => 'users#update'
   get '/signup' => 'users#signup'
   post '/signup' => 'users#create'
 
 
-  get 'dispensaries/random_dispensaries' => 'dispensaries#random_dispensaries'
+
 
 
 
