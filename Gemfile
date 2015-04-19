@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
@@ -74,7 +74,7 @@ group :development, :test do
   gem 'shoulda-matchers'
 
   # User bettererros to display more speciic errors in browser
-  # gem 'better_errors'
+  gem 'better_errors'
 
 end
 
