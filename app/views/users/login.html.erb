@@ -1,0 +1,30 @@
+
+
+
+<div class="container">
+  <div class="form-box"
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+
+      <%= form_for(:session, url: login_path, method: "put", class: "form-control") do |f| %>
+          <%=f.label :email %>
+          <%=f.email_field :email, class: "form-control"%>
+          <%=f.label :password %>
+          <%=f.password_field :password, class: "form-control"%>
+
+
+
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+
+          <%=f.submit "Login", class: "btn btn-lg btn-primary btn-block" %>
+        <% end %>
+
+
+      </form>
+    </div>
+  </div>

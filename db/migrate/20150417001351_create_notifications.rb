@@ -3,7 +3,7 @@ class CreateNotifications < ActiveRecord::Migration
     create_table :notifications do |t|
       t.references :user
       t.references :dispensary_strain
-
+      t.references :dispensary
 
       t.timestamps null: false
     end
