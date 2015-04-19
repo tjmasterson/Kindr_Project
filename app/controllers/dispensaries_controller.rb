@@ -1,6 +1,10 @@
 class DispensariesController < ApplicationController
 
+
   def index
+  end
+
+  def index_json
     dispensaries = Dispensary.all.to_json
     render json: dispensaries
   end
