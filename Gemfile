@@ -74,7 +74,7 @@ group :development, :test do
   gem 'shoulda-matchers'
 
   # User bettererros to display more speciic errors in browser
-  gem 'better_errors'
+  # gem 'better_errors'
 
 end
 
