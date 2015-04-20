@@ -15,11 +15,13 @@ class User < ActiveRecord::Base
   has_many :dispensaries
   has_many :user_choices
   has_many :choices, through: :user_choices
+  has_many :notifications
 
   validates :username, :password, :email, presence: true
   validates :username, :email, uniqueness: true
   validates :email, format: { with: /\w*@\w*.\w*/, message: "Must enter valid email"}
 
+  accepts_nested_attributes_for :notifications
 
   def password
     @password ||= Password.new(self.password_hash)
