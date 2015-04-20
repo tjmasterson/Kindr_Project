@@ -1,11 +1,9 @@
-var DispensaryBox = React.createClass({
-  loadDispensariesFromServer: function() {
+var StrainBox = React.createClass({
+  loadStrainsFromServer: function() {
     $.ajax({
       url: this.props.url,
       dataType: 'json',
       success: function(response) {
-        console.log(response)
-        console.log("yes")
         this.setState({data: response});
       }.bind(this),
       error: function(xhr, status, err) {
@@ -17,15 +15,13 @@ var DispensaryBox = React.createClass({
     return {data: []};
   },
   componentDidMount: function() {
-    this.loadDispensariesFromServer();
-    setInterval(this.loadDispensariesFromServer, this.props.pollInterval);
+    this.loadStrainFromServer();
   },
   render: function() {
     return (
       <div className="row">
-      <DispensaryList data={this.state.data} />
+      <StrainList data={this.state.data} />
       </div>
       );
   }
 });
-
