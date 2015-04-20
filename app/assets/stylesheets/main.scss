@@ -60,7 +60,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 #myCarousel  .item {
-  height: 600px;
+  height: 400px;
   background-color:#bbb;
 }
 #myCarousel img {
@@ -206,7 +206,7 @@ h1 {
 
 section {
   color: #ffffff;
-  min-height: 400px;
+  min-height: 320px;
   height: auto !important;
   height: 100%;
   padding-top:100px;
