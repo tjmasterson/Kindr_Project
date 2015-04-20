@@ -1,34 +1,70 @@
-<!DOCTYPE html>
-<html>
-<<<<<<< HEAD
-  <head>
-    <title>Kindr</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-=======
-<head>
-  <title>Kindr Project</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
->>>>>>> origin/dispensary_index
-<body>
+<!-- Wrap all page content here -->
+<div id="wrap">
 
-<%= yield %>
+  <header class="masthead">
+    <div class="logo">Kindr Project</div>
+  </header>
+
+
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a href="/">Home</a></li>
+          <li><a href="/dispensaries">Dispensaries</a></li>
+          <li class="dropdown">
+            <a href="#section3" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Academic</a></li>
+              <li><a href="#">Commercial</a></li>
+              <li><a href="#">Financial</a></li>
+              <li><a href="#">Interior Design</a></li>
+              <li><a href="#">Medical</a></li>
+              <li><a href="#">Religious</a></li>
+            </ul>
+          </li>
+          <li><a href="/strains">Strains</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+  </div><!--/.navbar -->
+
+  <!-- Begin page content -->
+  <!--/container-->
+
+  <!-- <div class="divider"></div> -->
+
+  <section class="bg-3">
+    <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Search Dispensaries or Strains...</h2></div>
+  </section>
+
+  <!-- <div class="divider" id="section3"></div> -->
+
+  <div class="bg-4">
+    <div class="container" id="all_strains">
+    </div><!--/container-->
+  </div>
+
   <div class="row">
 
     <hr>
     <div class="col-sm-3 pull-right">
 
       <address id="address_dispensaries_index">
-        Kindr Project, Inc.<br>
+        The Firm, Inc.<br>
         <span id="map-input">
-          420 Main Street<br>
-          Chicago, IL 60614</span><br>
-          P: (555) 555-5555
+          1500 Main Street<br>
+          Springfield, MA 01115</span><br>
+          P: (413) 700-5999
         </address>
 
         <address>
@@ -37,7 +73,7 @@
         </address>
       </div>
 
-      <div class="col-sm-8 col-sm-offset-1">
+      <div class="col-sm-7 col-sm-offset-1">
 
         <div class="row form-group">
           <div class="col-md-12">
@@ -90,7 +126,7 @@
 
 <div id="footer">
   <div class="container">
-    <p class="text-muted">Copyright ©2015 Kindr Project, Inc.</p>
+    <p class="text-muted">Copyright ©2014 ACME, Inc.</p>
   </div>
 </div>
 
@@ -124,6 +160,3 @@
     </div>
   </div>
 </div>
-</body>
-</html>
-7890-
