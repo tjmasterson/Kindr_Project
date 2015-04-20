@@ -3,7 +3,16 @@ require 'rails_helper'
 RSpec.describe Choice, type: :model do
   let(:choice) { Choice.new(name: "happy", category: "effects") }
 
-  it 'should belong to a strain rating' do
+
+  it 'should have a name' do
+    expect(choice.name).to be_a String
+  end
+
+  it 'should have a category field' do
+
+  end
+
+  it 'should have many user choices' do
     expect(choice).to have_many :user_choices
   end
 

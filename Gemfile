@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Faker for seeding database
 gem 'faker', '~> 1.4.3'
+gem 'capybara'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
