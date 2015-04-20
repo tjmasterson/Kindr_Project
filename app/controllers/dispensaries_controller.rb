@@ -17,7 +17,9 @@ class DispensariesController < ApplicationController
   end
 
   def show
-
+    @dispensary = Dispensary.find(params[:id])
+    @dispensary_strains = @dispensary.dispensary_strains
+    puts @dispensary_strains
   end
 
   private
