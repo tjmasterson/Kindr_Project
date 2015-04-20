@@ -1,21 +1,9 @@
 ##users(name, email, password)
-# 50.times do User.create(username: Faker::Name.name, password: Faker::Internet.password) end
 
 kelly = User.create(username: "Kelly Malone", email: "kelly@gmail.com", password: Faker::Internet.password)
 ziggy = User.create(username: "Ziggy Marley", email: "jahrastafari@themosthigh.com", password: Faker::Internet.password)
 selasie = User.create(username: "Haile Selasie", email: "hisimperialmajesty@gmail.com", password: Faker::Internet.password)
 lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com", password: Faker::Internet.password)
-
-##cities(name, state)
-golden = City.new(name: "Golden", state: "Colorado")
-steamboat = City.new(name: "Steamboat Springs", state: "Colorado")
-buena_vista = City.new(name: "Buena Vista", state: "Colorado")
-denver = City.new(name: "Denver", state: "Colorado")
-boulder = City.new(name: "Boulder", state: "Colorado")
-aurora = City.new(name: "Aurora", state: "Colorado")
-manitou_springs = City.new(name: "Manitou Springs", state: "Colorado")
-erie = City.new(name: "Erie", state: "Colorado")
-lakewood = City.new(name: "Lakewood", state: "Colorado")
 
 ##dispensaries(name, address, city, zip, website, photo) ---addresses need doublechecking
 ##--missing data for user_id and photo_id
@@ -124,6 +112,7 @@ durban_poison = Strain.create(name: "Durban Poison")
 ##dispensary_strains(dispensary_id, strain_id, stocked?)
 ##only dispensaries in boulder ---- all w/ white_widow, trainwreck, cheese, skywalker
 
+one = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: white_widow.id)
 two = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: trainwreck.id)
 three = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: cheese.id)
 four = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: skywalker.id)
@@ -157,21 +146,15 @@ thirty_one = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational
 thirty_two = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: super_silver_haze.id)
 thirty_three = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: tahoe_og_kush.id)
 
-##strain ratings(dispensary_strain_id, user_id)
-a = StrainRating.create(dispensary_strain_id: two.id, user_id: kelly.id)
-b = StrainRating.create(dispensary_strain_id: two.id, user_id: ziggy.id)
-c = StrainRating.create(dispensary_strain_id: eight.id, user_id: selasie.id)
-d = StrainRating.create(dispensary_strain_id: three.id, user_id: lil_jon.id)
-e = StrainRating.create(dispensary_strain_id: four.id, user_id: lil_jon.id)
-f = StrainRating.create(dispensary_strain_id: five.id, user_id: ziggy.id)
-g = StrainRating.create(dispensary_strain_id: six.id, user_id: selasie.id)
-h = StrainRating.create(dispensary_strain_id: six.id, user_id: kelly.id)
-i = StrainRating.create(dispensary_strain_id: seven.id, user_id: ziggy.id)
-j = StrainRating.create(dispensary_strain_id: eight.id, user_id: selasie.id)
+
+a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
+     thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
+     twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
+     thirty,thirty_one, thirty_two, thirty_three]
 
 ## choices (name, category)
-  #effects
 
+  #effects
 euphoric = Choice.create(name: "Euphoric", category: "Effects")
 lazy = Choice.create(name: "Lazy", category: "Effects")
 happy = Choice.create(name: "Happy", category: "Effects")
@@ -202,74 +185,9 @@ paranoia = Choice.create(name: "Paranoia", category: "Negatives")
 dizzy = Choice.create(name: "Dizzy", category: "Negatives")
 
 ## user_choices (strain_rating_id, choice_id, rating)
-#kelly is rating ____ from ____ for euphoria, happy, pain, focused, dizzy)
-UserChoice.create(strain_rating_id: a.id, choice_id: euphoric.id, rating: 5)
-UserChoice.create(strain_rating_id: a.id, choice_id: happy.id, rating: 9)
-UserChoice.create(strain_rating_id: a.id, choice_id: pain.id, rating: 10)
-UserChoice.create(strain_rating_id: a.id, choice_id: focused.id, rating: 5)
-UserChoice.create(strain_rating_id: a.id, choice_id: dizzy.id, rating: 6)
 
-UserChoice.create(strain_rating_id: b.id, choice_id: stress.id, rating: 10)
-UserChoice.create(strain_rating_id: b.id, choice_id: depression.id, rating: 5)
-UserChoice.create(strain_rating_id: b.id, choice_id: relaxed.id, rating: 8)
-UserChoice.create(strain_rating_id: b.id, choice_id: uplifted.id, rating: 4)
-UserChoice.create(strain_rating_id: b.id, choice_id: euphoric.id, rating: 7)
+ choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
 
-UserChoice.create(strain_rating_id: c.id, choice_id: shakes.id, rating: 9)
-UserChoice.create(strain_rating_id: c.id, choice_id: insomnia.id, rating: 7)
-UserChoice.create(strain_rating_id: c.id, choice_id: dry_mouth.id, rating: 6)
-UserChoice.create(strain_rating_id: c.id, choice_id: fatigue.id, rating: 5)
-UserChoice.create(strain_rating_id: c.id, choice_id: lazy.id, rating: 9)
-
-UserChoice.create(strain_rating_id: d.id, choice_id: pain.id, rating: 10)
-UserChoice.create(strain_rating_id: d.id, choice_id: glaucoma.id, rating: 10)
-UserChoice.create(strain_rating_id: d.id, choice_id: fatigue.id, rating: 7)
-UserChoice.create(strain_rating_id: d.id, choice_id: focused.id, rating: 5)
-UserChoice.create(strain_rating_id: d.id, choice_id: sleepy.id, rating: 3)
-
-UserChoice.create(strain_rating_id: e.id, choice_id: paranoia.id, rating: 5)
-UserChoice.create(strain_rating_id: e.id, choice_id: giggly.id, rating: 8)
-UserChoice.create(strain_rating_id: e.id, choice_id: happy.id, rating: 6)
-UserChoice.create(strain_rating_id: e.id, choice_id: creative.id, rating: 7)
-UserChoice.create(strain_rating_id: e.id, choice_id: dry_mouth.id, rating: 9)
-
-UserChoice.create(strain_rating_id: f.id, choice_id: insomnia.id, rating: 10)
-UserChoice.create(strain_rating_id: f.id, choice_id: happy.id, rating: 4)
-UserChoice.create(strain_rating_id: f.id, choice_id: fatigue.id, rating: 7)
-UserChoice.create(strain_rating_id: f.id, choice_id: sleepy.id, rating: 8)
-UserChoice.create(strain_rating_id: f.id, choice_id: muscle_spasms.id, rating: 6)
-
-UserChoice.create(strain_rating_id: g.id, choice_id: talkative.id, rating: 6)
-UserChoice.create(strain_rating_id: g.id, choice_id: energetic.id, rating: 7)
-UserChoice.create(strain_rating_id: g.id, choice_id: dry_eyes.id, rating: 5)
-UserChoice.create(strain_rating_id: g.id, choice_id: fatigue.id, rating: 2)
-UserChoice.create(strain_rating_id: g.id, choice_id: euphoric.id, rating: 1)
-
-UserChoice.create(strain_rating_id: h.id, choice_id: lazy.id, rating: 3)
-UserChoice.create(strain_rating_id: h.id, choice_id: focused.id, rating: 5)
-UserChoice.create(strain_rating_id: h.id, choice_id: anxiety.id, rating: 6)
-UserChoice.create(strain_rating_id: h.id, choice_id: pain.id, rating: 9)
-UserChoice.create(strain_rating_id: h.id, choice_id: depression.id, rating: 10)
-
-UserChoice.create(strain_rating_id: i.id, choice_id: happy.id, rating: 8)
-UserChoice.create(strain_rating_id: i.id, choice_id: uplifted.id, rating: 5)
-UserChoice.create(strain_rating_id: i.id, choice_id: depression.id, rating: 7)
-UserChoice.create(strain_rating_id: i.id, choice_id: headache.id, rating: 9)
-UserChoice.create(strain_rating_id: i.id, choice_id: sleepy.id, rating: 3)
-
-UserChoice.create(strain_rating_id: j.id, choice_id: creative.id, rating: 3)
-UserChoice.create(strain_rating_id: j.id, choice_id: lazy.id, rating: 5)
-UserChoice.create(strain_rating_id: j.id, choice_id: dry_mouth.id, rating: 8)
-UserChoice.create(strain_rating_id: j.id, choice_id: fatigue.id, rating: 5)
-UserChoice.create(strain_rating_id: j.id, choice_id: energetic.id, rating: 8)
-
-
-
-##dispensary ratings (rating, user_id, dispensary_id)
-## notifications
-
-
-
-
-
-
+200.times do
+  UserChoice.create(dispensary_strain_id: a.sample.id, choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
+end

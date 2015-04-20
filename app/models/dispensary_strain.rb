@@ -11,11 +11,9 @@
 #
 
 class DispensaryStrain < ActiveRecord::Base
-  has_many :strain_ratings
-  has_many :user_choices, through: :strain_ratings
+  has_many :user_choices
   has_many :choices, through: :user_choices
-  has_many :voters, through: :strain_ratings, class_name: "User"
-  has_many :notifications
+  has_many :voters, through: :user_choices, class_name: "User"
   belongs_to :dispensary
   belongs_to :strain
 

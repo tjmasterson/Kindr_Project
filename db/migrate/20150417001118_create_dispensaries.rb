@@ -6,7 +6,7 @@ class CreateDispensaries < ActiveRecord::Migration
       t.string :website
       t.references :user
       t.references :photo
-      t.references :city
+
 
       t.timestamps null: false
     end
