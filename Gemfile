@@ -48,6 +48,9 @@ gem 'annotate', '~> 2.6.6'
 # Use React for JS framework and views
 gem 'react-rails', '~> 1.0'
 
+# Underscore for templates
+gem 'underscore-rails'
+
 # possible gems...
 # geocoder for location based associations
 # dashing for creating dashboards
