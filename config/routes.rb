@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   get '/strains/strains_index_json' => 'strains#strains_index_json'
 
   resources :strains
-  resources :users
+  resources :users do
+    resources :notifications
+  end
 
   resources :dispensaries do
     resources :dispensary_ratings
