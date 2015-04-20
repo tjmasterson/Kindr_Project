@@ -1,11 +1,8 @@
 class StrainsController < ApplicationController
 
-  def index
 
-  end
-
-  def index_strains
-    strains = Strains.all.to_json
+  def strains_index_json
+    strains = Strain.all.to_json
     render json: strains
   end
 

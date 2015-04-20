@@ -4,15 +4,13 @@ class DispensariesController < ApplicationController
   def index
   end
 
-  def index_json
+  def dispensaries_index_json
     dispensaries = Dispensary.all.to_json
     render json: dispensaries
   end
 
   def show
-    # dispensary = Dispensary.find(params[:id])
-    # dispensary_strains = dispensary.dispensary_strains.to_json
-    # render json: dispensary_strains
+
   end
 
   def random_dispensaries

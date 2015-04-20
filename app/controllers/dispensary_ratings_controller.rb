@@ -1,2 +1,0 @@
-class DispensaryRatingsController < ApplicationController
-end
