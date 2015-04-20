@@ -2,6 +2,7 @@ class DispensariesController < ApplicationController
 
 
   def index
+    @dispensaries = Dispensary.all
   end
 
   def dispensaries_index_json
@@ -9,13 +10,14 @@ class DispensariesController < ApplicationController
     render json: dispensaries
   end
 
-  def show
-
-  end
 
   def random_dispensaries
     dispensaries = Dispensary.six_rand_dispensaries_json
     render json: dispensaries
+  end
+
+  def show
+
   end
 
   private
