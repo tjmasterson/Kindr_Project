@@ -49,4 +49,4 @@ var List = React.createClass({
   }
 });
 
-React.renderComponent(<FilteredList/>, document.getElementById('mount-point'));
+// React.renderComponent(<FilteredList/>, document.getElementById('mount-point'));

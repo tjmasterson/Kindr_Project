@@ -4,14 +4,18 @@
 
 <head>
   <title>Kindr Project</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+
+
+
+<body class="<%= params[:controller] %> <%= params[:action] %>">origin/dev
 
 <%= yield %>
+
   <div class="row">
 
     <hr>
@@ -20,7 +24,7 @@
       <address id="address_dispensaries_index">
         Kindr Project, Inc.<br>
         <span id="map-input">
-          420 Main Street<br>
+          1212 Main Street<br>
           Chicago, IL 60614</span><br>
           P: (555) 555-5555
         </address>
