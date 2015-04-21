@@ -188,6 +188,6 @@ dizzy = Choice.create(name: "Dizzy", category: "Negatives")
 
  choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
 
-10000.times do
+1000.times do
   UserChoice.create(dispensary_strain_id: a.sample.id, choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
 end
