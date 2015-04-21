@@ -218,8 +218,8 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
-  factory_girl_rails
   d3-rails
+  factory_girl_rails
   faker (~> 1.4.3)
   hirb
   jbuilder (~> 2.0)

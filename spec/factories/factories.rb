@@ -12,12 +12,12 @@ FactoryGirl.define do
     password "password"
   end
 
-  ##logged in user
-  factory :logged_in, class: User do
-    username "maurice"
+
+  factory :current_user, class: User do
+    username "Smoky the Bear"
     email "smoke@weed.edu"
     password "smokeweed"
-    after(:build) { }
+    after(:build) { |current_user| }
   end
 
   factory :photo do
