@@ -1,0 +1,13 @@
+
+<%= form_for @dispensary_strain, url: {action: "create_user_choice_collection", controller: "users"} do |f| %>
+  <% @choices.each do |choice| %>
+    <h4><%= f.label choice.name%></h4>
+
+    <%= f.fields_for @dispensary_strain.user_choices.new do |user_choice| %>
+      <%= user_choice.collection_radio_buttons :rating, Choice.first(10), :id, :id, options: {choice_id: choice.id} %>
+      <br>
+    <% end %>
+  <% end %>
+<% end %>
+
+

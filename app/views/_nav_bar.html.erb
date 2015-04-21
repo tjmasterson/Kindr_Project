@@ -23,10 +23,12 @@
             </ul>
           </li>
           <li><a id="all_strains_link" href="/strains">Strains</a></li>
-
+          <% if logged_in? %>
+            <li><%= link_to "Logout", logout_path, id:"logout_link" %></li>
+          <% else %>
             <li><%= link_to "Sign Up", signup_path, id:"signup_link", remote: true %></li>
             <li><%= link_to "Login Up", login_path, id:"login_link", remote: true %></li>
-
+          <% end %>
         </ul>
       </div><!--/.nav-collapse -->
     </div><!--/.container -->

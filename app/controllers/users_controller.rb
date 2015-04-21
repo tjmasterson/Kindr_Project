@@ -43,6 +43,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def new_user_choice_collection
+
+  end
+
+  def create_user_choice_collection
+
+  end
+
   private
 
   def user_params

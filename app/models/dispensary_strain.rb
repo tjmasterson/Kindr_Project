@@ -12,6 +12,7 @@
 
 class DispensaryStrain < ActiveRecord::Base
   has_many :user_choices
+  accepts_nested_attributes_for :user_choices
   has_many :choices, through: :user_choices
   has_many :voters, through: :user_choices, class_name: "User"
   belongs_to :dispensary
