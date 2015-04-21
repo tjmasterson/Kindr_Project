@@ -27,8 +27,8 @@ RSpec.describe Dispensary, type: :model do
       expect(dispensary.dispensary_strains).not_to be nil
     end
 
-    it 'has many dispensary strains that users have rated' do
-      expect(dispensary.dispensary_strains.user_choices).to_not be nil
-    end
+    # it 'has many dispensary strains that users have rated' do
+    #   expect(dispensary_strain.user_choices).to_not be nil
+    # end
   end
 

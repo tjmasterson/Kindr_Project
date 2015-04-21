@@ -2,38 +2,38 @@ require 'rails_helper'
 
   describe "User" do
     user = FactoryGirl.build(:user)
-
     it 'is not nil object' do
         expect(user).to_not be nil
       end
 
-    context "User creates new account with authentication credentials" do
+    context "User creates new account with credentials" do
       it 'has username' do
         expect(user.username).to_not be nil
       end
       it 'has properly formatted email address' do
-        should allow_value("who@cares.com")
+        expect(user.email).to match(/\w*@\w*.\w*/)
       end
       it 'does not have improperly formatted email address' do
         expect(FactoryGirl.build(:user, email: "5com")).to_not be_valid
       end
-      # it 'has secure password' do
-      #   expect(user.password).to have_secure_password
-      # end
-
       it 'has secure password (does not store passwords as unecrypted strings)' do
-        expect(user.password).to_not eq "password"
+        expect(user.password).to_not be "password"
       end
     end
+
+    context "When user is owner of dispensary" do
+      owner = FactoryGirl.build(:owner)
+      xit 'owner is able to create a new dispensary page' do
+      end
+      xit 'owner can upload pictures of a dispensary' do
+      end
+      xit 'owner can view all ratings of its own dispensary strains' do
+      end
+      xit 'owner can view all ratings of its own dispensary' do
+      end
+    end
+
   end
-
-  # context "owner of dispensary signs up for privileged user access" do
-  #   it 'is owner of one or more dispensaries' do
-  #     expect(chase).to have_many :dispensaries
-  #   end
-
-
-  # end
 
 
 

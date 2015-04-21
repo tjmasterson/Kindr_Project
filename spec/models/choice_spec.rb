@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Choice, type: :model do
   let(:choice) { Choice.new(name: "happy", category: "effects") }
 
-
   it 'should have a name' do
     expect(choice.name).to be_a String
   end
@@ -23,5 +22,7 @@ RSpec.describe Choice, type: :model do
   it 'should be used on dispensary strains' do
     expect(choice).to have_many :dispensary_strains
   end
+
+  other = Fa
 
 end

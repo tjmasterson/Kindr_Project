@@ -5,7 +5,7 @@ FactoryGirl.define do
     username "factory_name"
     email "cannibas@gmail.com"
     password "password"
-    after(:build){|user|generate_hashed_password(user)}
+
 
     ##basic user w/ user_choices
     # factory :user_choice do
@@ -16,33 +16,30 @@ FactoryGirl.define do
     end
   end
 
-  ##logged in user smokes weed
-  factory :logged_in_user do
+  factory :owner, class: User do
+    username "owner"
+    email "who@cares.com"
+    password "password"
+  end
+
+  ##logged in user
+  factory :logged_in do
     username "maurice"
     email "smoke@weed.edu"
     password "smokeweed"
-    after(:build) { |logged_in_user| }
+    after(:build) { }
   end
-
-  ###########################PHOTO########################
 
   factory :photo do
-    id 1
   end
 
-  #############STRAIN####################################
   factory :strain do
     id 1
     name "Purple OG Kush"
     photo_id 1
   end
-  ##########################################################
 
 
-
-
-
-  ####################DISPENSARY#######################basic
   factory :dispensary do
     id 1
     name "Terrapin Care"
@@ -55,10 +52,16 @@ FactoryGirl.define do
     end
   end
 
+  factory :choice do
+    user_choices
+  end
+
+  factory :user_choice do
+  end
+
 
 
   # factory :dispensary_has_strains_with_many_ratings do
   # end
 
-  ##dispensary owned by user
 end

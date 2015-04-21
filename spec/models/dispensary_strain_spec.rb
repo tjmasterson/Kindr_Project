@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe DispensaryStrain, type: :model do
-  let(:silver_haze) { DispensaryStrain.new}
+  let(:silver_haze) {DispensaryStrain.new}
 
   it 'should be specific to a dispensary' do
     expect(silver_haze).to belong_to :dispensary
