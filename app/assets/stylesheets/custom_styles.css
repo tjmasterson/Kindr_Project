@@ -8,9 +8,29 @@
 
 .chart div {
   font: 10px sans-serif;
-  background-color: steelblue;
+  /*background-color: steelblue;*/
   text-align: right;
   padding: 3px;
   margin: 1px;
   color: white;
+}
+
+.first{
+	background-color: #588A23;
+}
+
+.second{
+	background-color: steelblue;
+}
+
+.third{
+	background-color: #bebebe;
+}
+
+.fourth{
+	background-color: #DC7000;
+}
+
+.fifth{
+	background-color: #FF2000;
 }
