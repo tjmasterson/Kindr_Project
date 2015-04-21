@@ -23,6 +23,6 @@ RSpec.describe Choice, type: :model do
     expect(choice).to have_many :dispensary_strains
   end
 
-  other = Fa
+  # other = Fa
 
 end

@@ -24,7 +24,7 @@ class DispensaryStrain < ActiveRecord::Base
     self.average_ratings.each do  |choice, average|
       sorted[choice.name] = average.to_f.round(2)
     end
-    return sorted.sort_by{|key, value| value}.pop(5)
+    return sorted.sort_by{|key, value| value}
   end
 
 end

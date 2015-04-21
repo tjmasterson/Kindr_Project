@@ -2,6 +2,8 @@ require 'rails_helper'
 
   describe "User" do
     user = FactoryGirl.build(:user)
+    the_dude = FactoryGirl.build(:user, email: "5com")
+
     it 'is not nil object' do
         expect(user).to_not be nil
       end
@@ -14,7 +16,7 @@ require 'rails_helper'
         expect(user.email).to match(/\w*@\w*.\w*/)
       end
       it 'does not have improperly formatted email address' do
-        expect(FactoryGirl.build(:user, email: "5com")).to_not be_valid
+        expect(the_dude).to_not be_valid
       end
       it 'has secure password (does not store passwords as unecrypted strings)' do
         expect(user.password).to_not be "password"
