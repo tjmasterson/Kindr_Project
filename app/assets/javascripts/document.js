@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  var dispensaryMarkupGenerator = _.template("<div className='panel panel-default'> <div class='col-sm-4 col-xs-6'> <div class='dispensary_item'> <p> <h4 class='dispensary_item_name'> <%= name %> </h4></p><p></p> <div class='panel-thumbnail'> <a href='#' title='Renovations'> <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> </a> </div> </div> </div> </div>");
+  var dispensaryMarkupGenerator = _.template("<div class='col-sm-4 col-xs-6'> <div class='dispensary_item'> <p> <h4 class='dispensary_item_name'> <a href='dispensaries/<%= id %>'><%= name %></a> </h4></p><p></p> <div class='panel-thumbnail'> <a href='#' title='Renovations'> <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> </a> </div> </div> </div>");
 
-  var strainMarkupGenerator = _.template("<div className='panel panel-default'> <div class='col-sm-4 col-xs-6'> <div class='dispensary_item'> <p> <h4 class='dispensary_item_name'> <%= name %> </h4></p><p></p> <div class='panel-thumbnail'> <a href='#' title='Renovations'> <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> </a> </div> </div> </div> </div>");
+  var strainMarkupGenerator = _.template("<div class='panel panel-default'> <div class='col-sm-4 col-xs-6'> <div class='dispensary_item'> <p> <h4 class='dispensary_item_name'> <%= name %> </h4></p><p></p> <div class='panel-thumbnail'> <a href='#' title='Renovations'> <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> </a> </div> </div> </div> </div>");
 
   var $randomDispensaries = $("#random_dispensaries");
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
     $.get('/dispensaries/random_dispensaries').done(function(response){
       $randomDispensaries.html("");
       response.forEach(function(dispensaryData){
-        addRandomDispensaries( {name: dispensaryData.name} );
+        addRandomDispensaries( dispensaryData );
       });
     });
   };

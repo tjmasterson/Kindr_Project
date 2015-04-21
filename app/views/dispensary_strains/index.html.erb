@@ -1,4 +1,4 @@
-
+<!-- Wrap all page content here -->
 <div id="wrap">
 
   <header class="masthead">
@@ -12,11 +12,12 @@
   <!-- Begin page content -->
   <%= render partial: '/search' %>
 
-  <h2 class="dispensary_title_show title"><%= @dispensary.name %></h2>
+  <!-- <div class="divider" id="section3"></div> -->
 
   <div class="bg-4">
-    <div class="container" id="all_dispensary_strains">
-      <%= render @dispensary_strains %>
+    <div class="container" id="all_dispensaries">
+      <%= render @dispensaries %>
     </div><!--/container-->
   </div>
- origin/dev
+
+
