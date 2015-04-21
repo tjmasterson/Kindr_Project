@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-
-
-
   describe "User" do
     user = FactoryGirl.build(:user)
+
     it 'is not nil object' do
         expect(user).to_not be nil
       end
+
     context "User creates new account with authentication credentials" do
       it 'has username' do
         expect(user.username).to_not be nil
@@ -15,10 +14,20 @@ require 'rails_helper'
       it 'has properly formatted email address' do
         should allow_value("who@cares.com")
       end
-      it 'has secure password' do
-        expect(user).to have_secure_password
+      it 'does not have improperly formatted email address' do
+        expect(FactoryGirl.build(:user, email: "5com")).to_not be_valid
+      end
+      # it 'has secure password' do
+      #   expect(user.password).to have_secure_password
+      # end
+
+      it 'has secure password: does not store passwords as unecrypted strings' do
+        expect(user.password).to_not eq "password"
       end
     end
+
+
+
   end
 
 

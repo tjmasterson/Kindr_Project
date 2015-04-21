@@ -14,5 +14,7 @@ module Features
       fill_in 'Password', with: user.password
       click_button 'Sign In'
     end
+
+
   end
 end
