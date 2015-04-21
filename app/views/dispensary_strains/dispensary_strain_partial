@@ -1,0 +1,41 @@
+<div class='col-sm-4 col-xs-6'>
+    <div class='dispensary_item'>
+      <h4 class='dispensary_item_name'>
+        <%= link_to dispensary_strain.strain.name, dispensary_dispensary_strain_path(@dispensary, dispensary_strain) %>
+      </h4>
+      </p><p>
+      <div class='panel-thumbnail'>
+        <a href='#' title='Renovations'>
+
+          <!-- chart -->
+          <style>
+
+          .chart div {
+            font: 10px sans-serif;
+            background-color: steelblue;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+          }
+
+          </style>
+          <div class="chart">
+            <div style="width: 40px;">4</div>
+            <div style="width: 80px;">8</div>
+            <div style="width: 150px;">15</div>
+            <div style="width: 160px;">16</div>
+            <div style="width: 230px;">23</div>
+            <div style="width: 420px;">42</div>
+          </div>
+          <!-- chart -->
+
+
+         <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/>
+        </a>
+        <%= dispensary_strain.top_five[-1][0] %>:
+        <%= dispensary_strain.top_five[-1][1] %>
+      </div>
+    </div>
+  </div>
+

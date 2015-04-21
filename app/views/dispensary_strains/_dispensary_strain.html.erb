@@ -1,17 +1,44 @@
+<div class='col-sm-4 col-xs-6'>
+  <div class='dispensary_item'>
+    <h4 class='dispensary_item_name'>
+      <%= link_to dispensary_strain.strain.name, dispensary_dispensary_strain_path(@dispensary, dispensary_strain) %>
+    </h4>
+  </p><p>
+  <div class='panel-thumbnail'>
+    <a href='#' title='Renovations'>
 
-  <div class='col-sm-4 col-xs-6'>
-    <div class='dispensary_item'>
-      <h4 class='dispensary_item_name'>
-        <%= link_to dispensary_strain.strain.name, dispensary_dispensary_strain_path(@dispensary, dispensary_strain) %>
-      </h4>
-      </p><p>
-      <div class='panel-thumbnail'>
-        <a href='#' title='Renovations'>
-          <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/>
-        </a>
-        <%= dispensary_strain.top_five[-1][0] %>:
-        <%= dispensary_strain.top_five[-1][1] %>
+      <!-- chart -->
+      <div class="chart">
+
+        <div style="width: <%= (dispensary_strain.top_five[4][1] * 20)%>px;">
+          <%= dispensary_strain.top_five[4][0] %>:
+          <%= dispensary_strain.top_five[4][1] %>
+        </div>
+        <div style="width: <%= (dispensary_strain.top_five[3][1] * 20)%>px;">
+          <%= dispensary_strain.top_five[3][0] %>:
+          <%= dispensary_strain.top_five[3][1] %>
+        </div>
+        <div style="width: <%= (dispensary_strain.top_five[2][1] * 20)%>px;">
+          <%= dispensary_strain.top_five[2][0] %>:
+          <%= dispensary_strain.top_five[2][1] %>
+        </div>
+        <div style="width: <%= (dispensary_strain.top_five[1][1] * 20)%>px;">
+          <%= dispensary_strain.top_five[1][0] %>:
+          <%= dispensary_strain.top_five[1][1] %>
+        </div>
+        <div style="width: <%= (dispensary_strain.top_five[0][1] * 20)%>px;">
+          <%= dispensary_strain.top_five[0][0] %>:
+          <%= dispensary_strain.top_five[0][1] %>
+        </div>
       </div>
-    </div>
+      <!-- chart -->
+
+
+      <!-- <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> -->
+    </a>
   </div>
+</div>
+</div>
+
+
 
