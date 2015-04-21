@@ -21,17 +21,11 @@ require 'rails_helper'
       #   expect(user.password).to have_secure_password
       # end
 
-      it 'has secure password: does not store passwords as unecrypted strings' do
+      it 'has secure password (does not store passwords as unecrypted strings)' do
         expect(user.password).to_not eq "password"
       end
     end
-
-
-
   end
-
-
-
 
   # context "owner of dispensary signs up for privileged user access" do
   #   it 'is owner of one or more dispensaries' do

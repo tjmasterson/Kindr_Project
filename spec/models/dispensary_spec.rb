@@ -1,36 +1,34 @@
 require 'rails_helper'
 
-# RSpec.describe Dispensary, type: :model do
-#   let(:dispensary) { Dispensary.new(name: "weed palace") }
+RSpec::Matchers.define :be_url do |expected|
+  match do |actual|
+    URI.parse(actual) rescue false
+  end
+end
 
-#   it 'should have an owner' do
-#     expect(dispensary).to belong_to :owner
-#   end
-
-#   it 'should have many ratings' do
-#     expect(dispensary).to have_many :dispensary_ratings
-#   end
-
-#   it 'should have ratings from many people' do
-#     expect(dispensary).to have_many :voters
-#   end
-
-
-  describe "Dispensary" do
+RSpec.describe Dispensary, type: :model do
     dispensary = FactoryGirl.build(:dispensary)
-    one_with_strains = FactoryGirl.build(:dispensary_strains)
-
+    dispensary_strain = FactoryGirl.build(:dispensary_strain)
+    user_choice = FactoryGirl.build(:user_choice)
 
     it 'has name' do
       expect(dispensary.name).to_not be nil
     end
 
     it 'has phone number' do
+      expect(dispensary.phone_number).to be_a Integer
     end
 
-    it 'has dispensary strains' do
-      expect(one_with_strains.dispensary_strains.size).to be 1
+    it 'has valid url' do
+      expect(dispensary.website).to be_url
     end
 
+    it 'has many dispensary strains' do
+      expect(dispensary.dispensary_strains).not_to be nil
+    end
+
+    it 'has many dispensary strains that users have rated' do
+      expect(dispensary.dispensary_strains.user_choices).to_not be nil
+    end
   end
 
