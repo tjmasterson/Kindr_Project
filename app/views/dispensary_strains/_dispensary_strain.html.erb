@@ -9,8 +9,8 @@
         <a href='#' title='Renovations'>
           <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/>
         </a>
-        <%= dispensary_strain.top_five[-1][0] %>:
-        <%= dispensary_strain.top_five[-1][1] %>
+        <%= render partial: '/dispensary_strains/dispensary_strain_details', locals: {dispensary_strain: dispensary_strain} %>:
+
       </div>
     </div>
   </div>

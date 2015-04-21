@@ -4,6 +4,11 @@ class UsersController < ApplicationController
   end
 
   def login
+     render partial: 'login'
+  end
+
+  def signup
+    render partial: 'signup'
   end
 
   def update
@@ -15,9 +20,6 @@ class UsersController < ApplicationController
       flash.now[:danger] = "Invalid login parameters"
       render :login
     end
-  end
-
-  def signup
   end
 
   def create
