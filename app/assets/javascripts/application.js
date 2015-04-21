@@ -16,4 +16,5 @@
 //= require react
 //= require react_ujs
 //= require underscore
+//= require d3
 //= require_tree .

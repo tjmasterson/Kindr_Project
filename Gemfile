@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as server
 gem 'unicorn-rails'
 
+#D3 for graphs
+gem "d3-rails"
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
