@@ -7,9 +7,9 @@
 
 
 .chart div {
-  font: 10px sans-serif;
+  font: 11px sans-serif;
   /*background-color: steelblue;*/
-  text-align: right;
+  text-align: left;
   padding: 3px;
   margin: 1px;
   margin-bottom: 10px;
