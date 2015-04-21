@@ -16,6 +16,10 @@
   color: white;
 }
 
+svg{
+	padding-left: 1em;
+}
+
 .first{
 	background-color: #588A23;
 }
