@@ -48,7 +48,8 @@ class UsersController < ApplicationController
   end
 
   def create_user_choice_collection
-
+    puts params
+    puts params.inspect
   end
 
   private

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   put '/login' => 'users#update'
   get '/signup' => 'users#signup'
   post '/signup' => 'users#create'
-  post '/create_user_choice_collection' => 'users#create_user_choice_collection'
+  patch '/create_user_choice_collection' => 'users#create_user_choice_collection'
   #dispensaries
   get '/dispensaries/random_dispensaries' => 'dispensaries#random_dispensaries'
   get '/dispensaries/dispensaries_index_json' => 'dispensaries#dispensaries_index_json'
