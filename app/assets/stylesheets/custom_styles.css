@@ -29,13 +29,25 @@
 
 @-webkit-keyframes bounceRandom{
 	0% {}
-	10% {transform: translateY(-100px); transform: translateX(-50px)}
-	20% {transform: translateY(-75px); transform: translateX(-20px)}
-	40% {transform: translateY(20px);}
-	60% {transform: translateY(-6px);}
-	70% {transform: translateY(2px);}
-	80% {transform: translateY(-2px);}
-	90% {transform: translateY(0px);}
+	10% {transform: translateY(-500px); transform: translateX(-400px)}
+	20% {transform: translateY(-355px); transform: translateX(-200px)}
+	40% {transform: translateY(120px);}
+	60% {transform: translateY(-16px);}
+	70% {transform: translateY(6px);}
+	80% {transform: translateY(-6px);}
+	90% {transform: translateY(-2px);}
+	100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes bounceRandomTwo{
+	0% {}
+	10% {transform: translateY(500px); transform: translateX(400px)}
+	20% {transform: translateY(355px); transform: translateX(200px)}
+	40% {transform: translateY(120px);}
+	60% {transform: translateY(-20px);}
+	70% {transform: translateY(10px);}
+	80% {transform: translateY(-6px);}
+	90% {transform: translateY(-2px);}
 	100% {transform: translateY(0px);}
 }
 
@@ -62,16 +74,50 @@
 }
 
 .third{
-	background-color: #bebebe;
+	background-color: #6500BF;
 	-webkit-animation: bounceDown 2.8s ease-in;
 }
 
 .fourth{
 	background-color: #DC7000;
-	-webkit-animation: bounceDown 2s ease-in;
+	-webkit-animation: bounceRandomTwo 3.4s ease-in;
 }
 
 .fifth{
 	background-color: #FF2000;
 	-webkit-animation: bounceLeft 2.3s ease-in;
+}
+
+
+/*<<<<<<<<<<<<< Hover Styles >>>>>>>>>>>>>>>*/
+
+
+.first:hover {
+	background-color: #588A23;
+	transform: scale(1.1);
+	opacity: 0.7;
+}
+
+.second:hover{
+	background-color: steelblue;
+	transform: scale(1.1);
+	opacity: 0.7;
+}
+
+.third:hover{
+	background-color: #6500BF;
+	transform: scale(1.1);
+	opacity: 0.7;
+}
+
+.fourth:hover{
+	background-color: #DC7000;
+	transform: scale(1.1);
+	opacity: 0.7;
+}
+
+.fifth:hover{
+	background-color: #FF2000;
+	transform: scale(1.1);
+	opacity: 0.7;
 }
