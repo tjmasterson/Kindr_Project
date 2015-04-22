@@ -1,0 +1,16 @@
+
+<%= form_for @user_choices, url: {action: "create_user_choice_collection", controller: "users"} do |f| %>
+  <% @user_choices.each do |user_choice| %>
+    <% @choices.each do |choice| %>
+    <h4><%= f.label choice.name%></h4>
+        <%= fields_for :choice, user_choice.choice do |choice_field| %>
+        <%= choice_field.check_box :choice %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
+
+
+
+

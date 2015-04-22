@@ -1,10 +1,18 @@
-// $(document).ready(function() {
+
+    $(document).ready(function() {
+        // $(".chart").children().slideToggle(1100, "swing");
+        $(".chart").children().hide("slide", { direction: "right" }, 5000);
+        $(".chart").delay(400).show("slide", { direction: "right" }, 5000);
+    });
 
 // var data = [10,20,30,40,50]
 // var barPadding = 1;
 // var w = 500;
 // var h = 100;
 // var margin = {top: 20, right: 10, bottom: 20, left: 10};
+
+
+
 
 // var canvas = d3.select(".chart")
 //             .append("svg")
@@ -26,11 +34,11 @@
 //             return d;
 //         });
 
-    // $(".chart").load(function() {
-    //     $(".first").transition()
-    //         .attr("x", 320)
-    //         .ease("elastic");
-    // });
+// $(".chart").load(function() {
+//     $(".first").transition()
+//         .attr("x", 320)
+//         .ease("elastic");
+// });
 
 // var svg = d3.select("chart")
 //             .append("svg")

@@ -16,14 +16,23 @@
   color: white;
 }
 
-svg{
-	padding-left: 1em;
+/* The animation code */
+@keyframes rollout{
+    from {background-color: #588A23;}
+    to {background-color: yellow;}
 }
 
-.first{
+/* The element to apply the animation to */
+.first {
 	background-color: #588A23;
-	animation: example 5s linear 2s ease-out right;
+    animation-name: rollout;
+    animation-duration: 4s;
 }
+
+/*.first{
+	-webkit-transition: all 1000ms easing’s Bezier curve;
+	transition:         all 1000ms easing’s Bezier curve;
+}*/
 
 .second{
 	background-color: steelblue;
