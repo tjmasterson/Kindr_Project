@@ -316,7 +316,7 @@ dispensaries = [terrapin,
 
 choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
 
-1000.times do
+10.times do
   dispensaries.each do |y|
     y.dispensary_strains.each do |x|
       x.user_choices.create(choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
