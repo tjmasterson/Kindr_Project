@@ -7,31 +7,117 @@
 
 
 .chart div {
-  font: 11px sans-serif;
-  /*background-color: steelblue;*/
-  text-align: left;
-  padding: 3px;
-  margin: 1px;
-  margin-bottom: 10px;
-  color: white;
+	font: 11px;
+	text-align: left;
+	padding: 3px;
+	margin: 1px;
+	margin-bottom: 10px;
+	color: white;
 }
 
-.first{
+@-webkit-keyframes bounceDown{
+	0% {}
+	10% {transform: translateY(-100px);}
+	20% {transform: translateY(-75px);}
+	40% {transform: translateY(20px);}
+	60% {transform: translateY(-6px);}
+	70% {transform: translateY(2px);}
+	80% {transform: translateY(-2px);}
+	90% {transform: translateY(0px);}
+	100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes bounceRandom{
+	0% {}
+	10% {transform: translateY(-500px); transform: translateX(-400px)}
+	20% {transform: translateY(-355px); transform: translateX(-200px)}
+	40% {transform: translateY(120px);}
+	60% {transform: translateY(-16px);}
+	70% {transform: translateY(6px);}
+	80% {transform: translateY(-12px);}
+	90% {transform: translateY(-2px);}
+	100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes bounceRandomTwo{
+	0% {}
+	10% {transform: translateY(500px); transform: translateX(400px)}
+	20% {transform: translateY(355px); transform: translateX(200px)}
+	40% {transform: translateY(120px);}
+	60% {transform: translateY(-20px);}
+	70% {transform: translateY(10px);}
+	80% {transform: translateY(-10px);}
+	90% {transform: translateY(-2px);}
+	100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes bounceLeft{
+	0% {}
+	10% {transform: translateX(-100px);}
+	20% {transform: translateX(-75px);}
+	40% {transform: translateX(20px);}
+	60% {transform: translateX(-6px);}
+	70% {transform: translateX(2px);}
+	80% {transform: translateX(-2px);}
+	90% {transform: translateX(0px);}
+	100% {transform: translateX(0px);}
+}
+
+.first {
 	background-color: #588A23;
+	-webkit-animation: bounceLeft 1.5s ease-in-out;
 }
 
 .second{
 	background-color: steelblue;
+	-webkit-animation: bounceRandom 1.3s ease-in-out;
 }
 
 .third{
-	background-color: #bebebe;
+	background-color: #6500BF;
+	-webkit-animation: bounceDown 1.8s ease-in;
 }
 
 .fourth{
 	background-color: #DC7000;
+	-webkit-animation: bounceRandomTwo 1.4s ease-in;
 }
 
 .fifth{
 	background-color: #FF2000;
+	-webkit-animation: bounceLeft 1s ease-in-out;
+}
+
+
+/*<<<<<<<<<<<<< Hover Styles >>>>>>>>>>>>>>>*/
+
+
+.first:hover {
+	background-color: #588A23;
+	transform: scale(1.05);
+	opacity: 0.7;
+}
+
+.second:hover{
+	background-color: steelblue;
+	transform: scale(1.05);
+	opacity: 0.7;
+}
+
+.third:hover{
+	background-color: #6500BF;
+	transform: scale(1.05);
+	opacity: 0.7;
+}
+
+.fourth:hover{
+	background-color: #DC7000;
+	transform: scale(1.05);
+	opacity: 0.7;
+}
+
+.fifth:hover{
+	background-color: #FF2000;
+	transform: scale(1.05);
+	opacity: 0.7;
 }
