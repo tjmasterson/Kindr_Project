@@ -1,9 +1,12 @@
 
-    $(document).ready(function() {
-        // $(".chart").children().slideToggle(1100, "swing");
-        $(".chart").children().hide("slide", { direction: "right" }, 5000);
-        $(".chart").delay(400).show("slide", { direction: "right" }, 5000);
-    });
+    // $(document).ready(function() {
+    // 	var graph = $(".chart").children();
+    //     graph.slideToggle("swing", function(){
+    //     	graph.delay(8000).show("slide", { direction: "right" }, 5000);
+
+    //     });
+        // $(".chart").children().hide("slide", { direction: "right" }, 5000);
+    // });
 
 // var data = [10,20,30,40,50]
 // var barPadding = 1;

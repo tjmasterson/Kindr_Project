@@ -7,45 +7,46 @@
 
 
 .chart div {
-  font: 11px sans-serif;
-  /*background-color: steelblue;*/
-  text-align: left;
-  padding: 3px;
-  margin: 1px;
-  margin-bottom: 10px;
-  color: white;
+	font: 11px;
+	text-align: left;
+	padding: 3px;
+	margin: 1px;
+	margin-bottom: 10px;
+	color: white;
 }
 
-/* The animation code */
-@keyframes rollout{
-    from {background-color: #588A23;}
-    to {background-color: yellow;}
+@-webkit-keyframes elastic{
+	0% {}
+	20% {transform: translateY(-50px);}
+	40% {transform: translateY(20px);}
+	60% {transform: translateY(-6px);}
+	90% {transform: translateY(0px);}
+	100% {transform: translateY(0px);}
 }
 
-/* The element to apply the animation to */
+
+
 .first {
 	background-color: #588A23;
-    animation-name: rollout;
-    animation-duration: 4s;
+	-webkit-animation: elastic 2.5s ease-in-out;
 }
-
-/*.first{
-	-webkit-transition: all 1000ms easing’s Bezier curve;
-	transition:         all 1000ms easing’s Bezier curve;
-}*/
 
 .second{
 	background-color: steelblue;
+	-webkit-animation: elastic 2s ease-in;
 }
 
 .third{
 	background-color: #bebebe;
+	-webkit-animation: elastic 2s ease-in;
 }
 
 .fourth{
 	background-color: #DC7000;
+	-webkit-animation: elastic 2s ease-in;
 }
 
 .fifth{
 	background-color: #FF2000;
+	-webkit-animation: elastic 2s ease-in;
 }
