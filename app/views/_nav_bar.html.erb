@@ -11,23 +11,27 @@
         <ul class="nav navbar-nav nav-justified">
           <li><a id="home_page_link" href="/">Home</a></li>
           <li><a id="all_dispensaries_link" href="/dispensaries">Dispensaries</a></li>
-          <li class="dropdown">
-            <a href="#section3" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Academic</a></li>
-              <li><a href="#">Commercial</a></li>
-              <li><a href="#">Financial</a></li>
-              <li><a href="#">Interior Design</a></li>
-              <li><a href="#">Medical</a></li>
-              <li><a href="#">Religious</a></li>
-            </ul>
+          <li class="dropdown" >
+            <a href="#section3" class="dropdown-toggle" id="strain_rate_nav_link_dropdown" data-toggle="dropdown">Rate Strain<b class="caret"></b></a>
+            <div class="dropdown-menu" id="hidden_strain_rate_nav_link" style="display:none;">
+              <div class="nav-side-menu">
+                <div class="brand">Brand Logo</div>
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                <div class="menu-list"></div>
+              </div>
+
+            </div>
           </li>
           <li><a id="all_strains_link" href="/strains">Strains</a></li>
-
+          <% if logged_in? %>
+          <li><%= link_to "Logout", logout_path, id:"logout_link" %></li>
+          <% else %>
             <li><%= link_to "Sign Up", signup_path, id:"signup_link", remote: true %></li>
-            <li><%= link_to "Login Up", login_path, id:"login_link", remote: true %></li>
-
+            <li><%= link_to "Login", login_path, id:"login_link", remote: true %></li>
+          <% end %>
         </ul>
       </div><!--/.nav-collapse -->
     </div><!--/.container -->
   </div><!--/.navbar -->
+

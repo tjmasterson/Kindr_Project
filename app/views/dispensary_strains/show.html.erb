@@ -18,3 +18,7 @@
       <%= render partial: 'dispensary_strain_details', locals: {dispensary_strain: @dispensary_strain} %>
     </div><!--/container-->
   </div>
+
+<div class="button btn-default text-center"><%= link_to "Rate #{@dispensary_strain.dispensary.name}'s version of #{@dispensary_strain.strain.name}",dispensary_dispensary_strain_new_user_choice_collection_path(@dispensary, @dispensary_strain) %></div>
+
+

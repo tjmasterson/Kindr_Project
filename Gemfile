@@ -29,9 +29,6 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as server
 gem 'unicorn-rails'
 
-#D3 for graphs
-gem "d3-rails"
-
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -41,6 +38,9 @@ gem "d3-rails"
 
 # Use Bootstrap for CSS frameowrk
 gem 'bootstrap-sass', '~> 3.3.4'
+
+# Bootsrap Forms for nested forms
+gem 'bootstrap_form'
 
 # Use Hirb to visualize Active Record tables in console
 gem 'hirb'
@@ -66,6 +66,8 @@ gem 'underscore-rails'
 # simpleform for excellent integration with bootstrap forms
 # sunspot for indexing
 
+#D3 for graphs
+gem "d3-rails"
 
 
 
