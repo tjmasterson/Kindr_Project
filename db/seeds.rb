@@ -182,9 +182,11 @@ shakes = Choice.create(name: "Shakes", category: "Negatives")
 paranoia = Choice.create(name: "Paranoia", category: "Negatives")
 dizzy = Choice.create(name: "Dizzy", category: "Negatives")
 
+overall_rating = Choice.create(name: "Overall Average")
+
 ## user_choices (strain_rating_id, choice_id, rating)
 
- choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
+ choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue, overall_rating, overall_rating, overall_rating, overall_rating]
 
 10000.times do
   UserChoice.create(dispensary_strain_id: a.sample.id, choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)

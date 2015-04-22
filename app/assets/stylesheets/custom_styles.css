@@ -94,30 +94,30 @@
 
 .first:hover {
 	background-color: #588A23;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	opacity: 0.7;
 }
 
 .second:hover{
 	background-color: steelblue;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	opacity: 0.7;
 }
 
 .third:hover{
 	background-color: #6500BF;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	opacity: 0.7;
 }
 
 .fourth:hover{
 	background-color: #DC7000;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	opacity: 0.7;
 }
 
 .fifth:hover{
 	background-color: #FF2000;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	opacity: 0.7;
 }
