@@ -20,21 +20,7 @@
 
                 <div class="menu-list">
 
-                  <ul id="menu-content" class="menu-content collapse out">
-                    <li>
-                      <a href="#"><i class="fa fa-dashboard fa-lg"></i> Dashboard</a>
-                    </li>
-                    <%= @dispensaries.each do |dispensary|%>
-                    <li  data-toggle="collapse" data-target="#products" class="collapsed active">
-                      <a href="#"><i class="fa fa-gift fa-lg"></i><%= dispensary.name %> <span class="arrow"></span></a>
-                    </li>
-                    <ul class="sub-menu collapse" id="products">
-                      <% dispensary.dispensary_strains.each do |dispensary_strain| %>
-                      <li class="active"><a href="#"> <%= dispensary_strain.name %> </a></li>
-                      <% end %>
-                    </ul>
-                    <% end %>
-                  </ul>
+
                 </div>
               </div>
 
@@ -52,3 +38,14 @@
     </div><!--/.container -->
   </div><!--/.navbar -->
 
+<!--           <li class="dropdown">
+            <a href="#section3" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Academic</a></li>
+              <li><a href="#">Commercial</a></li>
+              <li><a href="#">Financial</a></li>
+              <li><a href="#">Interior Design</a></li>
+              <li><a href="#">Medical</a></li>
+              <li><a href="#">Religious</a></li>
+            </ul>
+          </li> -->
