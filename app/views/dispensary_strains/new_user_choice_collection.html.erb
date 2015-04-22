@@ -22,4 +22,38 @@ Effects to choose:
 <%= f.submit %>
 <% end %>
 
+<div class="container">
+  <div class="jumbotron">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h3><%=@dispensary.name%></h3><br>
+      <div class="panel panel-primary">
+       <div class="panel-heading form-body">
+        <h3 class="panel-title"><span class="fa fa-line-chart">Rate your experience with:<br><%=@strain.name%></span></h3>
+      </div>
+        <div class="panel-body">
+          <ul id="form-body" class="list-group">
+            <li class="list-group-item">
+              <label><%=%></label>
+              <select>
+                <option value="Happy">Happy</option>
+              </select>
+            </li>
+            <li class="list-group-item">
+              <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">1</button>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        <div class="panel-footer text-center form-body">
+          <button type="button" class="btn btn-primary btn-block btn-sm">
+            Vote</button>
+            <a href="#" class="small">View Result</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
