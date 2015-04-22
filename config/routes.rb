@@ -16,13 +16,9 @@ Rails.application.routes.draw do
   # strains
   get '/strains/strains_index_json' => 'strains#strains_index_json'
 
-  get '/maps' => 'users#map'
-  get '/notifications/signup' => 'notifications#new'
-
 
   resources :strains
   resources :users
-  resources :notifications
 
   resources :dispensaries do
     resources :dispensary_ratings

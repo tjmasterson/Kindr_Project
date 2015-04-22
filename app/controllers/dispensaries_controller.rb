@@ -28,5 +28,4 @@ class DispensariesController < ApplicationController
     params.require(:dispensary).permit(:name, :phone_number, :website, :user_id, :photo_id, :city_id)
   end
 
-  #origin/dispensary_index
 end
