@@ -1,0 +1,30 @@
+## user choices form
+
+<%=  %>
+
+
+<%= form_for @dispensary_strain, url: {action: "create_user_choice_collection", controller: "users"} do |f| %>
+  <% @choices.each do |choice| %>
+    <h4><%= f.label choice.name%></h4>
+
+    <%= f.fields_for @dispensary_strain.user_choices.new do |user_choice| %>
+
+      <%= user_choice.collection_radio_buttons :rating, Choice.first(10), :id, :id, options: {choice_id: choice.id} %>
+
+      <br>
+    <% end %>
+
+  <% end %>
+  <%=f.submit%>
+<% end %>
+
+<%= render partial: '_new', :locals=>{} %>
+<%= form_for something   %>
+
+<%= option_groups_from_collection_for_select(@choices, :user_choice, :)
+
+<%= options_for_select([1,2,3,4,5,6,7,8,9,10]) %>
+
+<%= option_groups_from_collection_for_select(@choices, :user_choices, :name, :rating, :choice_id)%>
+
+

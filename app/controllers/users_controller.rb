@@ -4,17 +4,18 @@ class UsersController < ApplicationController
     @dispensaries = Dispensary.all
   end
 
-  def login
+def login
    render partial: 'login'
- end
+end
 
- def signup
+def signup
   render partial: 'signup'
 end
 
 def strain_rating_nav
   render partial: 'strain_rating_nav'
 end
+
 
 def update
   user = User.find_by(email: params[:session][:email].downcase)
@@ -26,6 +27,17 @@ def update
     render :login
   end
 end
+
+def create
+  @user = User.new(user_params)
+  if @user.save
+    redirect_to '/'
+  else
+    render :signup
+  end
+
+end
+
 
 def create
   @user = User.new(user_params)
@@ -52,10 +64,16 @@ def new_user_choice_collection
 
 end
 
+
 def create_user_choice_collection
   puts params
   puts params.inspect
 end
+
+def map
+  render :maps
+end
+
 
 private
 

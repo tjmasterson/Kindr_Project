@@ -107,5 +107,7 @@ $('.panel-thumbnail>a').click(function(e){
 // }
 // google.maps.event.addDomListener(window, 'load', initialize);
 
+
+
 /* end google maps */
 
