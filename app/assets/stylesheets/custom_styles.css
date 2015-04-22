@@ -15,38 +15,63 @@
 	color: white;
 }
 
-@-webkit-keyframes elastic{
+@-webkit-keyframes bounceDown{
 	0% {}
-	20% {transform: translateY(-50px);}
+	10% {transform: translateY(-100px);}
+	20% {transform: translateY(-75px);}
 	40% {transform: translateY(20px);}
 	60% {transform: translateY(-6px);}
+	70% {transform: translateY(2px);}
+	80% {transform: translateY(-2px);}
 	90% {transform: translateY(0px);}
 	100% {transform: translateY(0px);}
 }
 
+@-webkit-keyframes bounceRandom{
+	0% {}
+	10% {transform: translateY(-100px); transform: translateX(-50px)}
+	20% {transform: translateY(-75px); transform: translateX(-20px)}
+	40% {transform: translateY(20px);}
+	60% {transform: translateY(-6px);}
+	70% {transform: translateY(2px);}
+	80% {transform: translateY(-2px);}
+	90% {transform: translateY(0px);}
+	100% {transform: translateY(0px);}
+}
 
+@-webkit-keyframes bounceLeft{
+	0% {}
+	10% {transform: translateX(-100px);}
+	20% {transform: translateX(-75px);}
+	40% {transform: translateX(20px);}
+	60% {transform: translateX(-6px);}
+	70% {transform: translateX(2px);}
+	80% {transform: translateX(-2px);}
+	90% {transform: translateX(0px);}
+	100% {transform: translateX(0px);}
+}
 
 .first {
 	background-color: #588A23;
-	-webkit-animation: elastic 2.5s ease-in-out;
+	-webkit-animation: bounceLeft 2.5s ease-in-out;
 }
 
 .second{
 	background-color: steelblue;
-	-webkit-animation: elastic 2s ease-in;
+	-webkit-animation: bounceRandom 2.3s ease-in;
 }
 
 .third{
 	background-color: #bebebe;
-	-webkit-animation: elastic 2s ease-in;
+	-webkit-animation: bounceDown 2.8s ease-in;
 }
 
 .fourth{
 	background-color: #DC7000;
-	-webkit-animation: elastic 2s ease-in;
+	-webkit-animation: bounceDown 2s ease-in;
 }
 
 .fifth{
 	background-color: #FF2000;
-	-webkit-animation: elastic 2s ease-in;
+	-webkit-animation: bounceLeft 2.3s ease-in;
 }
