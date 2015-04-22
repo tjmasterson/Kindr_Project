@@ -110,84 +110,262 @@ durban_poison = Strain.create(name: "Durban Poison")
 ##dispensary_strains(dispensary_id, strain_id, stocked?)
 ##only dispensaries in boulder ---- all w/ white_widow, trainwreck, cheese, skywalker
 
-one = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: white_widow.id)
-two = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: trainwreck.id)
-three = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: cheese.id)
-four = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: skywalker.id)
-five = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: afghan_kush.id)
-six = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: white_widow.id)
-seven = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: trainwreck.id)
-eight = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: cheese.id)
-nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: skywalker.id)
-ten = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: white_widow.id)
-eleven = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: trainwreck.id)
-twelve = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: cheese.id)
-thirteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: skywalker.id)
-fourteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: afghan_kush.id)
-fifteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: bubble_gum.id)
-sixteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: cherry_pie.id)
-seventeen = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: white_widow.id)
-eighteen = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: trainwreck.id)
-nineteen = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: cheese.id)
-twenty = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: skywalker.id)
-twenty_one = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: afghan_kush.id)
-twenty_two = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: bubble_gum.id)
-twenty_three = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: white_widow.id)
-twenty_four = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: trainwreck.id)
-twenty_five = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: cheese.id)
-twenty_six = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: skywalker.id)
-twenty_seven = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: afghan_kush.id)
-twenty_eight = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: bubble_gum.id)
-twenty_nine = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: cherry_pie.id)
-thirty = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: g13.id)
-thirty_one = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: white_rhino.id)
-thirty_two = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: super_silver_haze.id)
-thirty_three = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: tahoe_og_kush.id)
+# <<<<<<< HEAD
+# one = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: white_widow.id)
+# two = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: trainwreck.id)
+# three = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: cheese.id)
+# four = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: skywalker.id)
+# five = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: afghan_kush.id)
+# six = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: white_widow.id)
+# seven = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: trainwreck.id)
+# eight = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: cheese.id)
+# nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: skywalker.id)
+# ten = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: white_widow.id)
+# eleven = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: trainwreck.id)
+# twelve = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: cheese.id)
+# thirteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: skywalker.id)
+# fourteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: afghan_kush.id)
+# fifteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: bubble_gum.id)
+# sixteen = DispensaryStrain.create(dispensary_id: sweet_leaf_38th_ave.id, strain_id: cherry_pie.id)
+# seventeen = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: white_widow.id)
+# eighteen = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: trainwreck.id)
+# nineteen = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: cheese.id)
+# twenty = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: skywalker.id)
+# twenty_one = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: afghan_kush.id)
+# twenty_two = DispensaryStrain.create(dispensary_id: ballpark_holistic_dispensary.id, strain_id: bubble_gum.id)
+# twenty_three = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: white_widow.id)
+# twenty_four = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: trainwreck.id)
+# twenty_five = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: cheese.id)
+# twenty_six = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: skywalker.id)
+# twenty_seven = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: afghan_kush.id)
+# twenty_eight = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: bubble_gum.id)
+# twenty_nine = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: cherry_pie.id)
+# thirty = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: g13.id)
+# thirty_one = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: white_rhino.id)
+# thirty_two = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: super_silver_haze.id)
+# thirty_three = DispensaryStrain.create(dispensary_id: chronic_therapy_recreational.id, strain_id: tahoe_og_kush.id)
+# =======
+dispensaries = [terrapin,
+  native_roots,
+  fox_street_clinic,
+  natural_remedies,
+  mindful_recreation,
+  new_age_medical,
+  northern_lights_cannabis,
+  green_man_cannabis,
+  lightshade,
+  firehouse,
+  standing_akimbo,
+  livegreen_cannabis,
+  medicine_man,
+  tru_cannabis_mile_high,
+  metro_cannabis_inc,
+  natural_remedies_denver,
+  botanico,
+  caregivers_for_life,
+  herbs4you,
+  sweet_leaf,
+  the_herbal_cure,
+  trenchtown_medical_marijuana_center,
+  green_man_cannabis_sf_street,
+  infinite_wellness_center,
+  denver_relief,
+  verde_wellness_center,
+  dank_colorado,
+  the_giving_tree_of_denver,
+  colorado_harvest_center,
+  herbs4you_9th_ave,
+  holistic_life,
+  cannabis_center,
+  native_roots_boulder,
+  sweet_leaf_38th_ave,
+  ballpark_holistic_dispensary,
+  chronic_therapy_recreational,
+  good_chemistry,
+  herbs4you_aurora,
+  tru_cannabis_aurora,
+  allgreens,
+  river_rock_store,
+  maggies_farm,
+  the_clone_store,
+  lyons_finest,
+  at_home_remedies,
+  lucy_sky,
+  tru_cannabis,
+  natures_best_alternative_medicine,
+  herban_medicinals]
 
 
-a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
-     thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
-     twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
-     thirty,thirty_one, thirty_two, thirty_three]
+  10.times do
+    dispensaries.each do |dispensary|
+      num = 1
+      dispensary.dispensary_strains.create(strain_id: num)
+      num += 1
+    end
+  end
+  # one = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: white_widow.id)
+  # two = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: trainwreck.id)
+  # three = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: cheese.id)
+  # four = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: skywalker.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: afghan_kush.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: lemon_kush.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: blackberry_kush.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: grandaddy_purple.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: super_silver_haze.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: durban_poison.id)
+  # five = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: strawberry_cough.id)
+  # six = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: white_widow.id)
+  # seven = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: trainwreck.id)
+  # eight = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: cheese.id)
+  # nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: strawberry_cough.id)
+  # nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: lemon_kush.id)
+  # nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: afghan_kush.id)
+  # nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: blackberry_kush.id)
+  # nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: cherry_pie.id)
+  # nine = DispensaryStrain.create(dispensary_id: native_roots_boulder.id, strain_id: durban_poison.id)
+  # ten = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: white_widow.id)
+  # eleven = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: trainwreck.id)
+  # twelve = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: cheese.id)
+  # thirteen = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: skywalker.id)
+  # fourteen = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: afghan_kush.id)
+  # fifteen = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: bubble_gum.id)
+  # sixteen = DispensaryStrain.create(dispensary_id: fox_street_clinic.id, strain_id: cherry_pie.id)
+  # seventeen = DispensaryStrain.create(dispensary_id: natural_remedies.id, strain_id: white_widow.id)
+  # eighteen = DispensaryStrain.create(dispensary_id: natural_remedies.id, strain_id: trainwreck.id)
+  # nineteen = DispensaryStrain.create(dispensary_id: natural_remedies.id, strain_id: cheese.id)
+  # twenty = DispensaryStrain.create(dispensary_id: natural_remedies.id, strain_id: skywalker.id)
+  # twenty_one = DispensaryStrain.create(dispensary_id: natural_remedies.id, strain_id: afghan_kush.id)
+  # twenty_two = DispensaryStrain.create(dispensary_id: natural_remedies.id, strain_id: bubble_gum.id)
+  # twenty_three = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: white_widow.id)
+  # twenty_four = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: trainwreck.id)
+  # twenty_five = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: cheese.id)
+  # twenty_six = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: skywalker.id)
+  # twenty_seven = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: afghan_kush.id)
+  # twenty_eight = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: bubble_gum.id)
+  # twenty_nine = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: cherry_pie.id)
+  # thirty = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: g13.id)
+  # thirty_one = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: white_rhino.id)
+  # thirty_one = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: lemon_kush.id)
+  # thirty_two = DispensaryStrain.create(dispensary_id: mindful_recreation.id, strain_id: super_silver_haze.id)
+  # thirty_three = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: tahoe_og_kush.id)
+  # thirty_four = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: white_rhino.id)
+  # thirty_five = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: grandaddy_purple.id)
+  # thirty_six = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: skywalker.id)
+  # thirty_seven = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: afghan_kush.id)
+  # thirty_eight = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: lemon_kush.id)
+  # thirty_nine = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: cheese.id)
+  # forty = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: white_widow.id)
+  # forty_one = DispensaryStrain.create(dispensary_id: standing_akimbo.id, strain_id: durban_poison.id)
+  # forty_two = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: tahoe_og_kush.id)
+  # forty_three = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: afghan_kush.id)
+  # forty_four = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: lemon_kush.id)
+  # forty_five = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: skywalker.id)
+  # forty_six = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: tahoe_og_kush.id)
+  # forty_seven = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: super_silver_haze.id)
+  # forty_eight = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: grandaddy_purple.id)
+  # forty_nine = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: strawberry_cough.id)
+  # fifty = DispensaryStrain.create(dispensary_id: lightshade.id, strain_id: cherry_pie.id)
+  # fifty_one = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: skywalker.id)
+  # fifty_two = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: grandaddy_purple.id)
+  # fifty_three = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: strawberry_cough.id)
+  # fifty_four = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: white_widow.id)
+  # fifty_five = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: white_rhino.id)
+  # fifty_six = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: super_silver_haze.id)
+  # fifty_seven = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: afghan_kush.id)
+  # fifty_eight = DispensaryStrain.create(dispensary_id: timberline.id, strain_id: blackberry_kush.id)
+  # fifty_nine = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: lemon_kush.id)
+  # sixty = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: white_rhino.id)
+  # sixty_one = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: blackberry_kush.id)
+  # sixty_two = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: afghan_kush.id)
+  # sixty_three = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: super_silver_haze.id)
+  # sixty_four = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: white_widow.id)
+  # sixty_five = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: skywalker.id)
+  # sixty_six = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: bubble_gum.id)
+  # sixty_seven = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: bubba_kush.id)
+  # sixty_eight = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: strawberry_cough.id)
+  # sixty_nine = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: lemon_kush.id)
+  # seventy = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: trainwreck.id)
+  # seventy_one = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: grandaddy_purple.id)
+  # seventy_two = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: white_widow.id)
+  # seventy_three = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: skywalker.id)
+  # seventy_four = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: afghan_kush.id)
+  # seventy_five = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: lemon_kush.id)
+  # seventy_six = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: cherry_pie.id)
+  # seventy_seven = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: blackberry_kush.id)
+  # seventy_eight = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: super_silver_haze.id)
+  # seventy_nine = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: strawberry_cough.id)
+  # eighty = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: afghan_kush.id)
+  # eighty_one = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: super_silver_haze.id)
+  # eighty_two = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: blackberry_kush.id)
+  # eithy_three = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: lemon_kush.id)
+  # eighty_four = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: white_widow.id)
+  # eighty_five = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: skywalker.id)
+  # eighty_six = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: amnesia_haze.id)
+  # eighty_seven = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: lemon_haze.id)
+  # eighty_eight = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: cheese.id)
+
+# <<<<<<< HEAD
+# a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
+#      thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
+#      twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
+#      thirty,thirty_one, thirty_two, thirty_three]
+# =======
+
+  # a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
+  #  thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
+  #  twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
+  #  thirty,thirty_one, thirty_two, thirty_three, thirty_four, thirty_five, thirty_six,
+  #  thirty_seven, thirty_eight, thirty_nine, forty, forty_one, forty_two, forty_three,
+  #  forty_four, forty_five, forty_six, forty_seven, forty_eight, forty_nine, fifty,
+  #  fifty_one, fifty_two, fifty_three, fifty_four, fifty_five, fifty_six, fifty_seven,
+  #  fifty_eight, fifty_nine, sixty, sixty_one, sixty_two]
 
 ## choices (name, category)
 
   #effects
-euphoric = Choice.create(name: "Euphoric", category: "Effects")
-lazy = Choice.create(name: "Lazy", category: "Effects")
-happy = Choice.create(name: "Happy", category: "Effects")
-uplifted = Choice.create(name: "Uplifted", category: "Effects")
-sleepy = Choice.create(name: "Sleepy", category: "Effects")
-relaxed = Choice.create(name: "Relaxed", category: "Effects")
-giggly = Choice.create(name: "Giggly", category: "Effects")
-energetic = Choice.create(name: "Energetic", category: "Effects")
-focused = Choice.create(name: "Focused", category: "Effects")
-creative = Choice.create(name: "Creative", category: "Effects")
-talkative = Choice.create(name: "Talkative", category: "Effects")
-  #medical
-stress = Choice.create(name: "Stress", category: "Medical")
-pain = Choice.create(name: "Pain", category: "Medical")
-anxiety = Choice.create(name: "Anxiety", category: "Medical")
-insomnia = Choice.create(name: "Insomnia", category: "Medical")
-nausea = Choice.create(name: "Nausea", category: "Medical")
-depression = Choice.create(name: "Depression", category: "Medical")
-glaucoma = Choice.create(name: "Glaucoma", category: "Medical")
-muscle_spasms = Choice.create(name: "Muscle Spasms", category: "Medical")
-fatigue = Choice.create(name: "Fatigue", category: "Medical")
-  #negative
-headache = Choice.create(name: "Headache", category: "Negatives")
-dry_mouth = Choice.create(name: "Dry Mouth", category: "Negatives")
-dry_eyes = Choice.create(name: "Dry Eyes", category: "Negatives")
-shakes = Choice.create(name: "Shakes", category: "Negatives")
-paranoia = Choice.create(name: "Paranoia", category: "Negatives")
-dizzy = Choice.create(name: "Dizzy", category: "Negatives")
+  overall_rating = Choice.create(name: "Overall Average")
 
-overall_rating = Choice.create(name: "Overall Average")
+  euphoric = Choice.create(name: "Euphoric", category: "Effects")
+  lazy = Choice.create(name: "Lazy", category: "Effects")
+  happy = Choice.create(name: "Happy", category: "Effects")
+  uplifted = Choice.create(name: "Uplifted", category: "Effects")
+  sleepy = Choice.create(name: "Sleepy", category: "Effects")
+  relaxed = Choice.create(name: "Relaxed", category: "Effects")
+  giggly = Choice.create(name: "Giggly", category: "Effects")
+  energetic = Choice.create(name: "Energetic", category: "Effects")
+  focused = Choice.create(name: "Focused", category: "Effects")
+  creative = Choice.create(name: "Creative", category: "Effects")
+  talkative = Choice.create(name: "Talkative", category: "Effects")
+  #medical
+  stress = Choice.create(name: "Stress", category: "Medical")
+  pain = Choice.create(name: "Pain", category: "Medical")
+  anxiety = Choice.create(name: "Anxiety", category: "Medical")
+  insomnia = Choice.create(name: "Insomnia", category: "Medical")
+  nausea = Choice.create(name: "Nausea", category: "Medical")
+  depression = Choice.create(name: "Depression", category: "Medical")
+  glaucoma = Choice.create(name: "Glaucoma", category: "Medical")
+  muscle_spasms = Choice.create(name: "Muscle Spasms", category: "Medical")
+  fatigue = Choice.create(name: "Fatigue", category: "Medical")
+  #negative
+  headache = Choice.create(name: "Headache", category: "Negatives")
+  dry_mouth = Choice.create(name: "Dry Mouth", category: "Negatives")
+  dry_eyes = Choice.create(name: "Dry Eyes", category: "Negatives")
+  shakes = Choice.create(name: "Shakes", category: "Negatives")
+  paranoia = Choice.create(name: "Paranoia", category: "Negatives")
+  dizzy = Choice.create(name: "Dizzy", category: "Negatives")
+
 
 ## user_choices (strain_rating_id, choice_id, rating)
 
- choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue, overall_rating, overall_rating, overall_rating, overall_rating]
+choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue, overall_rating, overall_rating, overall_rating, overall_rating]
 
-10000.times do
-  UserChoice.create(dispensary_strain_id: a.sample.id, choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
+
+1000.times do
+  dispensaries.each do |y|
+    y.dispensary_strains.each do |x|
+      x.user_choices.create(choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
+    end
+  end
 end
+
+
