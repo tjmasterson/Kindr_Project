@@ -1,8 +1,8 @@
 <%= form_for @dispensary_strain, url: {action: "create_user_choice_collection", controller: "users", method: "post"} do |f| %>
- <% @choices.each do |choice| %>
-  <%= f.fields_for :user_choices, [UserChoice.new] do |user_choice| %>
-    <%= user_choice.label (choice.name) %>
-    <%= user_choice.text_field :rating %><br>
+  <% @choices.each do |choice| %>
+    <%= f.fields_for :user_choices, [UserChoice.new] do |user_choice| %>
+      <%= user_choice.label (choice.name) %>
+      <%= user_choice.text_field :rating %><br>
     <% end %>
   <% end  %>
   <%= f.submit %>
