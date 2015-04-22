@@ -5,14 +5,36 @@
 	margin-right: auto;
 }
 
+.chart{
+	display: inline-block;
+}
 
 .chart div {
-	font: 11px;
+	font: 5px;
 	text-align: left;
 	padding: 3px;
 	margin: 1px;
 	margin-bottom: 10px;
 	color: white;
+}
+
+@-webkit-keyframes slideIn{
+	0% {}
+	5% {width: 0%;}
+	10% {width: 4%;}
+	15% {width: 6%;}
+	20% {width: 8%;}
+	40% {width: 10%;}
+	60% {width: 15%;}
+	65% {width: 20%;}
+	70% {width: 25%;}
+	75% {width: 30%;}
+	80% {width: 35%;}
+	90% {width: 40%;}
+	95% {width: 45%;}
+	97% {width: 50%;}
+	98% {width: 60%;}
+	100% {width: 65%;}
 }
 
 @-webkit-keyframes bounceDown{
@@ -63,29 +85,108 @@
 	100% {transform: translateX(0px);}
 }
 
+@-webkit-keyframes stretchRight {
+	0% {
+		transform: scaleX(0.3);
+	}
+	40% {
+		transform: scaleX(1.02);
+	}
+	60% {
+		transform: scaleX(0.98);
+	}
+	80% {
+		transform: scaleX(1.01);
+	}
+	100% {
+		transform: scaleX(0.98);
+	}
+	80% {
+		transform: scaleX(1.01);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+
 .first {
 	background-color: #588A23;
-	-webkit-animation: bounceLeft 1.5s ease-in-out;
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
 }
 
 .second{
 	background-color: steelblue;
-	-webkit-animation: bounceRandom 1.3s ease-in-out;
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
 }
 
 .third{
 	background-color: #6500BF;
-	-webkit-animation: bounceDown 1.8s ease-in;
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
 }
 
 .fourth{
 	background-color: #DC7000;
-	-webkit-animation: bounceRandomTwo 1.4s ease-in;
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
 }
 
 .fifth{
 	background-color: #FF2000;
-	-webkit-animation: bounceLeft 1s ease-in-out;
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
 }
 
 

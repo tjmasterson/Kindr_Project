@@ -5,21 +5,40 @@
     </h4>
   </p><p>
   <div class='panel-thumbnail'>
-    <a href='#' title='Ratings'>
+    <!-- <a href='#' title='Ratings'> -->
 
     <!-- CHART -->
-
-    <%= render partial: '/dispensary_strains/dispensary_strain_details', locals: {dispensary_strain: dispensary_strain} %>
-
+    <div class="chart">
+      <div class="first" style="width: <%= (dispensary_strain.top_five[4][1] * 35)%>px;">
+        <%= dispensary_strain.top_five[4][0] %>:
+        <%= dispensary_strain.top_five[4][1] %>
+      </div>
+      <div class="second" style="width: <%= (dispensary_strain.top_five[3][1] * 35)%>px;">
+        <%= dispensary_strain.top_five[3][0] %>:
+        <%= dispensary_strain.top_five[3][1] %>
+      </div>
+      <div class="third" style="width: <%= (dispensary_strain.top_five[2][1] * 35)%>px;">
+        <%= dispensary_strain.top_five[2][0] %>:
+        <%= dispensary_strain.top_five[2][1] %>
+      </div>
+      <div class="fourth" style="width: <%= (dispensary_strain.top_five[1][1] * 35)%>px;">
+        <%= dispensary_strain.top_five[1][0] %>:
+        <%= dispensary_strain.top_five[1][1] %>
+      </div>
+      <div class="fifth" style="width: <%= (dispensary_strain.top_five[0][1] * 35)%>px;">
+        <%= dispensary_strain.top_five[0][0] %>:
+        <%= dispensary_strain.top_five[0][1] %>
+      </div>
+    </div>
     <!-- CHART -->
 
-    </a>
+    <!-- </a> -->
   </div>
 
 
-    <!-- <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> -->
+  <!-- <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> -->
 </div>
 </div>
-</div>
+
 
 
