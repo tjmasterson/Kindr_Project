@@ -1,14 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kindr</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Kindr Project</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= params[:controller] %> <%= params[:action] %>">
 
 <%= yield %>
 
+  <div class="row">
+    <hr>
+    <div class="col-sm-3 pull-right">
+
+      <address id="address_dispensaries_index">
+        Kindr Project, Inc.<br>
+        <span id="map-input">
+          1212 Main Street<br>
+          Chicago, IL 60614</span><br>
+          P: (555) 555-5555
+        </address>
+
+        <address>
+          <strong>Email Us</strong><br>
+          <a href="mailto:#">first.last@example.com</a>
+        </address>
+      </div>
+
+      <div class="col-sm-8 col-sm-offset-1">
+
+        <div class="row form-group">
+          <div class="col-md-12">
+            <h1>Contact Us</h1>
+          </div>
+          <div class="col-xs-4">
+            <input type="text" class="form-control" id="firstName" name="name" placeholder="Your Name">
+          </div>
+          <div class="col-xs-6">
+            <input type="text" class="form-control" id="organization" name="organization" placeholder="Company or Organization">
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-xs-5">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+          <div class="col-xs-5">
+            <input type="text" class="form-control" name="phone" placeholder="Phone">
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-xs-10">
+            <textarea class="form-control" placeholder="Comments"></textarea>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-xs-10">
+            <button class="btn btn-default pull-right">Contact Us</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!--/row-->
+
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+
+  <!--     <ul class="list-inline center-block">
+        <li><a href="http://facebook.com/bootply"><img src="/assets/example/soc_fb.png"></a></li>
+        <li><a href="http://twitter.com/bootply"><img src="/assets/example/soc_tw.png"></a></li>
+        <li><a href="http://google.com/+bootply"><img src="/assets/example/soc_gplus.png"></a></li>
+        <li><a href="http://pinterest.com/in1"><img src="/assets/example/soc_pin.png"></a></li>
+      </ul> -->
+
+    </div><!--/col-->
+  </div><!--/container-->
+
+</div><!--/wrap-->
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">Copyright ©2015 Kindr Project, Inc.</p>
+  </div>
+</div>
+
+<ul class="nav pull-right scroll-top">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+
+
+<div class="modal" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 class="modal-title"></h3>
+      </div>
+      <div class="modal-body">
+        <div id="modalCarousel" class="carousel">
+
+          <div class="carousel-inner">
+
+          </div>
+
+          <a class="carousel-control left" href="#modaCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

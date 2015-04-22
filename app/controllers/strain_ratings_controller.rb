@@ -1,2 +1,0 @@
-class StrainRatingsController < ApplicationController
-end

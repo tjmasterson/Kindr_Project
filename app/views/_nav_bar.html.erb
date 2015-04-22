@@ -1,0 +1,33 @@
+  <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="our_nav_bar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a id="home_page_link" href="/">Home</a></li>
+          <li><a id="all_dispensaries_link" href="/dispensaries">Dispensaries</a></li>
+          <li class="dropdown">
+            <a href="#section3" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Academic</a></li>
+              <li><a href="#">Commercial</a></li>
+              <li><a href="#">Financial</a></li>
+              <li><a href="#">Interior Design</a></li>
+              <li><a href="#">Medical</a></li>
+              <li><a href="#">Religious</a></li>
+            </ul>
+          </li>
+          <li><a id="all_strains_link" href="/strains">Strains</a></li>
+
+            <li><%= link_to "Sign Up", signup_path, id:"signup_link", remote: true %></li>
+            <li><%= link_to "Login Up", login_path, id:"login_link", remote: true %></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+  </div><!--/.navbar -->

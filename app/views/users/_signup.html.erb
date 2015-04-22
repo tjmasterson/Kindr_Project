@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="form-box"
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Create an account</h2>
+    <%= form_for :user do |f| %>
+    <%= f.label :username%>
+    <%= f.text_field :username, class: "form-control" %>
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "form-control" %>
+    <%= f.label :password%>
+    <%= f.password_field :password, class: "form-control" %>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <%= f.submit "Sign Up", class: "btn btn-lg btn-primary btn-block" %>
+    <%end%>
+  </form>
+</div>
+</div>
+<br><br>

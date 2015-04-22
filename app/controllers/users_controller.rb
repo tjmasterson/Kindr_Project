@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
 
+  def index
+  end
+
   def login
+     render partial: 'login'
+  end
+
+  def signup
+    render partial: 'signup'
   end
 
   def update
@@ -12,9 +20,6 @@ class UsersController < ApplicationController
       flash.now[:danger] = "Invalid login parameters"
       render :login
     end
-  end
-
-  def signup
   end
 
   def create
@@ -32,16 +37,16 @@ class UsersController < ApplicationController
       session.delete(:user_id)
       puts "Session deleted"
     end
+
     if request.xhr?
       render :partial => 'layouts/logout', layout: false
     end
   end
 
   private
+
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
-  def index
-    origin/controllers
-  end
+
 end
