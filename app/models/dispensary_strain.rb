@@ -27,4 +27,12 @@ class DispensaryStrain < ActiveRecord::Base
     return sorted.sort_by{|key, value| value}.pop(5)
   end
 
+  def top_overall
+    averages_hash = {}
+    self.average_ratings.each do  |choice, average|
+      averages_hash[choice.name] = average.to_f.round(2) if choice.name = "Overall Average"
+    end
+    return averages_hash.sort_by{|key, value| value}.pop
+  end
+
 end
