@@ -34,7 +34,7 @@
 	40% {transform: translateY(120px);}
 	60% {transform: translateY(-16px);}
 	70% {transform: translateY(6px);}
-	80% {transform: translateY(-6px);}
+	80% {transform: translateY(-12px);}
 	90% {transform: translateY(-2px);}
 	100% {transform: translateY(0px);}
 }
@@ -46,7 +46,7 @@
 	40% {transform: translateY(120px);}
 	60% {transform: translateY(-20px);}
 	70% {transform: translateY(10px);}
-	80% {transform: translateY(-6px);}
+	80% {transform: translateY(-10px);}
 	90% {transform: translateY(-2px);}
 	100% {transform: translateY(0px);}
 }
@@ -65,27 +65,27 @@
 
 .first {
 	background-color: #588A23;
-	-webkit-animation: bounceLeft 2.5s ease-in-out;
+	-webkit-animation: bounceLeft 1.5s ease-in-out;
 }
 
 .second{
 	background-color: steelblue;
-	-webkit-animation: bounceRandom 2.3s ease-in;
+	-webkit-animation: bounceRandom 1.3s ease-in-out;
 }
 
 .third{
 	background-color: #6500BF;
-	-webkit-animation: bounceDown 2.8s ease-in;
+	-webkit-animation: bounceDown 1.8s ease-in;
 }
 
 .fourth{
 	background-color: #DC7000;
-	-webkit-animation: bounceRandomTwo 3.4s ease-in;
+	-webkit-animation: bounceRandomTwo 1.4s ease-in;
 }
 
 .fifth{
 	background-color: #FF2000;
-	-webkit-animation: bounceLeft 2.3s ease-in;
+	-webkit-animation: bounceLeft 1s ease-in-out;
 }
 
 
