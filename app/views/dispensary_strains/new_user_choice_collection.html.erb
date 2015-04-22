@@ -1,72 +1,80 @@
-<%= form_for @dispensary_strain, url: {action: "create_user_choice_collection", controller: "users", method: "post"} do |f| %>
-<% @choices.each do |choice| %>
-<%= f.fields_for :user_choices, [UserChoice.new] do |user_choice| %>
-<%= user_choice.label (choice.name) %>
-<%= user_choice.text_field :rating %><br>
-<% end %>
-<% end  %>
-<%= f.submit %>
-<% end %>
+<!-- Wrap all page content here -->
+<div id="wrap">
 
-<%= form_for @person, url: {action: "create"} do |person_form| %>
-<%= person_form.text_field :name %>
-<%= fields_for @person.contact_detail do |contact_details_form| %>
-<%= contact_details_form.text_field :phone_number %>
-<% end %>
-<% end %>
+  <header class="masthead">
+    <div class="logo">Kindr Project</div>
+  </header>
 
-<%= form_for @person do |f| %>
-Addresses:
-<ul>
-  <%= f.fields_for :addresses do |addresses_form| %>
-  <li>
-    <%= addresses_form.label :kind %>
-    <%= addresses_form.text_field :kind %>
 
-    <%= addresses_form.label :street %>
-    <%= addresses_form.text_field :street %>
-    ...
-  </li>
-  <% end %>
-</ul>
-<% end %>
+  <!-- Fixed navbar -->
+  <%= render partial: '/nav_bar' %>
+  <!-- <div class="divider" id="section3"></div> -->
 
-<form class="form-horizontal">
-  <fieldset>
+  <div class="bg-4">
+    <div class="container" id="all_dispensaries">
+    </div><!--/container-->
+  </div>
 
-    <!-- Form Name -->
-    <legend>Rate Strain</legend>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="control-group">
-      <label class="control-label" for="radios">Inline Radios</label>
-      <div class="controls">
-        <label class="radio inline" for="radios-0">
-          <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-          1
-        </label>
-        <label class="radio inline" for="radios-1">
-          <input type="radio" name="radios" id="radios-1" value="2">
-          2
-        </label>
-        <label class="radio inline" for="radios-2">
-          <input type="radio" name="radios" id="radios-2" value="3">
-          3
-        </label>
-        <label class="radio inline" for="radios-3">
-          <input type="radio" name="radios" id="radios-3" value="4">
-          4
-        </label>
-      </div>
+<div class="container">
+  <div class="jumbotron">
+
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="fa fa-line-chart"></span> Please Rate our service</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label> Excellent</label>
+                            <div class="btn-toolbar" role="toolbar" aria-label="...">
+                            <div class="btn-group" role="group" aria-label="...">...</div>
+                            <div class="btn-group" role="group" aria-label="...">...</div>
+                            <div class="btn-group" role="group" aria-label="...">...</div>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Good
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Satisfactory
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Needs Improvement
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Poor
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-footer text-center">
+                <button type="button" class="btn btn-primary btn-block btn-sm">
+                    Vote</button>
+                <a href="#" class="small">View Result</a>
+            </div>
+        </div>
     </div>
-
-    <!-- Button -->
-    <div class="control-group">
-      <label class="control-label" for="singlebutton">Single Button</label>
-      <div class="controls">
-        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
-      </div>
-    </div>
-
-  </fieldset>
-</form>
+</div>
+</div>
+</div>
