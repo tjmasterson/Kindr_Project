@@ -8,9 +8,9 @@ lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com", password:
 ##dispensaries(name, address, city, zip, website, photo) ---addresses need doublechecking
 ##--missing data for user_id and photo_id
     ##golden
-terrapin = Dispensary.create(name: "Terrapin Care Clinic", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
-native_roots = Dispensary.create(name: "Native Roots", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
-fox_street_clinic = Dispensary.create(name: "Fox Street Clinic", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
+    terrapin = Dispensary.create(name: "Terrapin Care Clinic", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
+    native_roots = Dispensary.create(name: "Native Roots", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
+    fox_street_clinic = Dispensary.create(name: "Fox Street Clinic", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
 ##steamboat
 natural_remedies = Dispensary.create(name: "Natural Remedies",  phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
 mindful_recreation = Dispensary.create(name: "Mindful Recreation", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
@@ -189,7 +189,7 @@ sixty_two = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain
 sixty_three = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: super_silver_haze.id)
 sixty_four = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: white_widow.id)
 sixty_five = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: skywalker.id)
-sixty_six = DispensaryStrain.create(dispensary_ifortyd: green_man_cannabis.id, strain_id: bubble_gum.id)
+sixty_six = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: bubble_gum.id)
 sixty_seven = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: bubba_kush.id)
 sixty_eight = DispensaryStrain.create(dispensary_id: green_man_cannabis.id, strain_id: strawberry_cough.id)
 sixty_nine = DispensaryStrain.create(dispensary_id: native_roots.id, strain_id: lemon_kush.id)
@@ -215,49 +215,49 @@ eighty_eight = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain
 
 
 a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
-     thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
-     twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
-     thirty,thirty_one, thirty_two, thirty_three, thirty_four, thirty_five, thirty_six,
-     thirty_seven, thirty_eight, thirty_nine, forty, forty_one, forty_two, forty_three
-     forty_four, fort_five, forty_six, forty_seven, forty_eight, forty_nine, fifty,
-     fifty_one, fifty_two, fifty_three, fifty_four, fifty_five, fifty_six, fifty_seven,
-     fifty_eight, fifty_nine, sixty, sixty_one, sixty_two]
+ thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
+ twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
+ thirty,thirty_one, thirty_two, thirty_three, thirty_four, thirty_five, thirty_six,
+ thirty_seven, thirty_eight, thirty_nine, forty, forty_one, forty_two, forty_three,
+ forty_four, forty_five, forty_six, forty_seven, forty_eight, forty_nine, fifty,
+ fifty_one, fifty_two, fifty_three, fifty_four, fifty_five, fifty_six, fifty_seven,
+ fifty_eight, fifty_nine, sixty, sixty_one, sixty_two]
 
 ## choices (name, category)
 
   #effects
-euphoric = Choice.create(name: "Euphoric", category: "Effects")
-lazy = Choice.create(name: "Lazy", category: "Effects")
-happy = Choice.create(name: "Happy", category: "Effects")
-uplifted = Choice.create(name: "Uplifted", category: "Effects")
-sleepy = Choice.create(name: "Sleepy", category: "Effects")
-relaxed = Choice.create(name: "Relaxed", category: "Effects")
-giggly = Choice.create(name: "Giggly", category: "Effects")
-energetic = Choice.create(name: "Energetic", category: "Effects")
-focused = Choice.create(name: "Focused", category: "Effects")
-creative = Choice.create(name: "Creative", category: "Effects")
-talkative = Choice.create(name: "Talkative", category: "Effects")
+  euphoric = Choice.create(name: "Euphoric", category: "Effects")
+  lazy = Choice.create(name: "Lazy", category: "Effects")
+  happy = Choice.create(name: "Happy", category: "Effects")
+  uplifted = Choice.create(name: "Uplifted", category: "Effects")
+  sleepy = Choice.create(name: "Sleepy", category: "Effects")
+  relaxed = Choice.create(name: "Relaxed", category: "Effects")
+  giggly = Choice.create(name: "Giggly", category: "Effects")
+  energetic = Choice.create(name: "Energetic", category: "Effects")
+  focused = Choice.create(name: "Focused", category: "Effects")
+  creative = Choice.create(name: "Creative", category: "Effects")
+  talkative = Choice.create(name: "Talkative", category: "Effects")
   #medical
-stress = Choice.create(name: "Stress", category: "Medical")
-pain = Choice.create(name: "Pain", category: "Medical")
-anxiety = Choice.create(name: "Anxiety", category: "Medical")
-insomnia = Choice.create(name: "Insomnia", category: "Medical")
-nausea = Choice.create(name: "Nausea", category: "Medical")
-depression = Choice.create(name: "Depression", category: "Medical")
-glaucoma = Choice.create(name: "Glaucoma", category: "Medical")
-muscle_spasms = Choice.create(name: "Muscle Spasms", category: "Medical")
-fatigue = Choice.create(name: "Fatigue", category: "Medical")
+  stress = Choice.create(name: "Stress", category: "Medical")
+  pain = Choice.create(name: "Pain", category: "Medical")
+  anxiety = Choice.create(name: "Anxiety", category: "Medical")
+  insomnia = Choice.create(name: "Insomnia", category: "Medical")
+  nausea = Choice.create(name: "Nausea", category: "Medical")
+  depression = Choice.create(name: "Depression", category: "Medical")
+  glaucoma = Choice.create(name: "Glaucoma", category: "Medical")
+  muscle_spasms = Choice.create(name: "Muscle Spasms", category: "Medical")
+  fatigue = Choice.create(name: "Fatigue", category: "Medical")
   #negative
-headache = Choice.create(name: "Headache", category: "Negatives")
-dry_mouth = Choice.create(name: "Dry Mouth", category: "Negatives")
-dry_eyes = Choice.create(name: "Dry Eyes", category: "Negatives")
-shakes = Choice.create(name: "Shakes", category: "Negatives")
-paranoia = Choice.create(name: "Paranoia", category: "Negatives")
-dizzy = Choice.create(name: "Dizzy", category: "Negatives")
+  headache = Choice.create(name: "Headache", category: "Negatives")
+  dry_mouth = Choice.create(name: "Dry Mouth", category: "Negatives")
+  dry_eyes = Choice.create(name: "Dry Eyes", category: "Negatives")
+  shakes = Choice.create(name: "Shakes", category: "Negatives")
+  paranoia = Choice.create(name: "Paranoia", category: "Negatives")
+  dizzy = Choice.create(name: "Dizzy", category: "Negatives")
 
 ## user_choices (strain_rating_id, choice_id, rating)
 
- choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
+choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
 
 10000.times do
   UserChoice.create(dispensary_strain_id: a.sample.id, choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
