@@ -6,15 +6,15 @@ lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com", password:
 
 
 ##cities(name, state)
-golden = City.new(name: "Golden", state: "Colorado")
-steamboat = City.new(name: "Steamboat Springs", state: "Colorado")
-buena_vista = City.new(name: "Buena Vista", state: "Colorado")
-denver = City.new(name: "Denver", state: "Colorado")
-boulder = City.new(name: "Boulder", state: "Colorado")
-aurora = City.new(name: "Aurora", state: "Colorado")
-manitou_springs = City.new(name: "Manitou Springs", state: "Colorado")
-erie = City.new(name: "Erie", state: "Colorado")
-lakewood = City.new(name: "Lakewood", state: "Colorado")
+# golden = City.new(name: "Golden", state: "Colorado")
+# steamboat = City.new(name: "Steamboat Springs", state: "Colorado")
+# buena_vista = City.new(name: "Buena Vista", state: "Colorado")
+# denver = City.new(name: "Denver", state: "Colorado")
+# boulder = City.new(name: "Boulder", state: "Colorado")
+# aurora = City.new(name: "Aurora", state: "Colorado")
+# manitou_springs = City.new(name: "Manitou Springs", state: "Colorado")
+# erie = City.new(name: "Erie", state: "Colorado")
+# lakewood = City.new(name: "Lakewood", state: "Colorado")
 
 
 ##dispensaries(name, address, city, zip, website, photo) ---addresses need doublechecking
