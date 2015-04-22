@@ -1,0 +1,47 @@
+    #container1 {
+      min-height: 4000px;
+      margin-bottom: 120px;
+      padding:20px;
+      background-color:#f5f5f5;
+    }
+/*    .panel-default {
+
+    }
+
+    .list-group {
+      min-height: 4000px;
+    }*/
+    .rating {
+      margin-left: 30px;
+    }
+
+    div.skill {
+      background: #5cb85c;
+      border-radius: 3px;
+      color: white;
+      font-weight: bold;
+      padding: 3px 4px;
+      width: 70px;
+    }
+
+    .skillLine {
+      display: inline-block;
+      width: 100%;
+      min-height: 90px;
+      padding: 3px 4px;
+    }
+
+    .skillLineDefault {
+      padding: 3px 4px;
+    }
+
+    #rating_box {
+      min-height: 500px;
+    }
+
+    #rating_list_group {
+      min-height: 500px;
+    }
+    #rating_list_group li {
+      margin-top: 20px;
+    }

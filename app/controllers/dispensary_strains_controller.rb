@@ -9,16 +9,13 @@ class DispensaryStrainsController < ApplicationController
   def new_user_choice_collection
     @dispensary = Dispensary.find(params[:dispensary_id])
     @dispensary_strain = DispensaryStrain.find(params[:dispensary_strain_id])
+    Choice.all.each
+    26.times  { |i| @dispensary_strain.user_choices.build(choice_id: i)}
     @choices = Choice.all
   end
 
   def create_user_choice_collection
-      children_attributes = params[:parent].delete(:children) # takes off the attributes of the children
-      @parent = Parent.create(params[:parent])
-
-      children_attributes.each do |child_attributes|
-        child = @parent.children.create(child_attributes)
-      end
+puts params
     end
 
     private

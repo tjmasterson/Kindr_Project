@@ -1,72 +1,59 @@
 <%= form_for @dispensary_strain, url: {action: "create_user_choice_collection", controller: "users", method: "post"} do |f| %>
-<% @choices.each do |choice| %>
-<%= f.fields_for :user_choices, [UserChoice.new] do |user_choice| %>
-<%= user_choice.label (choice.name) %>
-<%= user_choice.text_field :rating %><br>
-<% end %>
-<% end  %>
-<%= f.submit %>
-<% end %>
-
-<%= form_for @person, url: {action: "create"} do |person_form| %>
-<%= person_form.text_field :name %>
-<%= fields_for @person.contact_detail do |contact_details_form| %>
-<%= contact_details_form.text_field :phone_number %>
-<% end %>
-<% end %>
-
-<%= form_for @person do |f| %>
-Addresses:
+Effects to choose:
 <ul>
-  <%= f.fields_for :addresses do |addresses_form| %>
+  <%= f.fields_for :user_choices do |user_choice_form| %>
   <li>
-    <%= addresses_form.label :kind %>
-    <%= addresses_form.text_field :kind %>
-
-    <%= addresses_form.label :street %>
-    <%= addresses_form.text_field :street %>
-    ...
+    <%= user_choice_form.object.choice.name if user_choice_form.object.choice %>
+    <%= user_choice_form.label :rating %>
+    <%= user_choice_form.radio_button(:rating, "1") %>
+    <%= user_choice_form.radio_button(:rating, "2") %>
+    <%= user_choice_form.radio_button(:rating, "3") %>
+    <%= user_choice_form.radio_button(:rating, "4") %>
+    <%= user_choice_form.radio_button(:rating, "5") %>
+    <%= user_choice_form.radio_button(:rating, "6") %>
+    <%= user_choice_form.radio_button(:rating, "7") %>
+    <%= user_choice_form.radio_button(:rating, "8") %>
+    <%= user_choice_form.radio_button(:rating, "9") %>
+    <%= user_choice_form.radio_button(:rating, "10") %>
+    <%= user_choice_form.radio_button(:rating, "11") %>
   </li>
   <% end %>
 </ul>
+<%= f.submit %>
 <% end %>
 
-<form class="form-horizontal">
-  <fieldset>
+<div class="container">
+  <div class="jumbotron">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h3><%=@dispensary.name%></h3><br>
+      <div class="panel panel-primary">
+       <div class="panel-heading form-body">
+        <h3 class="panel-title"><span class="fa fa-line-chart">Rate your experience with:<br><%=@strain.name%></span></h3>
+      </div>
+        <div class="panel-body">
+          <ul id="form-body" class="list-group">
+            <li class="list-group-item">
+              <label><%=%></label>
+              <select>
+                <option value="Happy">Happy</option>
+              </select>
+            </li>
+            <li class="list-group-item">
+              <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">1</button>
+              </div>
+            </li>
 
-    <!-- Form Name -->
-    <legend>Rate Strain</legend>
-
-    <!-- Multiple Radios (inline) -->
-    <div class="control-group">
-      <label class="control-label" for="radios">Inline Radios</label>
-      <div class="controls">
-        <label class="radio inline" for="radios-0">
-          <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-          1
-        </label>
-        <label class="radio inline" for="radios-1">
-          <input type="radio" name="radios" id="radios-1" value="2">
-          2
-        </label>
-        <label class="radio inline" for="radios-2">
-          <input type="radio" name="radios" id="radios-2" value="3">
-          3
-        </label>
-        <label class="radio inline" for="radios-3">
-          <input type="radio" name="radios" id="radios-3" value="4">
-          4
-        </label>
+          </ul>
+        </div>
+        <div class="panel-footer text-center form-body">
+          <button type="button" class="btn btn-primary btn-block btn-sm">
+            Vote</button>
+            <a href="#" class="small">View Result</a>
+        </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Button -->
-    <div class="control-group">
-      <label class="control-label" for="singlebutton">Single Button</label>
-      <div class="controls">
-        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
-      </div>
-    </div>
-
-  </fieldset>
-</form>
