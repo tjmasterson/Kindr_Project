@@ -43,6 +43,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def new_user_choice_collection
+
+  end
+
+  def create_user_choice_collection
+
+  end
+
+  def map
+    render :maps
+  end
+
   private
 
   def user_params

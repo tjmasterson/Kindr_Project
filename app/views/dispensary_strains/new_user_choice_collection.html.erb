@@ -1,0 +1,13 @@
+
+<%= form_for @dispensary_strain, url: {action: "create_user_choice_collection", controller: "users"} do |f| %>
+  <% @choices.each do |choice| %>
+    <h4><%= f.label choice.name%></h4>
+    <% choice_id = choice.id %>
+        <%= f.fields_for @dispensary_strain.user_choices.new do |uc| %>
+          <%= f.select rating[], "rating", %w[1 2 3 4 5 6 7 8 9 10] %>
+      <% end %>
+    <% end %>
+  <%=f.submit 'Rate' %>
+<% end %>
+
+
