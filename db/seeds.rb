@@ -164,8 +164,9 @@ dispensaries = [terrapin,
 
   10.times do
     dispensaries.each do |dispensary|
-      strain = Strain.limit(1).order("RANDOM()")
-      dispensary.dispensary_strains.create(strain_id: strain.id)
+      num = 1
+      dispensary.dispensary_strains.create(strain_id: num)
+      num += 1
     end
   end
   # one = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: white_widow.id)
@@ -270,14 +271,14 @@ dispensaries = [terrapin,
   # eighty_eight = DispensaryStrain.create(dispensary_id: cannabis_center.id, strain_id: cheese.id)
 
 
-  a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
-   thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
-   twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
-   thirty,thirty_one, thirty_two, thirty_three, thirty_four, thirty_five, thirty_six,
-   thirty_seven, thirty_eight, thirty_nine, forty, forty_one, forty_two, forty_three,
-   forty_four, forty_five, forty_six, forty_seven, forty_eight, forty_nine, fifty,
-   fifty_one, fifty_two, fifty_three, fifty_four, fifty_five, fifty_six, fifty_seven,
-   fifty_eight, fifty_nine, sixty, sixty_one, sixty_two]
+  # a = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
+  #  thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen,
+  #  twenty, twenty_one, twenty_two, twenty_three, twenty_four, twenty_five,
+  #  thirty,thirty_one, thirty_two, thirty_three, thirty_four, thirty_five, thirty_six,
+  #  thirty_seven, thirty_eight, thirty_nine, forty, forty_one, forty_two, forty_three,
+  #  forty_four, forty_five, forty_six, forty_seven, forty_eight, forty_nine, fifty,
+  #  fifty_one, fifty_two, fifty_three, fifty_four, fifty_five, fifty_six, fifty_seven,
+  #  fifty_eight, fifty_nine, sixty, sixty_one, sixty_two]
 
 ## choices (name, category)
 
@@ -315,6 +316,10 @@ dispensaries = [terrapin,
 
 choices_array = [shakes, insomnia, dry_mouth, fatigue, lazy, pain, glaucoma,fatigue, focused, sleepy, paranoia, giggly, happy, creative, dry_mouth, insomnia, happy, fatigue, sleepy, muscle_spasms,talkative, energetic, dry_eyes, fatigue, euphoric, lazy, focused, anxiety, pain, depression, happy, uplifted, depression, headache, sleepy, creative, lazy, dry_mouth, fatigue]
 
-# 10000.times do
-#   UserChoice.create(dispensary_strain_id: a.sample.id, choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
-# end
+1000.times do
+  dispensaries.each do |y|
+    y.dispensary_strains.each do |x|
+      x.user_choices.create(choice_id: choices_array.sample.id, rating: (1..10).to_a.sample)
+    end
+  end
+end
