@@ -102,9 +102,8 @@ h1 {
   font-size:50px;
 }
 
-.logo {
-  background-color: rgba(73,126,8,0.3);
-  font-size:85px;
+body.users.index .logo {
+  font-size:105px;
   font-weight: bold;
   position:absolute;
   z-index:1200;
@@ -113,8 +112,8 @@ h1 {
   text-align:center;
   width:100%;
 
-  -webkit-text-fill-color: rgba(73,126,8, 1);
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: rgba(105, 138, 32, 1);
+  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
 
