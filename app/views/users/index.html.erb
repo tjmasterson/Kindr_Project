@@ -47,7 +47,7 @@
               <%= strain.top_five[0][1] %>
             <div class="fifth" style="width: <%= (strain.top_five[0][1] * 35)%>px;">
             </div>
-            <div class="button btn-default text-center"><%= link_to "Rate #{strain.strain.name}'s version of #{disp.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain) %>
+            <div style="bu"><%= link_to "Rate #{strain.strain.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain), class: "btn btn-success text-center"%>
             </div>
           </div>
       <% end  %>
