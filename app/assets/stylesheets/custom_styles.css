@@ -16,6 +16,10 @@
 	left: 35%;
 }
 
+.disp_strain_show{
+	text-align: center;
+}
+
 .chart div {
 	font-size: 10px;
 	text-align: left;
