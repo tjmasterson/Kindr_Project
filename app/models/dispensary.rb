@@ -21,7 +21,7 @@ class Dispensary < ActiveRecord::Base
 
 
   def self.six_rand_dispensaries_json
-    limit(6).order("RANDOM()").to_json
+    limit(6).order("RANDOM()")
   end
 
 end

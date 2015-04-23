@@ -1,16 +1,18 @@
 .form-box {
 	width: 20em;
 	height: 20em;
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: ;*/
+	/*margin-right: ;*/
 }
 
 .chart{
 	display: inline-block;
+	width: 25em;
+	margin: 0.75em;
 }
 
 .chart div {
-	font: 5px;
+	font-size: 10px;
 	text-align: left;
 	padding: 3px;
 	margin: 1px;
@@ -174,6 +176,22 @@
 }
 
 .fifth{
+	background-color: #FF2000;
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
+}
+
+.sixth{
 	background-color: #FF2000;
 	animation-name: stretchRight;
 	-webkit-animation-name: stretchRight;
