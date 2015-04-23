@@ -11,6 +11,11 @@
 	margin: 0.75em;
 }
 
+#dispensary_strain_show{
+	position: relative;
+	left: 35%;
+}
+
 .chart div {
 	font-size: 10px;
 	text-align: left;
