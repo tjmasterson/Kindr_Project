@@ -9,13 +9,13 @@ class DispensaryStrainsController < ApplicationController
   def new_user_choice_collection
     @dispensary = Dispensary.find(params[:dispensary_id])
     @dispensary_strain = DispensaryStrain.find(params[:dispensary_strain_id])
-    26.times  { |i| @dispensary_strain.user_choices.build(choice_id: i)}
     @choices = Choice.all
+    @choices.each  { |choice| @dispensary_strain.user_choices.build(choice: choice)}
   end
 
   def create_user_choice_collection
-    puts params
-    params.inspect
+    debugger
+    p params
   end
 
   private

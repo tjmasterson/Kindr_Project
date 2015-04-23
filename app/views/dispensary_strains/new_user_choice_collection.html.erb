@@ -16,24 +16,25 @@
   <h3><%=@dispensary.name%></h3><br>
   <h3 class="panel-title">Rate the <%= @dispensary_strain.strain.name%> at <%=@dispensary.name%></h3>
 
-  <%= form_for @dispensary_strain, include_id: false, url: {action: "create_user_choice_collection", controller: "users", method: "post"} do |f| %>
+  <%= form_for @dispensary_strain, url: dispensary_dispensary_strain_user_choice_collection_path(@dispensary, @dispensary_strain), method: "post" do |f| %>
   <ul>
     <%= f.fields_for :user_choices do |user_choice_form| %>
-    <% if user_choice_form.object.id.nil? %>
-    <li>
-      <h4 font-color="black"><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
-      <%= user_choice_form.radio_button(:rating, "1") %>
-      <%= user_choice_form.radio_button(:rating, "2") %>
-      <%= user_choice_form.radio_button(:rating, "3") %>
-      <%= user_choice_form.radio_button(:rating, "4") %>
-      <%= user_choice_form.radio_button(:rating, "5") %>
-      <%= user_choice_form.radio_button(:rating, "6") %>
-      <%= user_choice_form.radio_button(:rating, "7") %>
-      <%= user_choice_form.radio_button(:rating, "8") %>
-      <%= user_choice_form.radio_button(:rating, "9") %>
-      <%= user_choice_form.radio_button(:rating, "10") %>
-    </li><br>
-    <% end %>
+      <% if user_choice_form.object.id.nil? %>
+        <li>
+          <%= user_choice_form.hidden_field :choice_id %>
+          <h4 font-color="black"><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
+          <%= user_choice_form.radio_button(:rating, "1") %>
+          <%= user_choice_form.radio_button(:rating, "2") %>
+          <%= user_choice_form.radio_button(:rating, "3") %>
+          <%= user_choice_form.radio_button(:rating, "4") %>
+          <%= user_choice_form.radio_button(:rating, "5") %>
+          <%= user_choice_form.radio_button(:rating, "6") %>
+          <%= user_choice_form.radio_button(:rating, "7") %>
+          <%= user_choice_form.radio_button(:rating, "8") %>
+          <%= user_choice_form.radio_button(:rating, "9") %>
+          <%= user_choice_form.radio_button(:rating, "10") %>
+        </li><br>
+      <% end %>
     <% end %>
   </ul>
   <%= f.submit("Submit", class: "btn btn-primary btn-block btn-sm")%>

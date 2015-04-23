@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :dispensary_ratings
     resources :dispensary_strains do
       get '/new_user_choice_collection' => 'dispensary_strains#new_user_choice_collection'
+      post '/user_choice_collection' => 'dispensary_strains#create_user_choice_collection'
     end
   end
 
