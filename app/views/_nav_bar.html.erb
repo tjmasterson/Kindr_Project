@@ -17,7 +17,7 @@
           </li>
           <li><%= link_to "Register Dispensary", register_path %></a></li>
           <% if logged_in? %>
-          <li><%= link_to "Logout", logout_path, id:"logout_link" %></li>
+          <li><%= link_to "Logout", logout_path, method: 'post', id:"logout_link" %></li>
           <% else %>
             <li><%= link_to "Sign Up", signup_path, id:"signup_link", remote: true %></li>
             <li><%= link_to "Login", login_path, id:"login_link", remote: true %></li>
