@@ -15,8 +15,8 @@ class DispensaryStrainsController < ApplicationController
   end
 
   def create_user_choice_collection
-puts params
-    end
+    puts params
+  end
 
     private
     def dispensary_strains_params

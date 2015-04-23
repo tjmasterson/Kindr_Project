@@ -1,6 +1,5 @@
 class DispensariesController < ApplicationController
 
-
   def index
     @dispensaries = Dispensary.all
   end
