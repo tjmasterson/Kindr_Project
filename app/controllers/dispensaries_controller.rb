@@ -6,7 +6,7 @@ class DispensariesController < ApplicationController
   end
 
   def dispensaries_index_json
-    dispensaries = Dispensary.all.to_json
+    dispensaries = Dispensary.all
     render json: dispensaries
   end
 

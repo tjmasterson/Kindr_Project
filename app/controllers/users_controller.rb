@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @dispensaries = Dispensary.all
+    @dispensary_strain = @dispensaries.sample.dispensary_strains.sample(6)
   end
 
   def login
