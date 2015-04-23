@@ -7,6 +7,8 @@
 
 .chart{
 	display: inline-block;
+	width: 25em;
+	margin: 0.75em;
 }
 
 .chart div {
