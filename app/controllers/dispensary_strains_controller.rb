@@ -14,8 +14,11 @@ class DispensaryStrainsController < ApplicationController
   end
 
   def create_user_choice_collection
-    debugger
-    p params
+    current_user = User.find(1)
+    user_choice_collection.each do |choice|
+      current_user.user_choices.create(choice)
+    end
+    redirect_to :root
   end
 
   private
@@ -23,4 +26,7 @@ class DispensaryStrainsController < ApplicationController
     params.require(:dispensary_strain).permit(:stocked, :dispensary_id, :strain_id)
   end
 
+  def user_choice_collection
+    params.require(:dispensary_strain).permit(:user_choices_attributes => [:choice_id, :rating, :dispensary_strain_id])[:user_choices_attributes].select { |k, v| v["rating"] }.map { |k, v| v.merge(user_id: session[:user_id]) }
+  end
 end

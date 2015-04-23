@@ -1,70 +1,66 @@
-<!-- Wrap all page content here -->
-<div id="wrap">
 
-  <header class="masthead">
-    <div class="logo">Kindr Project</div>
-  </header>
+<!-- Fixed navbar -->
+<%= render partial: '/nav_bar' %>
 
-
-  <!-- Fixed navbar -->
-  <%= render partial: '/nav_bar' %>
-
-  <!-- Begin page content -->
-  <%= render partial: '/search' %>
-
-  <!-- <div class="divider" id="section3"></div> -->
 <div class="container">
-  <div>
-    <div class="col-md-8"></div>
-    <div class="page-header"><h3 class="pull-left"><%=@dispensary.name%></h3></div>
-    <div class="col-md-6">
-            <div class="panel panel-primary">
-       <div id="panel-wide" class="panel-heading panel-primary form-body">
-             <div class="panel panel-primary">
-       <div class="panel-heading form-body">
-        <h3 class="panel-title"><span class="fa fa-line-chart">
-        <h3 class="panel-title"><span class="fa fa-line-chart">Rate the <%= @dispensary_strain.strain.name%> at <%=@dispensary.name%></span></h3>
-     <%= form_for @dispensary_strain, url: dispensary_dispensary_strain_user_choice_collection_path(@dispensary, @dispensary_strain), html: {class: "nifty_form"} do |f| %>
-      <div class="panel-body">
-      <ul id="form-body" class="list-group">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <div>
+        <h3 class=""><%=@dispensary.name%></h3>
+      </div>
+      <div>
+        <h4 class="fa fa-line-chart">Rate the <%= @dispensary_strain.strain.name%> at <%=@dispensary.name%>
+        </h4>
+      </div>
 
-        <%= f.fields_for :user_choices do |user_choice_form| %>
-        <% if user_choice_form.object.id.nil? %>
-        <div class="btn-group" >
-          <li class="list-group-item li-widen">
+      <div>
+
+        <%= form_for @dispensary_strain, url: dispensary_dispensary_strain_user_choice_collection_path(@dispensary, @dispensary_strain), method: "post", html: {class: "nifty_form"} do |f| %>
+        <ul class="list-group">
+          <%= f.fields_for :user_choices do |user_choice_form| %>
+          <% if user_choice_form.object.id.nil? %>
+          <li class="list-group-item ">
             <%= user_choice_form.hidden_field :choice_id %>
-            <div id="group-right" class="btn-group panel" role="group" aria-label="...">
-            <h4 class="font-cl"><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
-            <br>
-          <fieldset id="420fieldset">
-            <%= label_tag(:rating, "1", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "1") %>
-            <%= label_tag(:rating, "2", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "2") %>
-            <%= label_tag(:rating, "3", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "3") %>
-            <%= label_tag(:rating, "4", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "4") %>
-            <%= label_tag(:rating, "5", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "5") %>
-            <%= label_tag(:rating, "6", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "6") %>
-            <%= label_tag(:rating, "7", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "7") %>
-            <%= label_tag(:rating, "8", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "8") %>
-            <%= label_tag(:rating, "9", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "9") %>
-            <%= label_tag(:rating, "10", class: "inline control-label radio-label") %>
-            <%= user_choice_form.radio_button(:rating, "10") %>
-          </fieldset>
-          </div>
+            <%= user_choice_form.hidden_field :dispensary_strain_id %>
+            <div  class="btn-group " role="group" aria-label="...">
+              <h4 class=""><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
+              <%= label_tag(:rating, "1", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "1") %>
+              <%= label_tag(:rating, "2", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "2") %>
+              <%= label_tag(:rating, "3", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "3") %>
+              <%= label_tag(:rating, "4", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "4") %>
+              <%= label_tag(:rating, "5", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "5") %>
+              <%= label_tag(:rating, "6", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "6") %>
+              <%= label_tag(:rating, "7", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "7") %>
+              <%= label_tag(:rating, "8", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "8") %>
+              <%= label_tag(:rating, "9", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "9") %>
+              <%= label_tag(:rating, "10", class: "inline control-label ") %>
+              <%= user_choice_form.radio_button(:rating, "10") %>
+            </div>
           </li>
-         <% end %>
+          <% end %>
+          <!--  </div> -->
         </ul>
+
+        <% end %>
+        <div class="panel-footer text-center form-body">
+          <%= f.submit("Submit", class: "btn btn-info btn-block btn-sm")%>
+        </div>
+        <% end %>
+
+
       </div>
-      <div class="panel-footer text-center form-body">
-        <%= f.submit("Submit", class: "btn btn-info btn-block btn-sm")%>
-      </div>
-<% end %>
-<% end %>
+    </div>
+  </div>
+</div>
+
+
+
