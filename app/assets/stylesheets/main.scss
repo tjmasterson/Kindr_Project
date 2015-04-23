@@ -112,6 +112,10 @@ h1 {
   top:70px;
   text-align:center;
   width:100%;
+
+  -webkit-text-fill-color: rgba(73,126,8, 1);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 #nav {
