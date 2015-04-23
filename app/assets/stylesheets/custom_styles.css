@@ -240,3 +240,40 @@
 	transform: scale(1.05);
 	opacity: 0.7;
 }
+
+#panel-wide {
+	width: 70em;
+}
+
+.font-cl {
+	position: relative;
+	left: -3em;
+	top: 2.15em;
+	color: black;
+}
+
+.li-widen {
+	width: 56em;
+}
+
+#form-body {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.420-buttons {
+	padding: 5em 5em 5em 5em;
+	margin-left: 6em;
+	text-color: black;
+}
+.hack {
+	width: 4em;
+}
+.420-buttons input {
+	margin-left: 6em;
+}
+
+.420fieldset {
+	width: 40em;
+/*	padding: 10em 10em 10em 10em;*/
+}

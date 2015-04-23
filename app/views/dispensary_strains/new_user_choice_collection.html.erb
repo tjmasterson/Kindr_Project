@@ -17,12 +17,12 @@
 
 
 <div class="container">
-  <div class="jumbotron">
+  <div>
     <div class="col-md-8"></div>
-    <h3><%=@dispensary.name%></h3><br>
+    <div class="page-header"><h3 class="pull-left"><%=@dispensary.name%></h3></div>
     <div class="col-md-6">
             <div class="panel panel-primary">
-       <div class="panel-heading form-body">
+       <div id="panel-wide" class="panel-heading panel-primary form-body">
              <div class="panel panel-primary">
        <div class="panel-heading form-body">
         <h3 class="panel-title"><span class="fa fa-line-chart">
@@ -31,21 +31,35 @@
       <div class="panel-body">
       <ul id="form-body" class="list-group">
         <%= f.fields_for :user_choices do |user_choice_form| %>
-        <div class="btn-group" role="group" aria-label="...">
-          <li class="list-group-item">
-            <div class="btn-group" role="group" aria-label="...">
-            <h4 font-color="black"><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
+        <div class="btn-group" >
+          <li class="list-group-item li-widen">
+            <div id="group-right" class="btn-group panel" role="group" aria-label="...">
+            <h4 class="font-cl"><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
             <br>
+          <fieldset id="420fieldset">
+            <%= label_tag(:rating, "1", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "1") %>
+
+            <%= label_tag(:rating, "2", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "2") %>
+
+            <%= label_tag(:rating, "3", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "3") %>
+            <%= label_tag(:rating, "4", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "4") %>
+            <%= label_tag(:rating, "5", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "5") %>
+            <%= label_tag(:rating, "6", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "6") %>
+            <%= label_tag(:rating, "7", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "7") %>
+            <%= label_tag(:rating, "8", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "8") %>
+            <%= label_tag(:rating, "9", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "9") %>
+            <%= label_tag(:rating, "10", class: "inline control-label radio-label") %>
             <%= user_choice_form.radio_button(:rating, "10") %>
+          </fieldset>
           </div>
           </li>
           <br>
@@ -53,7 +67,7 @@
         </ul>
       </div>
         <div class="panel-footer text-center form-body">
-        <%= f.submit("Submit", class: "btn btn-primary btn-block btn-sm")%>
+        <%= f.submit("Submit", class: "btn btn-info btn-block btn-sm")%>
       </div>
       <% end %>
 
