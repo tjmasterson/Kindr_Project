@@ -1,3 +1,4 @@
+$(document).ready(function(){
 $('.carousel').carousel({interval:false});
 
 /* affix the navbar after scroll below header */
@@ -108,4 +109,4 @@ $('.panel-thumbnail>a').click(function(e){
 // google.maps.event.addDomListener(window, 'load', initialize);
 
 /* end google maps */
-
+});

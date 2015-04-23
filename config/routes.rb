@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   put '/login' => 'users#update'
   get '/signup' => 'users#signup'
   post '/signup' => 'users#create'
+  get 'register' => 'users#register'
   get '/strain_rating_nav' => 'users#strain_rating_nav'
   patch '/create_user_choice_collection' => 'users#create_user_choice_collection'
   #dispensaries
