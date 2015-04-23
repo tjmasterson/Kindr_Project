@@ -9,7 +9,6 @@ class DispensaryStrainsController < ApplicationController
   def new_user_choice_collection
     @dispensary = Dispensary.find(params[:dispensary_id])
     @dispensary_strain = DispensaryStrain.find(params[:dispensary_strain_id])
-    Choice.all.each
     26.times  { |i| @dispensary_strain.user_choices.build(choice_id: i)}
     @choices = Choice.all
   end
@@ -18,9 +17,9 @@ class DispensaryStrainsController < ApplicationController
     puts params
   end
 
-    private
-    def dispensary_strains_params
-      params.require(:dispensary_strain).permit(:stocked, :dispensary_id, :strain_id)
-    end
-
+  private
+  def dispensary_strains_params
+    params.require(:dispensary_strain).permit(:stocked, :dispensary_id, :strain_id)
   end
+
+end

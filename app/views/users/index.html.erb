@@ -24,8 +24,8 @@
       <% @dispensaries.sample(3).each do |disp| %>
         <% strain = disp.dispensary_strains.sample %>
           <div class="chart">
-            <h3 class="dispensary_title_show title"><%= disp.name %></h3>
-            <h4 class="strain_title_show title"><%= disp.dispensary_strains.sample.strain.name %></h4>
+            <h3 class="dispensary_title_show title"><%= link_to "#{disp.name}", dispensary_path(disp) %></h3>
+            <h4 class="strain_title_show title"><%= link_to "#{strain.strain.name}", dispensary_dispensary_strain_path(disp, strain) %></h4>
 
               <%= strain.top_five[4][0] %>:
               <%= strain.top_five[4][1] %>
@@ -46,6 +46,8 @@
               <%= strain.top_five[0][0] %>:
               <%= strain.top_five[0][1] %>
             <div class="fifth" style="width: <%= (strain.top_five[0][1] * 35)%>px;">
+            </div>
+            <div class="button btn-default text-center"><%= link_to "Rate #{strain.strain.name}'s version of #{disp.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain) %>
             </div>
           </div>
       <% end  %>
