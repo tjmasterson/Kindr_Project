@@ -103,13 +103,19 @@ h1 {
 }
 
 .logo {
-  font-size:40px;
+  background-color: rgba(73,126,8,0.3);
+  font-size:85px;
+  font-weight: bold;
   position:absolute;
   z-index:1200;
-  color:#333;
+  color: rgba(73,126,8, 1);
   top:70px;
   text-align:center;
   width:100%;
+
+  -webkit-text-fill-color: rgba(73,126,8, 1);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 #nav {
