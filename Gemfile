@@ -26,10 +26,6 @@ gem 'faker', '~> 1.4.3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as server
-gem 'unicorn-rails'
-
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -68,6 +64,8 @@ gem 'underscore-rails'
 
 #D3 for graphs
 gem "d3-rails"
+
+gem "thin"
 
 
 
