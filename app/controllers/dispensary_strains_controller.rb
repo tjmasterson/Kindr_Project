@@ -15,6 +15,7 @@ class DispensaryStrainsController < ApplicationController
 
   def create_user_choice_collection
     puts params
+    params.inspect
   end
 
   private
