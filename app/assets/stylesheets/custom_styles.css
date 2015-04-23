@@ -343,3 +343,7 @@ body.users.index .logo{
 /*	padding: 10em 10em 10em 10em;*/
 }
 
+.weed_image {
+	position: relative;
+	left: 20%;
+}

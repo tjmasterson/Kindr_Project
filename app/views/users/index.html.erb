@@ -26,7 +26,6 @@
           <div class="chart">
             <h3 class="dispensary_title_show title"><%= link_to "#{disp.name}", dispensary_path(disp) %></h3>
             <h4 class="strain_title_show title"><%= link_to "#{strain.strain.name}", dispensary_dispensary_strain_path(disp, strain) %></h4>
-
               <%= strain.top_five[4][0] %>:
               <%= strain.top_five[4][1] %>
             <div class="first" style="width: <%= (strain.top_five[4][1] * 35)%>px;">
@@ -47,7 +46,7 @@
               <%= strain.top_five[0][1] %>
             <div class="fifth" style="width: <%= (strain.top_five[0][1] * 35)%>px;">
             </div>
-            <div style="bu"><%= link_to "Rate #{strain.strain.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain), class: "btn btn-success text-center"%>
+            <div ><%= link_to "Rate #{strain.strain.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain), class: "btn btn-success text-center"%>
             </div>
           </div>
       <% end  %>

@@ -3,6 +3,7 @@
     <h4 class='dispensary_item_name'>
       <%= link_to dispensary_strain.strain.name, dispensary_dispensary_strain_path(@dispensary, dispensary_strain) %>
     </h4>
+       <div class="weed_image"> <%= image_tag(dispensary_strain.strain.photo_url, size: "200x200") %></div>
   </p><p>
   <div class='panel-thumbnail'>
     <!-- <a href='#' title='Ratings'> -->
