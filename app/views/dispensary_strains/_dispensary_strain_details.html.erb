@@ -2,6 +2,8 @@
 
 	<h4 class="disp_strain_show"><a href="#"/> <%= @dispensary_strain.strain.name %> </a> </h4>
 
+  <div class="weed_image"> <%= image_tag(dispensary_strain.strain.photo_url, size: "200x200") %></div>
+
     <%= @dispensary_strain.top_five[4][0] %>:
     <%= @dispensary_strain.top_five[4][1] %>
   <div class="first" style="width: <%= (@dispensary_strain.top_five[4][1] * 35)%>px;">
