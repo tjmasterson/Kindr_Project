@@ -3,9 +3,9 @@ class DispensaryStrainsController < ApplicationController
   def show
     @dispensary_strain = DispensaryStrain.find(params[:id])
     @dispensary = @dispensary_strain.dispensary
-    dispensary_strain = DispensaryStrain.find(params[:id])
-    top_five_averages = dispensary_strain.top_five.to_json
-    render json: top_five_averages
+    # dispensary_strain = DispensaryStrain.find(params[:id])
+    # top_five_averages = dispensary_strain.top_five.to_json
+    # render json: top_five_averages
   end
 
   def new_user_choice_collection
