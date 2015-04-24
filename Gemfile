@@ -68,9 +68,9 @@ gem "thin"
 
 gem 'rails_12factor', group: :production
 
+  gem 'faker', '~> 1.4.3'
 group :development, :test do
   # Use Faker for seeding database
-gem 'faker', '~> 1.4.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'hirb'

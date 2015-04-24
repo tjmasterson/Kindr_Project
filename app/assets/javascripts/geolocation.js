@@ -3,8 +3,73 @@
 
 
 
-service = new google.maps.places.PlacesService(map);
-service.nearbySearch(request, callback);
+// service = new google.maps.places.PlacesService(map);
+// service.nearbySearch(request, callback);
+
+
+// var map;
+// var infowindow;
+
+// function initialize() {
+//   var mapOptions = {
+//     zoom: 6
+//   };
+
+//   map = new google.maps.Map(document.getElementById('map-canvas'),
+//       mapOptions);
+
+//   var styles = [];
+
+//   map.setOptions({styles: styles});
+//     // Try HTML5 geolocation
+//     if(navigator.geolocation) {
+//       navigator.geolocation.getCurrentPosition(function(position) {
+//         var pos = new google.maps.LatLng(position.coords.latitude,
+//                                          position.coords.longitude);
+//         var infowindow = new google.maps.InfoWindow({
+//           map: map,
+//           position: pos,
+//           content: 'Location found using HTML5.'
+//         });
+//         map.setCenter(pos);
+//       }, function() {
+//         handleNoGeolocation(true);
+//       });
+//     } else {
+//       // Browser doesn't support Geolocation
+//       handleNoGeolocation(false);
+//     }
+//   }
+
+
+//   function handleNoGeolocation(errorFlag) {
+//     if (errorFlag) {
+//       var content = 'Error: The Geolocation service failed.';
+//     } else {
+//       var content = 'Error: Your browser doesn\'t support geolocation.';
+//     }
+//     var options = {
+//       map: map,
+//       position: new google.maps.LatLng(60, 105),
+//       content: content
+//     };
+//     var infowindow = new google.maps.InfoWindow(options);
+//     map.setCenter(options.position);
+//   }
+
+//   function createPhotoMarker(place) {
+//     var photos = place.photos;
+//     if (!photos) {
+//       return;
+//     }
+
+//     var marker = new google.maps.Marker({
+//       map: map,
+//       position: place.geometry.location,
+//       title: place.name,
+//       icon: photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
+//     });
+//   }
 
 
 
@@ -20,87 +85,9 @@ service.nearbySearch(request, callback);
 
 
 
-var map;
-var infowindow;
-
-function initialize() {
-  var mapOptions = {
-    zoom: 6
-  };
-
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  var styles = [];
-
-  map.setOptions({styles: styles});
-    // Try HTML5 geolocation
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = new google.maps.LatLng(position.coords.latitude,
-                                         position.coords.longitude);
-        var infowindow = new google.maps.InfoWindow({
-          map: map,
-          position: pos,
-          content: 'Location found using HTML5.'
-        });
-        map.setCenter(pos);
-      }, function() {
-        handleNoGeolocation(true);
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleNoGeolocation(false);
-    }
-  }
+//   google.maps.event.addDomListener(window, 'load', initialize);
 
 
-  function handleNoGeolocation(errorFlag) {
-    if (errorFlag) {
-      var content = 'Error: The Geolocation service failed.';
-    } else {
-      var content = 'Error: Your browser doesn\'t support geolocation.';
-    }
-    var options = {
-      map: map,
-      position: new google.maps.LatLng(60, 105),
-      content: content
-    };
-    var infowindow = new google.maps.InfoWindow(options);
-    map.setCenter(options.position);
-  }
-
-  function createPhotoMarker(place) {
-    var photos = place.photos;
-    if (!photos) {
-      return;
-    }
-
-    var marker = new google.maps.Marker({
-      map: map,
-      position: place.geometry.location,
-      title: place.name,
-      icon: photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
-    });
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-
-
-  $(document).ready(function (e){
-    console.log("try me")
-  });
+//   $(document).ready(function (e){
+//     console.log("try me")
+//   });
