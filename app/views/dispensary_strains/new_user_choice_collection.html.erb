@@ -3,7 +3,9 @@
 <%= render partial: '/nav_bar' %>
 
 <div class="container">
-  <div class="col-md-6">
+  <br><br><br><br>
+
+  <div id="rating_form_container" class="col-md-6">
     <div class="jumbotron">
       <div>
         <h3 class=""><%=@dispensary.name%></h3>
@@ -22,7 +24,11 @@
           <li class="list-group-item ">
             <%= user_choice_form.hidden_field :choice_id %>
             <%= user_choice_form.hidden_field :dispensary_strain_id %>
+
+              <h3><%= user_choice_form.object.choice.category %></h3>
+
             <div  class="btn-group " role="group" aria-label="...">
+
               <h4 class=""><%= user_choice_form.object.choice.name if user_choice_form.object.choice %></h4>
               <%= label_tag(:rating, "1", class: "inline control-label ") %>
               <%= user_choice_form.radio_button(:rating, "1") %>

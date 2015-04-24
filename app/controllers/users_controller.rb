@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+include UsersHelper
   def index
     @dispensaries = Dispensary.all
     # @dispensary_strains = @dispensaries.sample.dispensary_strains.sample(6)
