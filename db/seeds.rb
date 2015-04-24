@@ -213,12 +213,18 @@ dispensaries = [terrapin,
                 herban_medicinals]
 
 
+# dispensaries.each do |dispensary|
+#   num = 1
+#   until num == 30
+#     dispensary.dispensary_strains.create(strain_id: num)
+#     num += 1
+#   end
+# end
+
 dispensaries.each do |dispensary|
-  num = 1
-  until num == 30
-    dispensary.dispensary_strains.create(strain_id: num)
-    num += 1
-  end
+   Strain.all.each do |strain|
+        dispensary.dispensary_strains.create(strain_id: strain.id)
+   end
 end
 # one = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: white_widow.id)
 # two = DispensaryStrain.create(dispensary_id: terrapin.id, strain_id: trainwreck.id)

@@ -3,41 +3,37 @@
     <h4 class='dispensary_item_name'>
       <%= link_to dispensary_strain.strain.name, dispensary_dispensary_strain_path(@dispensary, dispensary_strain) %>
     </h4>
-       <div class="weed_image"> <%= image_tag(dispensary_strain.strain.photo_url, size: "200x200") %></div>
+    <div class="weed_image"> <%= image_tag(dispensary_strain.strain.photo_url, size: "200x200") %></div>
   </p><p>
   <div class='panel-thumbnail'>
     <!-- <a href='#' title='Ratings'> -->
 
     <!-- CHART -->
     <div class="chart">
-        <%= dispensary_strain.top_five[4][0] %>:
-        <%= dispensary_strain.top_five[4][1] %>
+      <%= dispensary_strain.top_five[4][0] %>:
+      <%= dispensary_strain.top_five[4][1] %>
       <div class="first" style="width: <%= (dispensary_strain.top_five[4][1] * 35)%>px;">
       </div>
-        <%= dispensary_strain.top_five[3][0] %>:
-        <%= dispensary_strain.top_five[3][1] %>
+      <%= dispensary_strain.top_five[3][0] %>:
+      <%= dispensary_strain.top_five[3][1] %>
       <div class="second" style="width: <%= (dispensary_strain.top_five[3][1] * 35)%>px;">
       </div>
-        <%= dispensary_strain.top_five[2][0] %>:
-        <%= dispensary_strain.top_five[2][1] %>
+      <%= dispensary_strain.top_five[2][0] %>:
+      <%= dispensary_strain.top_five[2][1] %>
       <div class="third" style="width: <%= (dispensary_strain.top_five[2][1] * 35)%>px;">
       </div>
-        <%= dispensary_strain.top_five[1][0] %>:
-        <%= dispensary_strain.top_five[1][1] %>
+      <%= dispensary_strain.top_five[1][0] %>:
+      <%= dispensary_strain.top_five[1][1] %>
       <div class="fourth" style="width: <%= (dispensary_strain.top_five[1][1] * 35)%>px;">
       </div>
-        <%= dispensary_strain.top_five[0][0] %>:
-        <%= dispensary_strain.top_five[0][1] %>
+      <%= dispensary_strain.top_five[0][0] %>:
+      <%= dispensary_strain.top_five[0][1] %>
       <div class="fifth" style="width: <%= (dispensary_strain.top_five[0][1] * 35)%>px;">
       </div>
     </div>
     <!-- CHART -->
-
-    <!-- </a> -->
   </div>
 
-
-  <!-- <img src='//placehold.it/600x400/444/F8F8F8' class='img-responsive'/> -->
 </div>
 </div>
 

@@ -1,5 +1,5 @@
 class DispensaryStrainsController < ApplicationController
-
+include UsersHelper
   def show
     @dispensary_strain = DispensaryStrain.find(params[:id])
     @dispensary = @dispensary_strain.dispensary
@@ -16,7 +16,6 @@ class DispensaryStrainsController < ApplicationController
   end
 
   def create_user_choice_collection
-    current_user = User.find(1)
     user_choice_collection.each do |choice|
       current_user.user_choices.create(choice)
     end
