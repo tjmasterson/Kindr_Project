@@ -18,13 +18,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(email: params[:email])
-    if User.authenticate(params[:user])
+    @user = User.find_by(email: params[:user][:email])
+    if User.authenticate(params[:user][:email], params[:user][:password])
       session[:user_id] = @user.id
       redirect_to :root
     else
       flash.now[:danger] = "Invalid login parameters"
-      debugger
       redirect_to :root
     end
   end
