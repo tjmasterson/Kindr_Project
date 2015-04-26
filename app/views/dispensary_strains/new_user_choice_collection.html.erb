@@ -1,6 +1,6 @@
 
 <!-- Fixed navbar -->
-<%= render partial: '/nav_bar' %>
+<%= render partial: '/home/nav_bar' %>
 
 <div class="container">
   <br><br><br><br>
@@ -25,7 +25,7 @@
             <%= user_choice_form.hidden_field :choice_id %>
             <%= user_choice_form.hidden_field :dispensary_strain_id %>
 
-              <h3><%= user_choice_form.object.choice.category %></h3>
+            <h3><%= user_choice_form.object.choice.category %></h3>
 
             <div  class="btn-group " role="group" aria-label="...">
 

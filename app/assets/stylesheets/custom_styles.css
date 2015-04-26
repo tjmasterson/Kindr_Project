@@ -95,7 +95,7 @@
 	}
 }
 
-body.users.index .logo{
+body.home.index .logo{
 
 	/*opacity: 0;*/
 
@@ -320,9 +320,6 @@ body.users.index .logo{
 	color: black;
 }
 
-.li-widen {
-	width: 56em;
-}
 
 #form-body {
 	margin-left: auto;

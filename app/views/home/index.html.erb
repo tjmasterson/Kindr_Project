@@ -3,12 +3,12 @@
 
 
   <header class="masthead">
-    <%= render partial: '/carousel'%>
+    <%= render partial: 'carousel'%>
   </header>
 
 
   <!-- Fixed navbar -->
-  <%= render partial: '/nav_bar', locals: {dispensaries: @dispensaries}%>
+  <%= render partial: 'nav_bar', locals: {dispensaries: @dispensaries}%>
 
   <!-- hidden user task form -->
   <div id="user_task_form" style="display:none;"></div>
