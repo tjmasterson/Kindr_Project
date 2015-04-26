@@ -15,15 +15,15 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+adapter: postgresql
+encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
-development:
+  development:
   <<: *default
-  database: Kindr_development
+    database: KindrProject_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -56,8 +56,8 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: Kindr_test
+<<: *default
+  database: KindrProject_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -79,7 +79,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: Kindr_production
+<<: *default
+  database: KindrProject_production
   username: Kindr
-  password: <%= ENV['KINDR_DATABASE_PASSWORD'] %>
+  password: <%= ENV['KINDRPROJECT_DATABASE_PASSWORD'] %>

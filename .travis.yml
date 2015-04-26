@@ -1,13 +1,12 @@
 language: ruby
-sudo: false
 rvm:
-  - "2.0.0"
+  - 2.0.0
 
 # uncomment this line if your project needs to run something other than `rake`:
 
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database Kindr_test;' -U postgres
+  - psql -c 'create database KindrProject_test;' -U postgres
 
 script:
   -bundle exec rake

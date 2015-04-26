@@ -1,4 +1,4 @@
 test:
   adapter: postgresql
-  database: Kindr_test
-  username: postgres
+  database: KindrProject_test
+  username: Kindr
