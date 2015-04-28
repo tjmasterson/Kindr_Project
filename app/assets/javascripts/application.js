@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require react
+//= require components
 //= require react_ujs
 //= require underscore
 //= require d3
