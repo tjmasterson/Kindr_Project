@@ -1,0 +1,71 @@
+<!-- Wrap all page content here -->
+<div id="wrap">
+
+
+  <header class="masthead">
+    <%= render partial: 'carousel'%>
+  </header>
+
+
+  <!-- Fixed navbar -->
+  <%= render partial: 'nav_bar', locals: {dispensaries: @dispensaries}%>
+
+  <!-- hidden user task form -->
+  <div id="user_task_form" style="display:none;"></div>
+
+  <!-- Begin page content -->
+
+  <div class="bg-4">
+    <div class="container" id="random_dispensaries">
+
+      <!-- <<<<<<<<<<<CHART>>>>>>>>>>> -->
+      <% @dispensaries.sample(3).each do |disp| %>
+      <% strain = disp.dispensary_strains.sample %>
+      <div class="chart">
+        <h3 class="dispensary_title_show title"><%= link_to "#{disp.name}", dispensary_path(disp) %></h3>
+        <h4 class="strain_title_show title"><%= link_to "#{strain.strain.name}", dispensary_dispensary_strain_path(disp, strain) %></h4>
+        <%= strain.top_five[4][0] %>:
+        <%= strain.top_five[4][1] %>
+        <div class="first" style="width: <%= (strain.top_five[4][1] * 35)%>px;">
+        </div>
+        <%= strain.top_five[3][0] %>:
+        <%= strain.top_five[3][1] %>
+        <div class="second" style="width: <%= (strain.top_five[3][1] * 35)%>px;">
+        </div>
+        <%= strain.top_five[2][0] %>:
+        <%= strain.top_five[2][1] %>
+        <div class="third" style="width: <%= (strain.top_five[2][1] * 35)%>px;">
+        </div>
+        <%= strain.top_five[1][0] %>:
+        <%= strain.top_five[1][1] %>
+        <div class="fourth" style="width: <%= (strain.top_five[1][1] * 35)%>px;">
+        </div>
+        <%= strain.top_five[0][0] %>:
+        <%= strain.top_five[0][1] %>
+        <div class="fifth" style="width: <%= (strain.top_five[0][1] * 35)%>px;">
+        </div>
+        <div ><%= link_to "Rate #{strain.strain.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain), class: "btn btn-success text-center"%>
+        </div>
+      </div>
+      <% end  %>
+      <!-- <<<<<<<<<<<Chart>>>>>>>>>>>>> -->
+
+    </div><!--/container-->
+  </div>
+
+  <div class="divider" id="section3"></div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1"></div>
+  </div><!--/row-->
+
+
+
+  <div class="col-sm-10 col-sm-offset-1">
+    <h1>Locations of Our Dispensaries</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d196281.64169563106!2d-104.85511145!3d39.764338949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdispensaries+denver!5e0!3m2!1sen!2sus!4v1429821066201" width="1000" height="400" frameborder="0" style="border:0"></iframe>
+  </div>
+
+  <div id="map-canvas"></div>
+
+  <hr>
