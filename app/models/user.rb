@@ -20,7 +20,6 @@ class User < ActiveRecord::Base
   validates :username, :email, uniqueness: true
   validates :email, format: { with: /\w*@\w*.\w*/, message: "Must enter valid email"}
 
-
   def password
     @password ||= Password.new(self.password_hash)
   end
