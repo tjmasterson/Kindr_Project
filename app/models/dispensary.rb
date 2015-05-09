@@ -30,15 +30,6 @@ class Dispensary < ActiveRecord::Base
     disp_with_strain
   end
 
-  def associate_effects
-
-    sorted = strain.average_ratings {|choice, avg| avg}.to_h
-    sorted.each do |choice, average|
-      if choice.name == "Effects"
-        self.effects[choice.name] = average.to_f.round(2)
-      end
-    end
-  end
 
 end
 

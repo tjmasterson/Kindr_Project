@@ -8,7 +8,6 @@ var Dispensary = React.createClass({
         <div className="dispensary_item">
           <p>{this.props.name}</p><p></p>
           <div className="chart">
-          <div>{this.props.effects[0]}</div>
           </div>
         </div>
       </div>
