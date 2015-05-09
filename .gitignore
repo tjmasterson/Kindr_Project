@@ -13,4 +13,4 @@
 /tmp
 
 #Ignore Node
-#/node_modules
+/node_modules
