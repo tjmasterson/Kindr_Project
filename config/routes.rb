@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # strains
 
 
-
+  resources :search
   resources :users
 
   resources :dispensaries do

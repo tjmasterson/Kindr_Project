@@ -36,4 +36,6 @@ class DispensaryStrain < ActiveRecord::Base
     return averages_hash.sort_by{|key, value| value}.pop
   end
 
+
+
 end

@@ -19,9 +19,25 @@ class Dispensary < ActiveRecord::Base
   has_many :strains, through: :dispensary_strains
   belongs_to :owner, class_name: "User", foreign_key: :user_id
 
+  delegate :average_ratings, to: :user_choices
 
   def self.six_rand_dispensaries_json
-    limit(6).order("RANDOM()")
+    disp_with_strain = {}
+    dispensaries = limit(6).order("RANDOM()")
+    dispensaries.each do |dispensary|
+      disp_with_strain[dispensary] = dispensary.dispensary_strains.sample
+    end
+    disp_with_strain
+  end
+
+  def associate_effects
+
+    sorted = strain.average_ratings {|choice, avg| avg}.to_h
+    sorted.each do |choice, average|
+      if choice.name == "Effects"
+        self.effects[choice.name] = average.to_f.round(2)
+      end
+    end
   end
 
 end
