@@ -23,6 +23,6 @@ module Kindr
     config.react.addons      = true
 
     # browserify for CommonJS and JSX transform
-    config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
+    # config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
   end
 end
