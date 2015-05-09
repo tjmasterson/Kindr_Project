@@ -15,43 +15,13 @@
 
   <!-- Begin page content -->
 
-  <div class="bg-4">
+  <div class="bg-4"><!-- <<<<<<<<<<<CHART>>>>>>>>>>> -->
     <div class="container" id="random_dispensaries">
+      <%= react_component 'DispensaryBox', {url: "/dispensaries/random_dispensaries", pollInterval: 10000}%>
 
-      <!-- <<<<<<<<<<<CHART>>>>>>>>>>> -->
-      <% @dispensaries.sample(3).each do |disp| %>
-      <% strain = disp.dispensary_strains.sample %>
-      <div class="chart">
-        <h3 class="dispensary_title_show title"><%= link_to "#{disp.name}", dispensary_path(disp) %></h3>
-        <h4 class="strain_title_show title"><%= link_to "#{strain.strain.name}", dispensary_dispensary_strain_path(disp, strain) %></h4>
-        <%= strain.top_five[4][0] %>:
-        <%= strain.top_five[4][1] %>
-        <div class="first" style="width: <%= (strain.top_five[4][1] * 35)%>px;">
-        </div>
-        <%= strain.top_five[3][0] %>:
-        <%= strain.top_five[3][1] %>
-        <div class="second" style="width: <%= (strain.top_five[3][1] * 35)%>px;">
-        </div>
-        <%= strain.top_five[2][0] %>:
-        <%= strain.top_five[2][1] %>
-        <div class="third" style="width: <%= (strain.top_five[2][1] * 35)%>px;">
-        </div>
-        <%= strain.top_five[1][0] %>:
-        <%= strain.top_five[1][1] %>
-        <div class="fourth" style="width: <%= (strain.top_five[1][1] * 35)%>px;">
-        </div>
-        <%= strain.top_five[0][0] %>:
-        <%= strain.top_five[0][1] %>
-        <div class="fifth" style="width: <%= (strain.top_five[0][1] * 35)%>px;">
-        </div>
-        <div ><%= link_to "Rate #{strain.strain.name}",dispensary_dispensary_strain_new_user_choice_collection_path(disp, strain), class: "btn btn-success text-center"%>
-        </div>
-      </div>
-      <% end  %>
-      <!-- <<<<<<<<<<<Chart>>>>>>>>>>>>> -->
 
-    </div><!--/container-->
-  </div>
+    </div>
+  </div><!--/CHART-->
 
   <div class="divider" id="section3"></div>
 
