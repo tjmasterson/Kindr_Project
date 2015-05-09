@@ -36,8 +36,7 @@ gem 'react-rails', '~> 1.0'
 gem 'underscore-rails'
 # Haml for more organized html
 gem 'haml-rails'
-# User browserfiy to manage JS modules
-gem "browserify-rails"
+
 #D3 for graphs
 gem "d3-rails"
 # Use thin server for a fast load time vs webricks
