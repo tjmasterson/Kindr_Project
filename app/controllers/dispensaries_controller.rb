@@ -12,9 +12,9 @@ class DispensariesController < ApplicationController
 
   def random_dispensaries
     dispensaries = Dispensary.six_rand_dispensaries_json
-    dispensaries.each do |key, value|
-      # @attrs << {value.strain.name => value.associate_effects}
-      dispensaries[key] = {value => value.associate_effects}
+    dispensaries.map do |item|
+      disp_strain = item["dispensary_strain"]
+      item["dip_strain_attrs"] = disp_strain.associate_effects
     end
     render json: dispensaries
   end

@@ -22,7 +22,7 @@ class DispensaryStrain < ActiveRecord::Base
 
   def top_five
     sorted = {}
-    self.average_ratings.each do  |choice, average|
+    self.average_ratings.each do |choice, average|
       sorted[choice.name] = average.to_f.round(2)
     end
     return sorted.sort_by{|key, value| value}.pop(5)
@@ -37,31 +37,19 @@ class DispensaryStrain < ActiveRecord::Base
   end
 
   def associate_effects
-    effects = {"Effects" => []}
-    medical = {"Medical" => []}
-    negative = {"Negative" => []}
+    attrs = {"Effects" => [], "Medical" => [], "Negative" => []}
     sorted = self.average_ratings {|choice, avg| avg}.to_h
     sorted.each do |choice, average|
-      # 3.times do
         if choice.category == "Effects"
-          effects["Effects"] << {choice.name => average.to_f.round(2)}
+          attrs["Effects"] << {choice.name => average.to_f.round(2)}
         end
-      # end
-      # 2.times do
         if choice.category == "Medical"
-        medical["Medical"] << {choice.name => average.to_f.round(2)}
+        attrs["Medical"] << {choice.name => average.to_f.round(2)}
         end
-      # end
-      # 1.times do
         if choice.category == "Negatives"
-          negative["Negative"] << {choice.name => average.to_f.round(2)}
+          attrs["Negative"] << {choice.name => average.to_f.round(2)}
         end
-      # end
     end
-    attrs = []
-    attrs << effects
-    attrs << medical
-    attrs << negative
     attrs
   end
 
