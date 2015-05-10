@@ -18,10 +18,10 @@
       <div>
 
         <%= form_for @dispensary_strain, url: dispensary_dispensary_strain_user_choice_collection_path(@dispensary, @dispensary_strain), method: "post", html: {class: "nifty_form"} do |f| %>
-        <ul class="list-group">
+
           <%= f.fields_for :user_choices do |user_choice_form| %>
           <% if user_choice_form.object.id.nil? %>
-          <li class="list-group-item ">
+
             <%= user_choice_form.hidden_field :choice_id %>
             <%= user_choice_form.hidden_field :dispensary_strain_id %>
 
@@ -51,18 +51,14 @@
               <%= label_tag(:rating, "10", class: "inline control-label ") %>
               <%= user_choice_form.radio_button(:rating, "10") %>
             </div>
-          </li>
+
           <% end %>
-          <!--  </div> -->
-        </ul>
 
         <% end %>
         <div class="panel-footer text-center form-body">
           <%= f.submit("Submit", class: "btn btn-info btn-block btn-sm")%>
         </div>
         <% end %>
-
-
       </div>
     </div>
   </div>
