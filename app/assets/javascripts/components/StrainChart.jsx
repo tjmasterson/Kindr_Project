@@ -14,13 +14,13 @@ var StrainChart = React.createClass({
     var medicalNodes = this.props.attr_data.Medical.map(function(info){
       // console.log(info)
       return (
-        <p>{info}</p>
+        <MedicalBars info={info} />
         );
     });
     var negativeNodes = this.props.attr_data.Negative.map(function(info){
       // console.log(info)
       return (
-        <p>{info}</p>
+        <NegativeBars info={info} />
         );
     })
     // console.log(this.props.attr_data)

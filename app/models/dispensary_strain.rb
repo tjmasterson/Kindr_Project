@@ -38,17 +38,25 @@ class DispensaryStrain < ActiveRecord::Base
 
   def associate_effects
     attrs = {"Effects" => [], "Medical" => [], "Negative" => []}
-    sorted = self.average_ratings {|choice, avg| avg}.to_h
-    sorted.each do |choice, average|
-        if choice.category == "Effects"
-          attrs["Effects"] << {"name" => choice.name, "number" => average.to_f.round(2)}
-        end
-        if choice.category == "Medical"
+
+    sorted = self.average_ratings.sort_by {|choice, avg| -avg}.to_h
+
+    effects = sorted.select {|choice, average| choice.category == "Effects"}
+
+    medical = sorted.select {|choice, average| choice.category == "Medical"}
+
+    negative = sorted.select {|choice, average| choice.category == "Negatives"}
+
+    effects.first(3).each do |choice, average|
+      attrs["Effects"] << {"name" => choice.name, "number" => average.to_f.round(2)}
+    end
+
+    medical.first(2).each do |choice, average|
         attrs["Medical"] << {"name" => choice.name, "number" => average.to_f.round(2)}
-        end
-        if choice.category == "Negatives"
+    end
+
+    negative.first(1).each do |choice, average|
           attrs["Negative"] << {"name" => choice.name, "number" => average.to_f.round(2)}
-        end
     end
     attrs
   end
