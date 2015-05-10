@@ -5,7 +5,10 @@
 React = require('react');
 
 // put components here
-DemoComponent = require('./components/DemoComponent');
-Dispensary = require('./components/Dispensary')
-DispensaryList = require('./components/DispensaryList')
+DemoComponent = require('./components/DemoComponent')
+StrainChart = require('./components/StrainChart')
+EffectBars = require('./components/EffectBars')
+DispensaryStrain = require('./components/DispensaryStrain')
 DispensaryBox = require('./components/DispensaryBox')
+DispensaryList = require('./components/DispensaryList')
+Dispensary = require('./components/Dispensary')

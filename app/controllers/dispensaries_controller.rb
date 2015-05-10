@@ -15,6 +15,7 @@ class DispensariesController < ApplicationController
     dispensaries.map do |item|
       disp_strain = item["dispensary_strain"]
       item["dip_strain_attrs"] = disp_strain.associate_effects
+      item["dispensary_strain_name"] = disp_strain.strain.name
     end
     render json: dispensaries
   end
