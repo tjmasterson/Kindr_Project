@@ -346,7 +346,7 @@ end
 ## choices (name, category)
 
 #effects
-overall_rating = Choice.create(name: "Overall Average")
+overall_rating = Choice.create(name: "Overall Average", category: "Overall_Average")
 
 euphoric = Choice.create(name: "Euphoric", category: "Effects")
 lazy = Choice.create(name: "Lazy", category: "Effects")

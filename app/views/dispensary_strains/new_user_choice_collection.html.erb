@@ -19,6 +19,10 @@
 
         <%= form_for @dispensary_strain, url: dispensary_dispensary_strain_user_choice_collection_path(@dispensary, @dispensary_strain), method: "post", html: {class: "nifty_form"} do |f| %>
 
+        <% @x.each_key do |key, value| %>
+        <%= key %>
+        <%end%>
+
           <%= f.fields_for :user_choices do |user_choice_form| %>
           <% if user_choice_form.object.id.nil? %>
 

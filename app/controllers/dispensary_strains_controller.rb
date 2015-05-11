@@ -12,7 +12,8 @@ include UsersHelper
     @dispensary = Dispensary.find(params[:dispensary_id])
     @dispensary_strain = DispensaryStrain.find(params[:dispensary_strain_id])
     @choices = Choice.all
-    @choices.each  { |choice| @dispensary_strain.user_choices.build(choice: choice)}
+    @x = @choices.each  { |choice| @dispensary_strain.user_choices.build(choice: choice)}.group_by(&:category)
+    puts @x
   end
 
   def create_user_choice_collection
