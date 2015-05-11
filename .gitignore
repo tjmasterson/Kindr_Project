@@ -10,7 +10,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
-#/tmp
+/tmp
 
 #Ignore Node
 /node_modules
