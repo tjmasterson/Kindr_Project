@@ -52,6 +52,8 @@ gem 'faker', '~> 1.4.3'
 gem 'gmaps4rails'
 
 
+
+
 # <<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>
 # possible gems...
 # geocoder for location based associations
