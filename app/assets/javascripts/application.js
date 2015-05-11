@@ -15,7 +15,8 @@
 //= require jquery_ujs
 //= require components
 //= require react_ujs
-//= require underscore
 //= require d3
+//= require underscore
+//= require gmaps/google
 //= require main
 
