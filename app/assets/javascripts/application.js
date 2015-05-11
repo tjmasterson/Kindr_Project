@@ -17,4 +17,5 @@
 //= require react_ujs
 //= require underscore
 //= require d3
+//= require main
 

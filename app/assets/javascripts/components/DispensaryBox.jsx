@@ -6,7 +6,6 @@ var DispensaryBox = React.createClass({
       url: this.props.url,
       dataType: 'json',
       success: function(response) {
-        console.log(response)
         console.log("yes")
         this.setState({data: response});
       }.bind(this),

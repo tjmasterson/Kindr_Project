@@ -22,23 +22,12 @@ class Dispensary < ActiveRecord::Base
   delegate :average_ratings, to: :user_choices
 
   def self.six_rand_dispensaries_json
-    disp_with_strain = {}
     dispensaries = limit(6).order("RANDOM()")
-    dispensaries.each do |dispensary|
-      disp_with_strain[dispensary] = dispensary.dispensary_strains.sample
-    end
-    disp_with_strain
-  end
-
-  def associate_effects
-
-    sorted = strain.average_ratings {|choice, avg| avg}.to_h
-    sorted.each do |choice, average|
-      if choice.name == "Effects"
-        self.effects[choice.name] = average.to_f.round(2)
-      end
+    dispensaries.map do |dispensary|
+      {"dispensary" => dispensary, "dispensary_strain" => dispensary.dispensary_strains.sample}
     end
   end
+
 
 end
 
