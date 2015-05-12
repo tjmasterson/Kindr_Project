@@ -54,6 +54,9 @@ gem 'gmaps4rails'
 #geocoder gem for location
 gem 'geocoder'
 
+#broswerify gem
+gem 'browserify-rails'
+
 
 
 
