@@ -6,6 +6,8 @@ React = require('react');
 
 // put components here
 DemoComponent = require('./components/DemoComponent')
+List = require('./components/List')
+FilteredList = require('./components/FilteredList')
 StrainChart = require('./components/StrainChart')
 EffectBars = require('./components/EffectBars')
 MedicalBars = require('./components/MedicalBars')
