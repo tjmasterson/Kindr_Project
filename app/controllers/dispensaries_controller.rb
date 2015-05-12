@@ -5,7 +5,7 @@ class DispensariesController < ApplicationController
   end
 
   def dispensaries_index_json
-    dispensaries = Dispensary.all
+    dispensaries = Dispensary.select('id, name')
     render json: dispensaries
   end
 
