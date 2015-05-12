@@ -24,7 +24,15 @@ class DispensariesController < ApplicationController
   def show
     @dispensary = Dispensary.find(params[:id])
     @dispensary_strains = @dispensary.dispensary_strains
-    puts @dispensary_strains
+    @url = "/dispensaries/#{params[:id]}/all_dispensary_strains"
+  end
+
+  def all_dispensary_strains
+    dispensary = Dispensary.find(params[:id])
+    dispensary_strains = dispensary.dispensary_strains.map do |disp_strain|
+      disp_strain = {"name" => disp_strain.strain.name, "dip_strain_attrs" => disp_strain.associate_effects}
+    end
+    render json: dispensary_strains
   end
 
   private
