@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/dispensaries/random_dispensaries' => 'dispensaries#random_dispensaries'
   get '/dispensaries/dispensaries_index_json' => 'dispensaries#dispensaries_index_json'
   # strains
-
+  get '/dispensaries/:id/all_dispensary_strains' => 'dispensaries#all_dispensary_strains', as: 'all_dispensary_strains'
 
   resources :search
   resources :users
