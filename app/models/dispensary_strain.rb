@@ -41,11 +41,11 @@ class DispensaryStrain < ActiveRecord::Base
 
     sorted = self.average_ratings.sort_by {|choice, avg| -avg}.to_h
 
-    effects = sorted.select {|choice, average| choice.category == "Effects"}
+    effects = sorted.select {|choice| choice.category == "Effects"}
 
-    medical = sorted.select {|choice, average| choice.category == "Medical"}
+    medical = sorted.select {|choice| choice.category == "Medical"}
 
-    negative = sorted.select {|choice, average| choice.category == "Negatives"}
+    negative = sorted.select {|choice| choice.category == "Negatives"}
 
     effects.first(3).each do |choice, average|
       attrs["Effects"] << {"name" => choice.name, "number" => average.to_f.round(2)}
