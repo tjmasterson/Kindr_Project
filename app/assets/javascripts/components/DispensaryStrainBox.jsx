@@ -18,7 +18,7 @@ var DispensaryStrainBox = React.createClass({
   getInitialState: function() {
     return {data: []};
   },
-  componentWillMount: function() {
+  componentDidMount: function() {
     this.loadDispensariesFromServer();
   },
   render: function() {

@@ -5,7 +5,7 @@ var NegativeBars = React.createClass({
     var divWidth = this.props.info.number
    return (
     <div>
-      <h4>{this.props.info.name}: {this.props.info.number}</h4>
+      <p>{this.props.info.name}: {this.props.info.number}</p>
       <div className="fifth" style={{width: 35 * divWidth}}></div>
     </div>
     );
