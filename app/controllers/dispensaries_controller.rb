@@ -14,6 +14,7 @@ class DispensariesController < ApplicationController
     dispensaries = Dispensary.six_rand_dispensaries_json
     dispensaries.map do |item|
       disp_strain = item["dispensary_strain"]
+      puts disp_strain
       item["dip_strain_attrs"] = disp_strain.associate_effects
       item["dispensary_strain_name"] = disp_strain.strain.name
     end
