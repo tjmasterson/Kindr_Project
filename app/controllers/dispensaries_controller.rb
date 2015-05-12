@@ -23,7 +23,11 @@ class DispensariesController < ApplicationController
   def show
     @dispensary = Dispensary.find(params[:id])
     @dispensary_strains = @dispensary.dispensary_strains
-    puts @dispensary_strains
+    # @dispensaries = Dispensary.all
+    # @hash = Gmaps4rails.build_markers(@dispensaries) do |dispensary, marker|
+    #   marker.lat dispensary.latitude
+    #   marker.lng dispensary.longitude
+    # end
   end
 
   private

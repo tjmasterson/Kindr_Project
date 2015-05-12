@@ -1,105 +1,67 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-  var $navBar = $("#our_nav_bar");
-  var $signupLink = $("#signup_link");
-  var $loginLink = $("#login_link");
+    var $navBar = $("#our_nav_bar");
+    var $signupLink = $("#signup_link");
+    var $loginLink = $("#login_link");
 
-  $signupLink.on("click", function(e){
-    e.preventDefault();
-    $.get('/signup').done(function(response){
-      if($('#user_task_form').is(":hidden")) {
-        $('#user_task_form').html(response);
-        $('#user_task_form').slideDown(350);
-      }else{
-       $('#user_task_form').slideUp(350);
-      };
+    $signupLink.on("click", function(e) {
+        e.preventDefault();
+        $.get('/signup').done(function(response) {
+            if ($('#user_task_form').is(":hidden")) {
+                $('#user_task_form').html(response);
+                $('#user_task_form').slideDown(350);
+            } else {
+                $('#user_task_form').slideUp(350);
+            };
+        });
     });
-  });
 
 
-  $loginLink.on("click", function(e){
-    e.preventDefault();
-    $.get('/login').done(function(response){
-      if($('#user_task_form').is(":hidden")) {
-        $('#user_task_form').html(response);
-        $('#user_task_form').slideDown(350);
-      }else{
-       $('#user_task_form').slideUp(350);
-      };
+    $loginLink.on("click", function(e) {
+        e.preventDefault();
+        $.get('/login').done(function(response) {
+            if ($('#user_task_form').is(":hidden")) {
+                $('#user_task_form').html(response);
+                $('#user_task_form').slideDown(350);
+            } else {
+                $('#user_task_form').slideUp(350);
+            };
+        });
     });
-  });
 
-// $('.carousel').carousel({interval:false});
+    /* smooth scrolling for scroll to top */
+    $('.scroll-top').click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1000);
+    })
 
-/* affix the navbar after scroll below header */
-$('#nav').affix({
-      offset: {
-        top: $('header').height()-$('#nav').height()
-      }
-});
+    /* smooth scrolling for nav sections */
+    $('#nav .navbar-nav li>a').click(function() {
+        var link = $(this).attr('href');
+        var posi = $(link).offset().top;
+        $('body,html').animate({
+            scrollTop: posi
+        }, 700);
+    });
 
-/* highlight the top nav as scrolling occurs */
-$('body').scrollspy({ target: '#nav' })
+    // map
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers([
+        {
+          "lat": 0,
+          "lng": 0,
+          "picture": {
+            "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+            "width":  0,
+            "height": 0
+          },
+          "infowindow": "hello!"
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
 
-/* smooth scrolling for scroll to top */
-$('.scroll-top').click(function(){
-  $('body,html').animate({scrollTop:0},1000);
-})
-
-/* smooth scrolling for nav sections */
-$('#nav .navbar-nav li>a').click(function(){
-  var link = $(this).attr('href');
-  var posi = $(link).offset().top;
-  $('body,html').animate({scrollTop:posi},700);
-});
-
-
-
-
-
-
-
-/* google maps */
-// google.maps.visualRefresh = true;
-
-// var map;
-// function initialize() {
-//   var geocoder = new google.maps.Geocoder();
-//   var address = $('#map-input').text(); /* change the map-input to your address */
-//   var mapOptions = {
-//       zoom: 15,
-//       mapTypeId: google.maps.MapTypeId.ROADMAP,
-//       scrollwheel: false
-//   };
-//   map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-
-//     if (geocoder) {
-//       geocoder.geocode( { 'address': address}, function(results, status) {
-//         if (status == google.maps.GeocoderStatus.OK) {
-//           if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-//           map.setCenter(results[0].geometry.location);
-
-//             var infowindow = new google.maps.InfoWindow(
-//                 {
-//                   content: address,
-//                   map: map,
-//                   position: results[0].geometry.location,
-//                 });
-
-//             var marker = new google.maps.Marker({
-//                 position: results[0].geometry.location,
-//                 map: map,
-//                 title:address
-//             });
-
-//           } else {
-//             alert("No results found");
-//           }
-//         }
-//       });
-//   }
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
-
-/* end google maps */
 });
