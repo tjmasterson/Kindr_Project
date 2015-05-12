@@ -51,7 +51,7 @@ gem 'faker', '~> 1.4.3'
 #google maps gem
 gem 'gmaps4rails'
 
-#geocoder gem
+#geocoder gem for location
 gem 'geocoder'
 
 
