@@ -41,6 +41,7 @@
 .chart div {
 	padding: 3px;
 	/*margin: 0.25px;*/
+	/*text-align: left;*/
 }
 
 .chart2 div {
@@ -257,12 +258,26 @@ body.home.index .logo{
 
 #map-canvas2{
 	height: 20em;
-	width: 40em;
+	width: 60em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 2em;
 }
 
-.dispensaries.show p {
+.dispensaries.show .dispensary_item a {
+	color: white;
+}
+
+.dispensaries.show .dispensary_item a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.dispensary_title_show.title {
+	margin: 0;
+	padding: 0;
+}
+
+#address_show {
 	text-align: center;
 }
