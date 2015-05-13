@@ -16,10 +16,16 @@ include UsersHelper
   end
 
   def create_user_choice_collection
-    user_choice_collection.each do |choice|
-      current_user.user_choices.create(choice)
+    if logged_in?
+      user_choice_collection.each do |choice|
+        current_user.user_choices.create(choice)
+      end
+      # flash[:alert] = "Your choices have been saved!"
+      redirect_to :root
+    else
+      # flash[:alert] = "You must be logged in"
+      redirect_to :back
     end
-    redirect_to :root
   end
 
   private

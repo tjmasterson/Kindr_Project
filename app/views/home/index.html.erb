@@ -12,13 +12,11 @@
   <div id="user_task_form" style="display:none;"></div>
 
   <!-- Begin page content -->
-  <%= react_component 'DispensarySearchList', {url: "/dispensaries/dispensaries_index_json"}%>
+  <%= react_component 'FilteredList', {url: "/dispensaries/dispensaries_index_json"}%>
 
   <div class="bg-4"><!-- <<<<<<<<<<<CHART>>>>>>>>>>> -->
     <div class="container" id="random_dispensaries">
       <%= react_component 'DispensaryBox', {url: "/dispensaries/random_dispensaries", pollInterval: 10000}%>
-
-
     </div>
   </div><!--/CHART-->
 

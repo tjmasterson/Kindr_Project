@@ -32,4 +32,10 @@
 
 .search-list-item {
       list-style-type: none;
+      width: 420px;
+}
+
+.list-group {
+      position: absolute;
+      z-index: 1;
 }

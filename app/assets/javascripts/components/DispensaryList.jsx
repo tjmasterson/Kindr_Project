@@ -7,7 +7,7 @@ var DispensaryList = React.createClass({
       <div className="panel panel-default">
         <div className="col-sm-4 col-xs-6">
           <div className="dispensary_item">
-            <Dispensary name={dispensary.dispensary.name} />
+            <Dispensary name={dispensary.dispensary.name} disp_id={dispensary.dispensary.id}/>
             <DispensaryStrain name={dispensary.dispensary_strain_name} />
               <StrainChart attr_data={dispensary.dip_strain_attrs} />
           </div>
