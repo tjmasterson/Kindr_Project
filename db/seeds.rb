@@ -20,10 +20,13 @@ lil_jon = User.create(username: "Lil' Jon", email: "liljon@gmail.com", password:
 
 
 
+
 ##golden
 terrapin = Dispensary.create(name: "Terrapin Care Clinic", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
+terrapin_location = Location.create(address: "11091 E Mississippi Ave,Aurora,CO", dispensary_id: terrapin.id)
 native_roots = Dispensary.create(name: "Native Roots", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
 fox_street_clinic = Dispensary.create(name: "Fox Street Clinic", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
+fox_street_location = Location.create(address: "11975 E 40th Ave,Denver,CO", dispensary_id: fox_street_clinic.id)
 # ##steamboat
 # natural_remedies = Dispensary.create(name: "Natural Remedies",  phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
 # mindful_recreation = Dispensary.create(name: "Mindful Recreation", phone_number: Faker::PhoneNumber.phone_number, website: Faker::Internet.domain_name)
