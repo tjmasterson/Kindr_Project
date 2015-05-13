@@ -21,13 +21,8 @@ var StrainChart = React.createClass({
     // console.log(this.props.attr_data)
     return (
       <div className="chart">
-        <h4>Effects</h4>
         {effectNodes}
-        <br/>
-        <h4>Medical</h4>
         {medicalNodes}
-        <br/>
-        <h4>Negatives</h4>
         {negativeNodes}
       </div>
             );
