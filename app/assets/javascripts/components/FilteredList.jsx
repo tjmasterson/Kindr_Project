@@ -57,6 +57,7 @@ var FilteredList = React.createClass({
               </span>
             </div>
           </div>
+          <p></p>
           <List items={this.state.items}/>
         </div>
       </div>

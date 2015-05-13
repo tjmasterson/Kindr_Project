@@ -4,7 +4,7 @@ var Dispensary = React.createClass({
   render: function() {
     return (
       <div>
-        <h2>{this.props.name}</h2>
+        <h2><a href={"/dispensaries/" + this.props.disp_id}>{this.props.name}</a></h2>
         <p></p>
       </div>
             );
