@@ -19,10 +19,15 @@ class Dispensary < ActiveRecord::Base
   has_many :strains, through: :dispensary_strains
   belongs_to :owner, class_name: "User", foreign_key: :user_id
 
+  delegate :average_ratings, to: :user_choices
 
   def self.six_rand_dispensaries_json
-    limit(6).order("RANDOM()")
+    dispensaries = limit(6).order("RANDOM()")
+    dispensaries.map do |dispensary|
+      {"dispensary" => dispensary, "dispensary_strain" => dispensary.dispensary_strains.sample}
+    end
   end
+
 
 end
 
