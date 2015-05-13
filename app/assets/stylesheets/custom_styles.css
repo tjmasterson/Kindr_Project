@@ -264,6 +264,14 @@ body.home.index .logo{
 	margin-bottom: 2em;
 }
 
+#map-canvas{
+	height: 20em;
+	width: 60em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+}
+
 .dispensaries.show .dispensary_item a {
 	color: white;
 }
