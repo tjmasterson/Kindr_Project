@@ -17,6 +17,7 @@ class Dispensary < ActiveRecord::Base
   has_many :dispensary_strains
   has_many :photos
   has_many :strains, through: :dispensary_strains
+  has_many :locations
   belongs_to :owner, class_name: "User", foreign_key: :user_id
 
   delegate :average_ratings, to: :user_choices

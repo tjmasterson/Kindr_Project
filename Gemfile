@@ -49,6 +49,9 @@ gem 'faker', '~> 1.4.3'
 # Use bower to manage JS packages and dependencies
 # gem "bower-rails", "~> 0.9.2"
 
+gem 'geocoder'
+
+
 
 # <<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>
 # possible gems...
