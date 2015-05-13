@@ -11,7 +11,7 @@ var DispensaryStrainList = React.createClass({
             <DispensaryStrain name={dispensary_strain.name} />
             <div><img src={"/assets/" + dispensary_strain.photo_url} width="200" height="200" /></div>
             <p></p>
-            <div className="btn btn-success text-center"><a href={dispensary_strain.dispensary_id + "/dispensary_strains/" + dispensary_strain.disp_strain_id + "/new_user_choice_collection"}>Rate</a>
+            <div className="btn btn-success text-center"><a href={dispensary_strain.dispensary_id + "/dispensary_strains/" + dispensary_strain.disp_strain_id + "/new_user_choice_collection"}>Rate {dispensary_strain.name}</a>
             </div>
             <StrainChart attr_data={dispensary_strain.dip_strain_attrs} />
           </div>
