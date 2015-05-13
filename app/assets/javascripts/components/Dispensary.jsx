@@ -4,7 +4,7 @@ var Dispensary = React.createClass({
   render: function() {
     return (
       <div>
-        <p>{this.props.name}</p>
+        <h2>{this.props.name}</h2>
         <p></p>
       </div>
             );
