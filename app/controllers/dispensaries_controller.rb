@@ -30,7 +30,7 @@ class DispensariesController < ApplicationController
   def all_dispensary_strains
     dispensary = Dispensary.find(params[:id])
     dispensary_strains = dispensary.dispensary_strains.map do |disp_strain|
-      disp_strain = {"name" => disp_strain.strain.name, "dip_strain_attrs" => disp_strain.associate_effects}
+      disp_strain = {"name" => disp_strain.strain.name, "dip_strain_attrs" => disp_strain.associate_effects, "photo_url" => disp_strain.strain.photo_url}
     end
     render json: dispensary_strains
   end
