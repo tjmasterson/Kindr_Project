@@ -5,7 +5,7 @@
   <div id="user_task_form" style="display:none;"></div>
   <br><br>
   <h2 class="dispensary_title_show title"><%= @dispensary.name %></h2>
-  <p><%= @dispensary.locations.first.address.split(",").first %>, <%= @dispensary.locations.first.address.split(",")[1] %>, <%= @dispensary.locations.first.address.split(",")[2] %></p>
+  <p id="address_show"><%= @dispensary.locations.first.address.split(",").first %>, <%= @dispensary.locations.first.address.split(",")[1] %>, <%= @dispensary.locations.first.address.split(",")[2] %></p>
 
 
 
@@ -44,6 +44,7 @@
         defaultLatLng = new google.maps.LatLng(latitude, longitude);
         var mapOptions = {
             scaleControl: true,
+            scrollwheel: false,
             draggable: true,
             mapTypeControl: false,
             center: defaultLatLng,
@@ -55,6 +56,7 @@
         var marker = new google.maps.Marker({
             position: defaultLatLng,
             map: map,
+            <!-- icon: "/assets/pin_green2.png", -->
             title: "<%= @dispensary.name %>"
         });
 
