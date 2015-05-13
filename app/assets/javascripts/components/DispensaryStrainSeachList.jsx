@@ -1,5 +1,7 @@
-var FilteredList = React.createClass({
-  loadDispensariesFromServer: function() {
+var React = require('react');
+
+var DispensaryStrainSearchList = React.createClass({
+  loadDispensaryStrainsFromServer: function() {
     $.ajax({
       url: this.props.url,
       dataType: 'json',
@@ -36,7 +38,7 @@ var FilteredList = React.createClass({
      }
   },
   componentWillMount: function(){
-    this.loadDispensariesFromServer();
+    this.loadDispensaryStrainsFromServer();
     this.setState({items: this.state.initialItems})
   },
   render: function(){
@@ -49,7 +51,7 @@ var FilteredList = React.createClass({
         <div className="col-md-4 col-md-offset-4">
           <div id="custom-search-input">
             <div className="input-group col-md-12">
-              <input type="text" className="form-control input-lg" placeholder="Search Dispensaries" onChange={this.filterList}/>
+              <input type="text" className="form-control input-lg" placeholder="Search Strains" onChange={this.filterList}/>
               <span className="input-group-btn">
                 <button class="btn btn-info btn-lg" type="button">
                   <i className="glyphicon glyphicon-search"></i>
@@ -57,7 +59,7 @@ var FilteredList = React.createClass({
               </span>
             </div>
           </div>
-          <List items={this.state.items}/>
+          <DispensaryStrainSearchListItem items={this.state.items}/>
         </div>
       </div>
     );
@@ -67,4 +69,4 @@ var FilteredList = React.createClass({
 
 
 
-module.exports = FilteredList;
+module.exports = DispensaryStrainSearchList;

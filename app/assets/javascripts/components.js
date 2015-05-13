@@ -7,8 +7,8 @@ React = require('react');
 // put components here
 DispensaryStrain = require('./components/DispensaryStrain')
 DispensaryStrainBox = require('./components/DispensaryStrainBox')
-List = require('./components/List')
-FilteredList = require('./components/FilteredList')
+DispensarySearchList = require('./components/DispensarySearchList')
+DispensarySearchListItem = require('./components/DispensarySearchListItem')
 StrainChart = require('./components/StrainChart')
 EffectBars = require('./components/EffectBars')
 MedicalBars = require('./components/MedicalBars')

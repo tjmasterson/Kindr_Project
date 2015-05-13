@@ -1,6 +1,6 @@
 var React = require('react');
 
-var List = React.createClass({
+var DispensarySeachListItem = React.createClass({
   render: function(){
     return (
       <ul className="list-group">
@@ -17,4 +17,4 @@ var List = React.createClass({
   }
 });
 
-module.exports = List;
+module.exports = DispensarySeachListItem;
