@@ -24,7 +24,9 @@ class DispensariesController < ApplicationController
   def show
     @dispensary = Dispensary.find(params[:id])
     @dispensary_strains = @dispensary.dispensary_strains
-    puts @dispensary_strains
+    location = @dispensary.locations.first
+    @lat = location.latitude
+    @long = location.longitude
   end
 
   private

@@ -7,8 +7,63 @@
   <br><br>
   <h2 class="dispensary_title_show title"><%= @dispensary.name %></h2>
 
+  <%= javascript_tag do %>
+    $(window).load(function() {
+        loadScript();
+    });
+
+    function loadScript() {
+        var script;
+        console.log('loading');
+
+        script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp" +
+            "&key=AIzaSyA8mD2BRFC9ZX79SpRd8x0PIQqKDQw5ES4" +
+            "&libraries=drawing" +
+            "&callback=initialize";
+        document.body.appendChild(script);
+    }
+
+
+    function initialize() {
+    var geocoder = new google.maps.Geocoder();
+    var address = "<%= j @dispensary.locations.first.address %>";
+    console.log(address);
+
+    geocoder.geocode( { 'address': address}, function(results, status) {
+
+    if (status == google.maps.GeocoderStatus.OK) {
+        console.log(results[0]);
+        console.log(results[0].geometry.location.A);
+        var latitude = results[0].geometry.location.A;
+        var longitude = results[0].geometry.location.F;
+        }
+        defaultLatLng = new google.maps.LatLng(latitude, longitude);
+        var mapOptions = {
+            center: defaultLatLng,
+            zoom: 8
+        };
+
+        var map = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: defaultLatLng,
+            map: map,
+            title: "<%= @dispensary.name %>"
+        });
+
+    });
+
+
+  }
+
+  <% end %>
+
+  <div id="map-canvas2"></div>
+
   <div class="bg-4">
     <div class="container" id="all_dispensary_strains">
       <%= render @dispensary_strains %>
-    </div><!--/container-->
-  </div>
+    </div><!--/container
+</div>
