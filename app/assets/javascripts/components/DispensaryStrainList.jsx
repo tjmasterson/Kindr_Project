@@ -8,6 +8,7 @@ var DispensaryStrainList = React.createClass({
         <div className="col-sm-4 col-xs-6">
           <div className="dispensary_item">
             <DispensaryStrain name={dispensary_strain.name} />
+            <img src={"/assets/" + dispensary_strain.photo_url} width="200" height="200" />
             <StrainChart attr_data={dispensary_strain.dip_strain_attrs} />
           </div>
         </div>
