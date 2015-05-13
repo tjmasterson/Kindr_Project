@@ -27,6 +27,15 @@ class DispensariesController < ApplicationController
     location = @dispensary.locations.first
     @lat = location.latitude
     @long = location.longitude
+    @url = "/dispensaries/#{params[:id]}/all_dispensary_strains"
+  end
+
+  def all_dispensary_strains
+    dispensary = Dispensary.find(params[:id])
+    dispensary_strains = dispensary.dispensary_strains.map do |disp_strain|
+      disp_strain = {"name" => disp_strain.strain.name, "dip_strain_attrs" => disp_strain.associate_effects, "photo_url" => disp_strain.strain.photo_url, "dispensary_id" => params[:id], "disp_strain_id" => disp_strain.id}
+    end
+    render json: dispensary_strains
   end
 
   private
