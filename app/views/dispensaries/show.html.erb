@@ -5,6 +5,8 @@
   <div id="user_task_form" style="display:none;"></div>
   <br><br>
   <h2 class="dispensary_title_show title"><%= @dispensary.name %></h2>
+  <p><%= @dispensary.locations.first.address.split(",").first %>, <%= @dispensary.locations.first.address.split(",")[1] %>, <%= @dispensary.locations.first.address.split(",")[2] %></p>
+
 
 
   <%= javascript_tag do %>
@@ -41,8 +43,11 @@
         }
         defaultLatLng = new google.maps.LatLng(latitude, longitude);
         var mapOptions = {
+            scaleControl: true,
+            draggable: true,
+            mapTypeControl: false,
             center: defaultLatLng,
-            zoom: 8
+            zoom: 13
         };
 
         var map = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions);
